@@ -857,7 +857,7 @@ export default function Home() {
               <Button 
                 className="w-full rounded-full py-6 text-lg bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90"
                 data-testid="button-get-started"
-                onClick={() => setContactDialogOpen(true)}
+                onClick={() => setLocation("/pricing")}
               >
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2" />

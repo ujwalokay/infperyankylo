@@ -4,8 +4,27 @@ import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
-import { Mail, Sparkles, Lock, Layers, Zap, Shield, ArrowRight } from "lucide-react";
-import { SiX, SiGithub, SiDiscord } from "react-icons/si";
+import { 
+  Mail, 
+  Sparkles, 
+  Lock, 
+  Layers, 
+  Zap, 
+  Shield, 
+  ArrowRight,
+  MonitorPlay,
+  CalendarCheck,
+  ShoppingCart,
+  DollarSign,
+  Clock,
+  Database,
+  BarChart3,
+  Users,
+  FileText,
+  TrendingUp,
+  CheckCircle2
+} from "lucide-react";
+import { SiReact, SiTypescript, SiPostgresql, SiTailwindcss } from "react-icons/si";
 
 import browserTabsImage from "@assets/generated_images/Browser_interface_with_sidebar_tabs_328237be.png";
 import customizationImage from "@assets/generated_images/Browser_customization_interface_51f99058.png";
@@ -22,8 +41,8 @@ export default function Home() {
     },
     onSuccess: () => {
       toast({
-        title: "You're on the list!",
-        description: "We'll let you know when Arc is ready for you.",
+        title: "Thank you for your interest!",
+        description: "We'll contact you soon about Ankylo Gaming POS.",
       });
       setEmail("");
     },
@@ -60,25 +79,25 @@ export default function Home() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-chart-1 to-chart-2 flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-primary-foreground" />
+                <MonitorPlay className="w-5 h-5 text-primary-foreground" />
               </div>
-              <span className="text-xl font-bold text-foreground">Arc</span>
+              <span className="text-xl font-bold text-foreground">Ankylo Gaming POS</span>
             </div>
             
             <div className="hidden md:flex items-center gap-8">
               <a href="#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors" data-testid="link-features">
                 Features
               </a>
-              <a href="#privacy" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors" data-testid="link-privacy">
-                Privacy
+              <a href="#tech" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors" data-testid="link-tech">
+                Technology
               </a>
-              <a href="#download" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors" data-testid="link-download">
-                Download
+              <a href="#benefits" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors" data-testid="link-benefits">
+                Benefits
               </a>
             </div>
 
             <Button size="sm" data-testid="button-get-started">
-              Get Started
+              Get Demo
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           </div>
@@ -99,26 +118,26 @@ export default function Home() {
         <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8" data-testid="text-announcement">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-foreground">Meet Arc, from the makers of Arc Browser</span>
+            <span className="text-sm font-medium text-foreground">Complete Gaming Center Management System</span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6" data-testid="text-hero-heading">
             <span className="bg-gradient-to-r from-foreground via-foreground to-muted-foreground bg-clip-text text-transparent">
-              Arc is the Chrome
+              Ankylo Gaming POS
             </span>
             <br />
             <span className="bg-gradient-to-r from-chart-1 via-chart-2 to-chart-4 bg-clip-text text-transparent">
-              replacement I've been
+              Streamline Your Gaming
             </span>
             <br />
             <span className="bg-gradient-to-r from-chart-1 via-chart-2 to-chart-4 bg-clip-text text-transparent">
-              waiting for
+              Center Operations
             </span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12" data-testid="text-hero-description">
-            A browser that doesn't just meet your needs — it anticipates them.
-            Experience the web like never before with spaces, customization, and privacy built in.
+            A powerful, all-in-one platform designed to streamline every aspect of your gaming center's operations. 
+            From real-time session tracking to comprehensive financial oversight.
           </p>
 
           {/* Email Signup Form */}
@@ -128,7 +147,7 @@ export default function Home() {
                 <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                 <Input
                   type="email"
-                  placeholder="Enter your email..."
+                  placeholder="Enter your email for demo..."
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="pl-12 h-12 bg-card/50 backdrop-blur-sm border-border/50 focus:border-primary rounded-full"
@@ -143,7 +162,7 @@ export default function Home() {
                 disabled={signupMutation.isPending}
                 data-testid="button-submit-email"
               >
-                {signupMutation.isPending ? "Joining..." : "Get Early Access"}
+                {signupMutation.isPending ? "Requesting..." : "Request Demo"}
               </Button>
             </div>
           </form>
@@ -154,7 +173,7 @@ export default function Home() {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50 transform hover:scale-[1.02] transition-transform duration-500">
               <img 
                 src={browserTabsImage} 
-                alt="Arc Browser Interface"
+                alt="Ankylo Gaming POS Dashboard"
                 className="w-full h-auto"
               />
             </div>
@@ -162,309 +181,451 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Grid */}
+      {/* Key Highlights */}
       <section className="py-20 md:py-32 relative" id="features">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4" data-testid="text-features-heading">
-              A browser that doesn't just meet
-              <br />
-              your needs — it anticipates them
+            <h2 className="text-4xl md:text-5xl font-bold mb-4" data-testid="text-highlights-heading">
+              Built for Modern Gaming Centers
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Every feature is designed to help you browse smarter, faster, and with more privacy
+              Everything you need to maximize efficiency and profitability in one powerful platform
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="group p-8 rounded-2xl bg-card border border-card-border hover-elevate active-elevate-2 transition-all" data-testid="card-feature-spaces">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-chart-1 to-chart-2 flex items-center justify-center mb-6">
-                <Layers className="w-6 h-6 text-primary-foreground" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Spaces for different sides of you</h3>
-              <p className="text-muted-foreground">
-                Organize your tabs into Spaces — work, personal, hobbies. Switch contexts instantly without losing your flow.
-              </p>
-            </div>
-
-            <div className="group p-8 rounded-2xl bg-card border border-card-border hover-elevate active-elevate-2 transition-all" data-testid="card-feature-customization">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-chart-2 to-chart-4 flex items-center justify-center mb-6">
-                <Sparkles className="w-6 h-6 text-primary-foreground" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Your perfect setup</h3>
-              <p className="text-muted-foreground">
-                Customize every pixel to match your style. From themes to layouts, make Arc truly yours.
-              </p>
-            </div>
-
-            <div className="group p-8 rounded-2xl bg-card border border-card-border hover-elevate active-elevate-2 transition-all" data-testid="card-feature-privacy">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-chart-3 to-chart-1 flex items-center justify-center mb-6">
-                <Shield className="w-6 h-6 text-primary-foreground" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">The comfort of privacy</h3>
-              <p className="text-muted-foreground">
-                Browse without being watched. Built-in tracking protection and privacy controls keep your data yours.
-              </p>
-            </div>
-
-            <div className="group p-8 rounded-2xl bg-card border border-card-border hover-elevate active-elevate-2 transition-all" data-testid="card-feature-performance">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-chart-4 to-chart-3 flex items-center justify-center mb-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="group p-6 rounded-2xl bg-card border border-card-border hover-elevate active-elevate-2 transition-all" data-testid="card-highlight-frontend">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-chart-1 to-chart-2 flex items-center justify-center mb-4">
                 <Zap className="w-6 h-6 text-primary-foreground" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Lightning fast</h3>
-              <p className="text-muted-foreground">
-                Built on modern web technologies for speed that feels instant. Every click, every page, blazing fast.
+              <h3 className="text-lg font-semibold mb-2">Modern Frontend</h3>
+              <p className="text-sm text-muted-foreground">
+                Fast, intuitive experience with React + TypeScript
               </p>
             </div>
 
-            <div className="group p-8 rounded-2xl bg-card border border-card-border hover-elevate active-elevate-2 transition-all" data-testid="card-feature-split">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-chart-1 to-chart-4 flex items-center justify-center mb-6">
-                <Layers className="w-6 h-6 text-primary-foreground" />
+            <div className="group p-6 rounded-2xl bg-card border border-card-border hover-elevate active-elevate-2 transition-all" data-testid="card-highlight-sync">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-chart-2 to-chart-3 flex items-center justify-center mb-4">
+                <TrendingUp className="w-6 h-6 text-primary-foreground" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Split View</h3>
-              <p className="text-muted-foreground">
-                Work with two sites side-by-side without the hassle. Perfect for research, comparison, and productivity.
+              <h3 className="text-lg font-semibold mb-2">Live Data Sync</h3>
+              <p className="text-sm text-muted-foreground">
+                Always-current information across all operations
               </p>
             </div>
 
-            <div className="group p-8 rounded-2xl bg-card border border-card-border hover-elevate active-elevate-2 transition-all" data-testid="card-feature-design">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-chart-2 to-chart-3 flex items-center justify-center mb-6">
-                <Sparkles className="w-6 h-6 text-primary-foreground" />
+            <div className="group p-6 rounded-2xl bg-card border border-card-border hover-elevate active-elevate-2 transition-all" data-testid="card-highlight-tracking">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-chart-3 to-chart-4 flex items-center justify-center mb-4">
+                <Clock className="w-6 h-6 text-primary-foreground" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Thoughtfully designed</h3>
-              <p className="text-muted-foreground">
-                Every detail crafted with care. A browser that's as beautiful as it is powerful.
+              <h3 className="text-lg font-semibold mb-2">Precise Session Tracking</h3>
+              <p className="text-sm text-muted-foreground">
+                Accurate countdowns and billing with robust timers
+              </p>
+            </div>
+
+            <div className="group p-6 rounded-2xl bg-card border border-card-border hover-elevate active-elevate-2 transition-all" data-testid="card-highlight-security">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-chart-4 to-chart-1 flex items-center justify-center mb-4">
+                <Shield className="w-6 h-6 text-primary-foreground" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Robust Security</h3>
+              <p className="text-sm text-muted-foreground">
+                Role-based access control protects critical data
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Showcase Section 1 - Browsing */}
-      <section className="py-20 md:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-chart-1/5 to-transparent"></div>
-        
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
-                <Layers className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium">Tab Management</span>
-              </div>
-              
-              <h2 className="text-4xl md:text-5xl font-bold mb-6" data-testid="text-showcase-tabs-heading">
-                Space for the different
-                <br />
-                sides of you
-              </h2>
-              
-              <p className="text-lg text-muted-foreground mb-8">
-                Organize your life into Spaces. Keep work tabs separate from personal browsing.
-                Switch contexts without losing your place. Your browser should adapt to you, not the other way around.
-              </p>
+      {/* Core Operational Features */}
+      <section className="py-20 md:py-32 relative bg-card/30">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4" data-testid="text-features-heading">
+              Core Operational Features
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Essential tools designed to optimize daily gaming center operations
+            </p>
+          </div>
 
-              <ul className="space-y-4 mb-8">
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Session Management */}
+            <div className="group p-8 rounded-2xl bg-card border border-card-border hover-elevate active-elevate-2 transition-all" data-testid="card-feature-sessions">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-chart-1 to-chart-2 flex items-center justify-center mb-6">
+                <MonitorPlay className="w-7 h-7 text-primary-foreground" />
+              </div>
+              <h3 className="text-2xl font-semibold mb-4">Real-time Session Management</h3>
+              <p className="text-muted-foreground mb-6">
+                Effortlessly track gaming sessions across PC, consoles, VR, and simulators. Includes countdown timers, 
+                automatic status updates, and flexible pause/resume functionality.
+              </p>
+              <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Automatic organization</h4>
-                    <p className="text-sm text-muted-foreground">Tabs automatically organize themselves based on your activity</p>
-                  </div>
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Live session tracking & status updates</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Infinite customization</h4>
-                    <p className="text-sm text-muted-foreground">Color-code your spaces and make them uniquely yours</p>
-                  </div>
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Visual & audio countdown timers</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Quick switching</h4>
-                    <p className="text-sm text-muted-foreground">Jump between spaces with a single keyboard shortcut</p>
-                  </div>
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Multi-device support (PC, PS5, VR, simulators)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Flexible pause and resume options</span>
                 </li>
               </ul>
             </div>
 
-            <div className="order-1 lg:order-2" data-testid="image-showcase-tabs">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50 transform hover:scale-[1.02] transition-transform duration-500">
-                <img 
-                  src={browserTabsImage} 
-                  alt="Arc Browser Tab Management"
-                  className="w-full h-auto"
-                />
+            {/* Booking Management */}
+            <div className="group p-8 rounded-2xl bg-card border border-card-border hover-elevate active-elevate-2 transition-all" data-testid="card-feature-booking">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-chart-2 to-chart-3 flex items-center justify-center mb-6">
+                <CalendarCheck className="w-7 h-7 text-primary-foreground" />
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Showcase Section 2 - Customization */}
-      <section className="py-20 md:py-32 relative">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div data-testid="image-showcase-customization">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50 transform hover:scale-[1.02] transition-transform duration-500">
-                <img 
-                  src={customizationImage} 
-                  alt="Arc Browser Customization"
-                  className="w-full h-auto"
-                />
-              </div>
-            </div>
-
-            <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
-                <Sparkles className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium">Personalization</span>
-              </div>
-              
-              <h2 className="text-4xl md:text-5xl font-bold mb-6" data-testid="text-showcase-customization-heading">
-                Your perfect setup
-              </h2>
-              
-              <p className="text-lg text-muted-foreground mb-8">
-                Make Arc truly yours with endless customization options. Choose your color scheme,
-                arrange your sidebar, and create a browsing experience that feels like home.
+              <h3 className="text-2xl font-semibold mb-4">Streamlined Booking Management</h3>
+              <p className="text-muted-foreground mb-6">
+                Handle walk-in and advance bookings with intelligent conflict detection and instant seat allocation, 
+                ensuring smooth customer flow and efficient resource utilization.
               </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Quick walk-in processing</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Advance reservation system</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Automated conflict prevention</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Bulk operations for events/parties</span>
+                </li>
+              </ul>
+            </div>
 
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-chart-1 to-chart-2 flex items-center justify-center flex-shrink-0">
-                    <Sparkles className="w-6 h-6 text-primary-foreground" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Themes & Colors</h4>
-                    <p className="text-sm text-muted-foreground">Choose from beautiful presets or create your own custom theme</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-chart-2 to-chart-4 flex items-center justify-center flex-shrink-0">
-                    <Layers className="w-6 h-6 text-primary-foreground" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Flexible Layouts</h4>
-                    <p className="text-sm text-muted-foreground">Arrange your interface exactly how you want it</p>
-                  </div>
-                </div>
+            {/* Food & Inventory */}
+            <div className="group p-8 rounded-2xl bg-card border border-card-border hover-elevate active-elevate-2 transition-all" data-testid="card-feature-inventory">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-chart-3 to-chart-4 flex items-center justify-center mb-6">
+                <ShoppingCart className="w-7 h-7 text-primary-foreground" />
               </div>
+              <h3 className="text-2xl font-semibold mb-4">Integrated Food & Inventory</h3>
+              <p className="text-muted-foreground mb-6">
+                Manage food and beverage sales seamlessly with dynamic pricing, real-time order tracking, 
+                and comprehensive inventory control.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Comprehensive item catalog</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Direct order integration with bookings</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Real-time quantity tracking</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Revenue analytics for F&B</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Financial Management */}
+            <div className="group p-8 rounded-2xl bg-card border border-card-border hover-elevate active-elevate-2 transition-all" data-testid="card-feature-financial">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-chart-4 to-chart-1 flex items-center justify-center mb-6">
+                <DollarSign className="w-7 h-7 text-primary-foreground" />
+              </div>
+              <h3 className="text-2xl font-semibold mb-4">Comprehensive Financial Management</h3>
+              <p className="text-muted-foreground mb-6">
+                Gain clear insights into your center's finances with detailed expense tracking, category-wise reporting, 
+                and flexible export capabilities for informed decision-making.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Detailed expense categorization</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">CSV/PDF export for easy accounting</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Monthly & quarterly financial summaries</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Integrated revenue tracking</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Showcase Section 3 - Split View */}
-      <section className="py-20 md:py-32 relative overflow-hidden" id="privacy">
-        <div className="absolute inset-0 bg-gradient-to-bl from-chart-2/5 to-transparent"></div>
+      {/* Tech Stack */}
+      <section className="py-20 md:py-32 relative overflow-hidden" id="tech">
+        <div className="absolute inset-0 bg-gradient-to-br from-chart-1/5 to-transparent"></div>
         
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
-                <Zap className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium">Productivity</span>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4" data-testid="text-tech-heading">
+              Built with Cutting-Edge Technology
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Leveraging a modern, robust tech stack ensures reliability, performance, and scalability
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Frontend Stack */}
+            <div className="p-8 rounded-2xl bg-card border border-card-border" data-testid="card-frontend-stack">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-chart-1 to-chart-2 flex items-center justify-center">
+                  <SiReact className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <h3 className="text-2xl font-semibold">Frontend Stack</h3>
               </div>
-              
-              <h2 className="text-4xl md:text-5xl font-bold mb-6" data-testid="text-showcase-splitview-heading">
-                Work smarter with
-                <br />
-                Split View
-              </h2>
-              
-              <p className="text-lg text-muted-foreground mb-8">
-                View two websites side-by-side without the window management hassle.
-                Perfect for research, writing, coding, or just keeping an eye on multiple things at once.
-              </p>
+              <p className="text-muted-foreground mb-6">Intuitive User Experience</p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">React 18+ with TypeScript for type-safe, maintainable code</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">Vite for lightning-fast development and builds</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">TanStack React Query for efficient data fetching</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">Radix UI & shadcn/ui components for polished interface</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">Tailwind CSS with dark mode support</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">React Hook Form + Zod for robust form validation</span>
+                </li>
+              </ul>
             </div>
 
-            <div className="order-1 lg:order-2" data-testid="image-showcase-splitview">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50 transform hover:scale-[1.02] transition-transform duration-500">
-                <img 
-                  src={splitViewImage} 
-                  alt="Arc Browser Split View"
-                  className="w-full h-auto"
-                />
+            {/* Backend Stack */}
+            <div className="p-8 rounded-2xl bg-card border border-card-border" data-testid="card-backend-stack">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-chart-3 to-chart-4 flex items-center justify-center">
+                  <Database className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <h3 className="text-2xl font-semibold">Backend Stack</h3>
               </div>
+              <p className="text-muted-foreground mb-6">Powering Performance & Security</p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">Express.js with TypeScript for scalable API</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">PostgreSQL via Neon for reliable data storage</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">Drizzle ORM for type-safe database interactions</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">Bcrypt for secure password hashing</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">RESTful API design for seamless integration</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">Express-session for secure authentication</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Database Schema */}
+          <div className="mt-12 p-8 rounded-2xl bg-card border border-card-border" data-testid="card-database-schema">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-chart-2 to-chart-3 flex items-center justify-center">
+                <Database className="w-6 h-6 text-primary-foreground" />
+              </div>
+              <h3 className="text-2xl font-semibold">Comprehensive Database Schema</h3>
+            </div>
+            <p className="text-muted-foreground mb-8">
+              16-table schema meticulously covers all aspects of gaming center operations
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                "Bookings",
+                "Users", 
+                "Pricing Configs",
+                "Expenses",
+                "Loyalty Members",
+                "Loyalty Events",
+                "Loyalty Config",
+                "Game Updates",
+                "Center Info",
+                "Gallery Images",
+                "Facilities",
+                "Games",
+                "Booking History",
+                "Device Configs",
+                "Food Items",
+                "Activity Logs"
+              ].map((table) => (
+                <div key={table} className="flex items-center gap-2 p-3 rounded-lg bg-background/50">
+                  <Database className="w-4 h-4 text-primary flex-shrink-0" />
+                  <span className="text-sm font-medium">{table}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Showcase Section 4 - Privacy */}
-      <section className="py-20 md:py-32 relative">
+      {/* Benefits Section */}
+      <section className="py-20 md:py-32 relative" id="benefits">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div data-testid="image-showcase-privacy">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50 transform hover:scale-[1.02] transition-transform duration-500">
-                <img 
-                  src={privacyImage} 
-                  alt="Arc Browser Privacy Features"
-                  className="w-full h-auto"
-                />
-              </div>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4" data-testid="text-benefits-heading">
+              Why Choose Ankylo Gaming POS?
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Transform your gaming center into a highly efficient and profitable operation
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="p-6 rounded-2xl bg-card border border-card-border hover-elevate active-elevate-2 transition-all" data-testid="card-benefit-operations">
+              <Layers className="w-10 h-10 text-primary mb-4" />
+              <h3 className="text-lg font-semibold mb-2">Streamlined Operations</h3>
+              <p className="text-sm text-muted-foreground">
+                Centralized management for all activities, reducing manual effort
+              </p>
             </div>
 
-            <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
-                <Shield className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium">Security</span>
-              </div>
-              
-              <h2 className="text-4xl md:text-5xl font-bold mb-6" data-testid="text-showcase-privacy-heading">
-                The comfort of privacy
-              </h2>
-              
-              <p className="text-lg text-muted-foreground mb-8">
-                Browse without being watched. Arc blocks trackers by default and gives you
-                complete control over your data. Your browsing history is yours alone.
+            <div className="p-6 rounded-2xl bg-card border border-card-border hover-elevate active-elevate-2 transition-all" data-testid="card-benefit-monitoring">
+              <BarChart3 className="w-10 h-10 text-primary mb-4" />
+              <h3 className="text-lg font-semibold mb-2">Real-time Monitoring</h3>
+              <p className="text-sm text-muted-foreground">
+                Live tracking of sessions and availability for optimal resource use
               </p>
+            </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div className="p-4 rounded-xl bg-card border border-card-border">
-                  <Lock className="w-8 h-8 text-primary mb-3" />
-                  <h4 className="font-semibold mb-1">Ad Blocking</h4>
-                  <p className="text-sm text-muted-foreground">Built-in protection</p>
-                </div>
-                <div className="p-4 rounded-xl bg-card border border-card-border">
-                  <Shield className="w-8 h-8 text-primary mb-3" />
-                  <h4 className="font-semibold mb-1">Tracker Protection</h4>
-                  <p className="text-sm text-muted-foreground">Stop being followed</p>
-                </div>
-              </div>
+            <div className="p-6 rounded-2xl bg-card border border-card-border hover-elevate active-elevate-2 transition-all" data-testid="card-benefit-financial">
+              <DollarSign className="w-10 h-10 text-primary mb-4" />
+              <h3 className="text-lg font-semibold mb-2">Financial Control</h3>
+              <p className="text-sm text-muted-foreground">
+                Comprehensive tracking of expenses and revenue for better budgeting
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-card border border-card-border hover-elevate active-elevate-2 transition-all" data-testid="card-benefit-satisfaction">
+              <Users className="w-10 h-10 text-primary mb-4" />
+              <h3 className="text-lg font-semibold mb-2">Enhanced Customer Satisfaction</h3>
+              <p className="text-sm text-muted-foreground">
+                Automated customer service and public status boards improve experience
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-card border border-card-border hover-elevate active-elevate-2 transition-all" data-testid="card-benefit-decisions">
+              <FileText className="w-10 h-10 text-primary mb-4" />
+              <h3 className="text-lg font-semibold mb-2">Data-Driven Decisions</h3>
+              <p className="text-sm text-muted-foreground">
+                Actionable analytics and reporting for strategic insights
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-card border border-card-border hover-elevate active-elevate-2 transition-all" data-testid="card-benefit-scalability">
+              <TrendingUp className="w-10 h-10 text-primary mb-4" />
+              <h3 className="text-lg font-semibold mb-2">Future-Proof Scalability</h3>
+              <p className="text-sm text-muted-foreground">
+                Flexible device and pricing configurations adapt to your growth
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-card border border-card-border hover-elevate active-elevate-2 transition-all" data-testid="card-benefit-security">
+              <Lock className="w-10 h-10 text-primary mb-4" />
+              <h3 className="text-lg font-semibold mb-2">Enterprise Security</h3>
+              <p className="text-sm text-muted-foreground">
+                Robust role-based access and restrictions protect your business
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-card border border-card-border hover-elevate active-elevate-2 transition-all" data-testid="card-benefit-reliability">
+              <SiTypescript className="w-10 h-10 text-primary mb-4" />
+              <h3 className="text-lg font-semibold mb-2">Type Safety & Reliability</h3>
+              <p className="text-sm text-muted-foreground">
+                Full-stack TypeScript ensures dependable, error-free operations
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 md:py-32 relative overflow-hidden" id="download">
+      <section className="py-20 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-chart-1 via-chart-2 to-chart-3 opacity-100">
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/50"></div>
         </div>
 
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6" data-testid="text-cta-heading">
             <span className="bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
-              Enter your new home
+              Ready to Transform Your
             </span>
             <br />
             <span className="bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
-              on the Internet
+              Gaming Center?
             </span>
           </h2>
 
           <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Join thousands of people who've already made the switch to a better browsing experience.
+            Ankylo Gaming POS is the complete solution built for modern gaming centers, combining 
+            cutting-edge technology with unparalleled functionality.
           </p>
+
+          {/* Tech Icons */}
+          <div className="flex items-center justify-center gap-8 mb-12">
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-16 h-16 rounded-xl bg-card border border-card-border flex items-center justify-center">
+                <SiReact className="w-8 h-8 text-primary" />
+              </div>
+              <span className="text-sm text-muted-foreground">React + TypeScript</span>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-16 h-16 rounded-xl bg-card border border-card-border flex items-center justify-center">
+                <SiPostgresql className="w-8 h-8 text-primary" />
+              </div>
+              <span className="text-sm text-muted-foreground">PostgreSQL</span>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <div className="w-16 h-16 rounded-xl bg-card border border-card-border flex items-center justify-center">
+                <TrendingUp className="w-8 h-8 text-primary" />
+              </div>
+              <span className="text-sm text-muted-foreground">Real-time Updates</span>
+            </div>
+          </div>
 
           <form onSubmit={handleEmailSubmit} className="max-w-md mx-auto">
             <div className="flex gap-3" data-testid="form-email-signup-footer">
@@ -472,7 +633,7 @@ export default function Home() {
                 <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                 <Input
                   type="email"
-                  placeholder="Enter your email..."
+                  placeholder="Enter your email for demo..."
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="pl-12 h-12 bg-card/50 backdrop-blur-sm border-border/50 focus:border-primary rounded-full"
@@ -487,7 +648,7 @@ export default function Home() {
                 disabled={signupMutation.isPending}
                 data-testid="button-submit-email-footer"
               >
-                {signupMutation.isPending ? "Joining..." : "Get Arc"}
+                {signupMutation.isPending ? "Requesting..." : "Get Started"}
               </Button>
             </div>
           </form>
@@ -502,39 +663,39 @@ export default function Home() {
               <h4 className="font-semibold mb-4 text-foreground">Product</h4>
               <ul className="space-y-3">
                 <li><a href="#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-features">Features</a></li>
-                <li><a href="#download" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-download">Download</a></li>
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-releases">Releases</a></li>
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-roadmap">Roadmap</a></li>
+                <li><a href="#tech" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-tech">Technology</a></li>
+                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-pricing">Pricing</a></li>
+                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-demo">Request Demo</a></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-semibold mb-4 text-foreground">Company</h4>
               <ul className="space-y-3">
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-about">About</a></li>
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-blog">Blog</a></li>
+                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-about">About Us</a></li>
+                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-contact">Contact</a></li>
                 <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-careers">Careers</a></li>
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-press">Press</a></li>
+                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-partners">Partners</a></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-semibold mb-4 text-foreground">Resources</h4>
               <ul className="space-y-3">
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-support">Support</a></li>
                 <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-docs">Documentation</a></li>
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-community">Community</a></li>
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-contact">Contact</a></li>
+                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-guides">Guides</a></li>
+                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-support">Support</a></li>
+                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-api">API Reference</a></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-semibold mb-4 text-foreground">Legal</h4>
               <ul className="space-y-3">
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-privacy">Privacy</a></li>
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-terms">Terms</a></li>
+                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-privacy">Privacy Policy</a></li>
+                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-terms">Terms of Service</a></li>
                 <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-security">Security</a></li>
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-licenses">Licenses</a></li>
+                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-compliance">Compliance</a></li>
               </ul>
             </div>
           </div>
@@ -542,21 +703,17 @@ export default function Home() {
           <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-chart-1 to-chart-2 flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-primary-foreground" />
+                <MonitorPlay className="w-5 h-5 text-primary-foreground" />
               </div>
-              <span className="text-sm text-muted-foreground">© 2024 Arc Browser. All rights reserved.</span>
+              <span className="text-sm text-muted-foreground">© 2024 Ankylo Gaming POS. All rights reserved.</span>
             </div>
 
-            <div className="flex items-center gap-4">
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="link-twitter" aria-label="X (Twitter)">
-                <SiX className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="link-github" aria-label="GitHub">
-                <SiGithub className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors" data-testid="link-discord" aria-label="Discord">
-                <SiDiscord className="w-5 h-5" />
-              </a>
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <SiReact className="w-5 h-5" />
+              <span>+</span>
+              <SiTypescript className="w-5 h-5" />
+              <span>+</span>
+              <SiPostgresql className="w-5 h-5" />
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
@@ -27,6 +28,7 @@ import browserTabsImage from "@assets/generated_images/Browser_interface_with_si
 export default function Home() {
   const [email, setEmail] = useState("");
   const { toast } = useToast();
+  const [, setLocation] = useLocation();
 
   const signupMutation = useMutation({
     mutationFn: async (email: string) => {
@@ -135,6 +137,7 @@ export default function Home() {
                 size="lg" 
                 className="rounded-full px-10 py-6 text-lg bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90"
                 data-testid="button-explore-features"
+                onClick={() => setLocation("/features")}
               >
                 Explore Our Features
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -289,6 +292,7 @@ export default function Home() {
               size="lg" 
               className="rounded-full px-10 py-6 text-lg bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90"
               data-testid="button-explore-all-features"
+              onClick={() => setLocation("/features")}
             >
               Explore All Features
               <ArrowRight className="w-5 h-5 ml-2" />

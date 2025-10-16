@@ -479,6 +479,258 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Comparison Section */}
+      <section className="py-24 md:py-32 bg-lines">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              Why Choose Ankylo Gaming POS?
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              See how we compare to other gaming center management solutions
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="max-w-6xl mx-auto"
+          >
+            <div className="rounded-3xl border border-border/50 bg-card/50 backdrop-blur overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full" data-testid="table-comparison">
+                  <thead>
+                    <tr className="border-b border-border/50">
+                      <th className="text-left p-6 font-bold text-lg md:text-xl">Feature</th>
+                      <th className="text-center p-6 font-bold text-lg md:text-xl bg-gradient-to-br from-chart-1/10 to-chart-2/10">
+                        Ankylo Gaming POS
+                      </th>
+                      <th className="text-center p-6 font-bold text-lg md:text-xl">Pancafe Pro</th>
+                      <th className="text-center p-6 font-bold text-lg md:text-xl">Excel Sheet</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-border/50" data-testid="row-comparison-realtime">
+                      <td className="p-6 font-medium">Real-time Session Tracking</td>
+                      <td className="p-6 text-center bg-gradient-to-br from-chart-1/5 to-chart-2/5">
+                        <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
+                      </td>
+                      <td className="p-6 text-center">
+                        <CheckCircle2 className="w-6 h-6 text-muted-foreground mx-auto" />
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="text-2xl text-muted-foreground">✗</span>
+                      </td>
+                    </tr>
+
+                    <tr className="border-b border-border/50" data-testid="row-comparison-automation">
+                      <td className="p-6 font-medium">Automated Billing & Invoicing</td>
+                      <td className="p-6 text-center bg-gradient-to-br from-chart-1/5 to-chart-2/5">
+                        <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
+                      </td>
+                      <td className="p-6 text-center">
+                        <CheckCircle2 className="w-6 h-6 text-muted-foreground mx-auto" />
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="text-2xl text-muted-foreground">✗</span>
+                      </td>
+                    </tr>
+
+                    <tr className="border-b border-border/50" data-testid="row-comparison-inventory">
+                      <td className="p-6 font-medium">Food & Beverage Management</td>
+                      <td className="p-6 text-center bg-gradient-to-br from-chart-1/5 to-chart-2/5">
+                        <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="text-2xl text-muted-foreground">✗</span>
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="text-muted-foreground text-sm">Manual Only</span>
+                      </td>
+                    </tr>
+
+                    <tr className="border-b border-border/50" data-testid="row-comparison-analytics">
+                      <td className="p-6 font-medium">Advanced Analytics & Reports</td>
+                      <td className="p-6 text-center bg-gradient-to-br from-chart-1/5 to-chart-2/5">
+                        <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="text-muted-foreground text-sm">Basic</span>
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="text-muted-foreground text-sm">Manual Calculations</span>
+                      </td>
+                    </tr>
+
+                    <tr className="border-b border-border/50" data-testid="row-comparison-booking">
+                      <td className="p-6 font-medium">Advanced Booking System</td>
+                      <td className="p-6 text-center bg-gradient-to-br from-chart-1/5 to-chart-2/5">
+                        <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="text-muted-foreground text-sm">Basic</span>
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="text-2xl text-muted-foreground">✗</span>
+                      </td>
+                    </tr>
+
+                    <tr className="border-b border-border/50" data-testid="row-comparison-multidevice">
+                      <td className="p-6 font-medium">Multi-Device Support (PC, PS5, Xbox, VR)</td>
+                      <td className="p-6 text-center bg-gradient-to-br from-chart-1/5 to-chart-2/5">
+                        <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
+                      </td>
+                      <td className="p-6 text-center">
+                        <CheckCircle2 className="w-6 h-6 text-muted-foreground mx-auto" />
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="text-muted-foreground text-sm">Manual Only</span>
+                      </td>
+                    </tr>
+
+                    <tr className="border-b border-border/50" data-testid="row-comparison-customer">
+                      <td className="p-6 font-medium">Customer Management & Loyalty</td>
+                      <td className="p-6 text-center bg-gradient-to-br from-chart-1/5 to-chart-2/5">
+                        <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="text-muted-foreground text-sm">Limited</span>
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="text-2xl text-muted-foreground">✗</span>
+                      </td>
+                    </tr>
+
+                    <tr className="border-b border-border/50" data-testid="row-comparison-expense">
+                      <td className="p-6 font-medium">Expense Tracking</td>
+                      <td className="p-6 text-center bg-gradient-to-br from-chart-1/5 to-chart-2/5">
+                        <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="text-2xl text-muted-foreground">✗</span>
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="text-muted-foreground text-sm">Manual Only</span>
+                      </td>
+                    </tr>
+
+                    <tr className="border-b border-border/50" data-testid="row-comparison-live">
+                      <td className="p-6 font-medium">Live Availability Display</td>
+                      <td className="p-6 text-center bg-gradient-to-br from-chart-1/5 to-chart-2/5">
+                        <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="text-2xl text-muted-foreground">✗</span>
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="text-2xl text-muted-foreground">✗</span>
+                      </td>
+                    </tr>
+
+                    <tr className="border-b border-border/50" data-testid="row-comparison-alerts">
+                      <td className="p-6 font-medium">Audio & Visual Alerts</td>
+                      <td className="p-6 text-center bg-gradient-to-br from-chart-1/5 to-chart-2/5">
+                        <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="text-muted-foreground text-sm">Basic</span>
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="text-2xl text-muted-foreground">✗</span>
+                      </td>
+                    </tr>
+
+                    <tr className="border-b border-border/50" data-testid="row-comparison-timeline">
+                      <td className="p-6 font-medium">Timeline View & Scheduling</td>
+                      <td className="p-6 text-center bg-gradient-to-br from-chart-1/5 to-chart-2/5">
+                        <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="text-muted-foreground text-sm">Limited</span>
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="text-2xl text-muted-foreground">✗</span>
+                      </td>
+                    </tr>
+
+                    <tr className="border-b border-border/50" data-testid="row-comparison-role">
+                      <td className="p-6 font-medium">Role-Based Access Control</td>
+                      <td className="p-6 text-center bg-gradient-to-br from-chart-1/5 to-chart-2/5">
+                        <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="text-muted-foreground text-sm">Limited</span>
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="text-2xl text-muted-foreground">✗</span>
+                      </td>
+                    </tr>
+
+                    <tr className="border-b border-border/50" data-testid="row-comparison-cloud">
+                      <td className="p-6 font-medium">Cloud-Based & Multi-Location</td>
+                      <td className="p-6 text-center bg-gradient-to-br from-chart-1/5 to-chart-2/5">
+                        <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="text-muted-foreground text-sm">Local Only</span>
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="text-muted-foreground text-sm">File Sharing</span>
+                      </td>
+                    </tr>
+
+                    <tr data-testid="row-comparison-ease">
+                      <td className="p-6 font-medium">Ease of Use</td>
+                      <td className="p-6 text-center bg-gradient-to-br from-chart-1/5 to-chart-2/5">
+                        <div className="flex items-center justify-center gap-1">
+                          <span className="text-chart-1">★★★★★</span>
+                        </div>
+                      </td>
+                      <td className="p-6 text-center">
+                        <div className="flex items-center justify-center gap-1">
+                          <span className="text-muted-foreground">★★★☆☆</span>
+                        </div>
+                      </td>
+                      <td className="p-6 text-center">
+                        <div className="flex items-center justify-center gap-1">
+                          <span className="text-muted-foreground">★★☆☆☆</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-center mt-12"
+            >
+              <Button 
+                size="lg" 
+                className="rounded-full px-10 py-6 text-lg bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90"
+                data-testid="button-start-trial-comparison"
+                onClick={() => setContactDialogOpen(true)}
+              >
+                Experience the Difference
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section className="py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">

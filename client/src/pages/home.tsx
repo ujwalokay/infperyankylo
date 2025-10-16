@@ -421,6 +421,137 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section className="py-24 md:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Choose the perfect plan for your gaming center
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Free Trial Plan */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative p-8 rounded-3xl border border-border/50 bg-card/50 backdrop-blur"
+              data-testid="card-plan-trial"
+            >
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold mb-2">Free Trial</h3>
+                <p className="text-muted-foreground">Perfect to get started</p>
+              </div>
+              
+              <div className="mb-8">
+                <div className="flex items-baseline gap-2">
+                  <span className="text-5xl font-bold">Free</span>
+                </div>
+                <p className="text-sm text-muted-foreground mt-2">14 days trial period</p>
+              </div>
+
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
+                  <span>Full access to all features</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
+                  <span>Session & booking management</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
+                  <span>Inventory tracking</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
+                  <span>Basic support</span>
+                </li>
+              </ul>
+
+              <Button 
+                className="w-full rounded-full py-6 text-lg" 
+                variant="outline"
+                data-testid="button-start-trial"
+              >
+                Start Free Trial
+              </Button>
+            </motion.div>
+
+            {/* Pro Plan */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="relative p-8 rounded-3xl border-2 border-chart-1 bg-gradient-to-b from-chart-1/10 to-transparent backdrop-blur"
+              data-testid="card-plan-pro"
+            >
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                <span className="px-4 py-1.5 rounded-full bg-gradient-to-r from-chart-1 to-chart-2 text-sm font-semibold text-white">
+                  Most Popular
+                </span>
+              </div>
+
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold mb-2">Pro Plan</h3>
+                <p className="text-muted-foreground">For growing gaming centers</p>
+              </div>
+              
+              <div className="mb-8">
+                <div className="flex items-baseline gap-2">
+                  <span className="text-5xl font-bold">₹699</span>
+                  <span className="text-muted-foreground">/month</span>
+                </div>
+                <p className="text-sm text-muted-foreground mt-2">Billed monthly</p>
+              </div>
+
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
+                  <span>Everything in Free Trial</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
+                  <span>Unlimited devices & sessions</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
+                  <span>Advanced analytics & reports</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
+                  <span>Priority support</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
+                  <span>Custom branding</span>
+                </li>
+              </ul>
+
+              <Button 
+                className="w-full rounded-full py-6 text-lg bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90"
+                data-testid="button-get-started"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-32 md:py-40 bg-lines">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">

@@ -33,6 +33,7 @@ import {
 } from "lucide-react";
 
 import browserTabsImage from "@assets/generated_images/Browser_interface_with_sidebar_tabs_328237be.png";
+import ankyloLogo from "@assets/WhatsApp_Image_2025-10-10_at_18.36.58_1fb5438e-removebg-preview_1760631104312.png";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -100,9 +101,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-chart-1 to-chart-2 flex items-center justify-center">
-                <MonitorPlay className="w-6 h-6 text-white" />
-              </div>
+              <img 
+                src={ankyloLogo} 
+                alt="Ankylo Logo" 
+                className="w-12 h-12"
+              />
               <span className="text-2xl font-bold text-foreground">Ankylo Gaming POS</span>
             </div>
             

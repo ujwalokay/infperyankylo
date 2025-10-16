@@ -12,7 +12,6 @@ import {
   MonitorPlay,
   CalendarCheck,
   ShoppingCart,
-  DollarSign,
   Clock,
   Database,
   BarChart3,
@@ -265,7 +264,7 @@ export default function Home() {
               data-testid="card-feature-financial"
             >
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-chart-4/10 to-chart-1/10 flex items-center justify-center">
-                <DollarSign className="w-8 h-8 text-chart-4" />
+                <TrendingUp className="w-8 h-8 text-chart-4" />
               </div>
               <h3 className="text-2xl md:text-3xl font-bold">Comprehensive Financial Management</h3>
               <p className="text-lg text-muted-foreground leading-relaxed">

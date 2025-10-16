@@ -15,7 +15,7 @@ import {
   FileCheck,
   CalendarCheck,
   Users,
-  DollarSign
+  Activity
 } from "lucide-react";
 
 import seatManagementImage from "@assets/Screenshot (135)_1760629404121.png";
@@ -120,9 +120,9 @@ export default function Features() {
     },
     {
       id: 12,
-      icon: DollarSign,
-      title: "Payment Processing",
-      description: "Handle multiple payment methods seamlessly. Support cash, cards, UPI, and digital wallets with automatic invoice generation and payment tracking for complete financial transparency.",
+      icon: Activity,
+      title: "Live Availability Tracking",
+      description: "Standalone public page for customers to view real-time availability of gaming devices. See live status of PCs, PS5, Xbox, VR systems, and simulators before visiting your center. Attract walk-ins with transparent availability information.",
       image: seatManagementImage,
       color: "from-chart-4 to-chart-3"
     }

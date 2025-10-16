@@ -100,19 +100,21 @@ export default function Home() {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 md:gap-3">
               <img 
                 src={ankyloLogo} 
                 alt="Ankylo Logo" 
-                className="w-12 h-12"
+                className="w-10 h-10 md:w-12 md:h-12"
               />
-              <span className="text-2xl font-bold text-foreground">Ankylo Gaming POS</span>
+              <span className="text-lg md:text-2xl font-bold text-foreground hidden sm:inline">Ankylo Gaming POS</span>
+              <span className="text-lg font-bold text-foreground sm:hidden">Ankylo</span>
             </div>
             
             <Dialog open={contactDialogOpen} onOpenChange={setContactDialogOpen}>
               <DialogTrigger asChild>
-                <Button size="lg" className="rounded-full px-8" data-testid="button-contact">
-                  Contact Us
+                <Button size="lg" className="rounded-full px-4 md:px-8" data-testid="button-contact">
+                  <span className="hidden sm:inline">Contact Us</span>
+                  <span className="sm:hidden">Contact</span>
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </DialogTrigger>

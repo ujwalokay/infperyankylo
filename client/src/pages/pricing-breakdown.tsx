@@ -117,7 +117,7 @@ export default function PricingBreakdown() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-chart-1/20 to-chart-2/20 border border-chart-1/30 mb-6"
             >
               <Tag className="w-4 h-4 text-chart-1" />
-              <span className="text-sm font-semibold">Special Launch Offer - {discountPercent}% OFF</span>
+              <span className="text-sm font-semibold">Early Adopter Benefit - Price Drops to ₹499/month</span>
             </motion.div>
 
             <motion.h1 
@@ -229,7 +229,7 @@ export default function PricingBreakdown() {
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
                     <p className="text-sm text-muted-foreground">
-                      <strong>Limited Time Offer:</strong> Lock in this discounted price forever! As a first-time customer during our launch period, you'll continue to pay only ₹699/month even when we increase prices later.
+                      <strong>Early Adopter Reward:</strong> Join now and pay ₹699/month for the first 6 months. After that, your price automatically reduces to just ₹499/month forever as a loyalty reward for being an early supporter!
                     </p>
                   </div>
                 </div>

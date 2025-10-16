@@ -41,35 +41,35 @@ export default function PricingBreakdown() {
       icon: Server,
       title: "Server Infrastructure",
       description: "High-performance cloud servers for fast, reliable access",
-      originalCost: 299,
+      originalCost: 500,
       color: "from-chart-1 to-chart-2"
     },
     {
       icon: Database,
       title: "Database Management",
       description: "Secure PostgreSQL database with automatic backups",
-      originalCost: 200,
+      originalCost: 400,
       color: "from-chart-2 to-chart-3"
     },
     {
       icon: Shield,
       title: "Security & SSL",
       description: "Enterprise-grade security with SSL certificates",
-      originalCost: 150,
+      originalCost: 300,
       color: "from-chart-3 to-chart-4"
     },
     {
       icon: Zap,
       title: "Premium Features",
       description: "Advanced analytics, reporting, and automation tools",
-      originalCost: 250,
+      originalCost: 325,
       color: "from-chart-4 to-chart-1"
     }
   ];
 
   const originalTotal = costs.reduce((sum, cost) => sum + cost.originalCost, 0);
-  const discountPercent = 22;
-  const discountAmount = Math.round(originalTotal * (discountPercent / 100));
+  const discountPercent = 54;
+  const discountAmount = originalTotal - 699;
   const finalPrice = 699;
 
   return (

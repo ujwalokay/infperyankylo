@@ -898,9 +898,11 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-chart-1 to-chart-2 flex items-center justify-center">
-                  <MonitorPlay className="w-6 h-6 text-white" />
-                </div>
+                <img 
+                  src={ankyloLogo} 
+                  alt="Ankylo Logo" 
+                  className="w-12 h-12"
+                />
                 <span className="text-xl font-bold">Ankylo</span>
               </div>
               <p className="text-muted-foreground">

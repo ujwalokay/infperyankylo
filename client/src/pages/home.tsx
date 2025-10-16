@@ -6,6 +6,14 @@ import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { motion } from "framer-motion";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { 
   Mail, 
   ArrowRight,
@@ -19,13 +27,16 @@ import {
   Shield,
   Zap,
   TrendingUp,
-  Users
+  Users,
+  FileText,
+  MessageCircle
 } from "lucide-react";
 
 import browserTabsImage from "@assets/generated_images/Browser_interface_with_sidebar_tabs_328237be.png";
 
 export default function Home() {
   const [email, setEmail] = useState("");
+  const [contactDialogOpen, setContactDialogOpen] = useState(false);
   const { toast } = useToast();
   const [, setLocation] = useLocation();
 
@@ -95,10 +106,54 @@ export default function Home() {
               <span className="text-2xl font-bold text-foreground">Ankylo Gaming POS</span>
             </div>
             
-            <Button size="lg" className="rounded-full px-8" data-testid="button-contact">
-              Contact Us
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
+            <Dialog open={contactDialogOpen} onOpenChange={setContactDialogOpen}>
+              <DialogTrigger asChild>
+                <Button size="lg" className="rounded-full px-8" data-testid="button-contact">
+                  Contact Us
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md">
+                <DialogHeader>
+                  <DialogTitle>Contact Us</DialogTitle>
+                  <DialogDescription>
+                    Choose your preferred way to get in touch with us
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="grid gap-4 py-4">
+                  <Button
+                    onClick={() => {
+                      window.open('https://forms.gle/your-google-form-id', '_blank');
+                      setContactDialogOpen(false);
+                    }}
+                    className="w-full justify-start gap-3 h-auto py-4"
+                    variant="outline"
+                    data-testid="button-google-form"
+                  >
+                    <FileText className="w-5 h-5" />
+                    <div className="text-left">
+                      <div className="font-semibold">Fill Google Form</div>
+                      <div className="text-sm text-muted-foreground">Share your requirements with us</div>
+                    </div>
+                  </Button>
+                  
+                  <Button
+                    onClick={() => {
+                      window.open('https://wa.me/your-number', '_blank');
+                      setContactDialogOpen(false);
+                    }}
+                    className="w-full justify-start gap-3 h-auto py-4 bg-green-600 hover:bg-green-700 text-white"
+                    data-testid="button-whatsapp"
+                  >
+                    <MessageCircle className="w-5 h-5" />
+                    <div className="text-left">
+                      <div className="font-semibold">Chat on WhatsApp</div>
+                      <div className="text-sm text-green-100">Get instant support</div>
+                    </div>
+                  </Button>
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </motion.nav>
@@ -487,8 +542,9 @@ export default function Home() {
                 className="w-full rounded-full py-6 text-lg" 
                 variant="outline"
                 data-testid="button-start-trial"
+                onClick={() => setContactDialogOpen(true)}
               >
-                Start Free Trial
+                Contact Us
               </Button>
             </motion.div>
 
@@ -546,6 +602,7 @@ export default function Home() {
               <Button 
                 className="w-full rounded-full py-6 text-lg bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90"
                 data-testid="button-get-started"
+                onClick={() => setContactDialogOpen(true)}
               >
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -571,8 +628,9 @@ export default function Home() {
               size="lg" 
               className="rounded-full px-12 py-7 text-xl bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90"
               data-testid="button-check-plans"
+              onClick={() => setContactDialogOpen(true)}
             >
-              Check Our Plans
+              Contact Us
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </motion.div>

@@ -213,6 +213,48 @@
   body {
     @apply font-sans antialiased bg-background text-foreground;
   }
+
+  /* Animated background lines */
+  .bg-lines {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bg-lines::before,
+  .bg-lines::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      hsl(var(--border)) 50%,
+      transparent 100%
+    );
+    opacity: 0.3;
+  }
+
+  .bg-lines::before {
+    left: 20%;
+    animation: lineMove 8s ease-in-out infinite;
+  }
+
+  .bg-lines::after {
+    right: 20%;
+    animation: lineMove 8s ease-in-out infinite reverse;
+  }
+
+  @keyframes lineMove {
+    0%, 100% {
+      transform: translateY(-10%);
+      opacity: 0.2;
+    }
+    50% {
+      transform: translateY(10%);
+      opacity: 0.4;
+    }
+  }
 }
 
 /**

@@ -18,7 +18,8 @@ import {
   CheckCircle2,
   Shield,
   Zap,
-  TrendingUp
+  TrendingUp,
+  Users
 } from "lucide-react";
 
 import browserTabsImage from "@assets/generated_images/Browser_interface_with_sidebar_tabs_328237be.png";
@@ -64,51 +65,37 @@ export default function Home() {
   };
 
   const fadeInUp = {
-    initial: { opacity: 0, y: 20 },
+    initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.5 }
+    transition: { duration: 0.6 }
   };
 
-  const staggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
+  const fadeInDown = {
+    initial: { opacity: 0, y: -20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.5 }
   };
 
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
       <motion.nav 
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-background/80 border-b border-border/50"
+        initial="initial"
+        animate="animate"
+        variants={fadeInDown}
+        className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-background/95 border-b border-border/40"
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-chart-1 to-chart-2 flex items-center justify-center">
-                <MonitorPlay className="w-5 h-5 text-white" />
+          <div className="flex items-center justify-between h-20">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-chart-1 to-chart-2 flex items-center justify-center">
+                <MonitorPlay className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold text-foreground">Ankylo</span>
+              <span className="text-2xl font-bold text-foreground">Ankylo Gaming POS</span>
             </div>
             
-            <div className="hidden md:flex items-center gap-8">
-              <a href="#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors" data-testid="link-features">
-                Features
-              </a>
-              <a href="#benefits" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors" data-testid="link-benefits">
-                Benefits
-              </a>
-              <a href="#pricing" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors" data-testid="link-pricing">
-                Pricing
-              </a>
-            </div>
-
-            <Button size="sm" className="rounded-full" data-testid="button-get-started">
-              Get Started
+            <Button size="lg" className="rounded-full px-8" data-testid="button-contact">
+              Contact Us
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           </div>
@@ -116,615 +103,401 @@ export default function Home() {
       </motion.nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
-        {/* Animated Gradient Background */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background"></div>
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.3 }}
-            transition={{ duration: 1 }}
-            className="absolute top-20 -left-40 w-96 h-96 bg-chart-1 rounded-full mix-blend-multiply filter blur-3xl"
-          />
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.3 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="absolute top-40 -right-40 w-96 h-96 bg-chart-2 rounded-full mix-blend-multiply filter blur-3xl"
-          />
-        </div>
-
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div 
-            initial="initial"
-            animate="animate"
-            variants={staggerContainer}
-            className="text-center max-w-4xl mx-auto mb-16"
-          >
+      <section className="relative pt-32 pb-24 md:pt-48 md:pb-32 bg-lines">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
             <motion.h1 
-              variants={fadeInUp}
-              className="text-5xl md:text-7xl font-bold tracking-tight mb-6" 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-tight" 
               data-testid="text-hero-heading"
             >
-              <span className="block text-foreground">Manage Gaming</span>
-              <span className="block bg-gradient-to-r from-chart-1 via-chart-2 to-chart-4 bg-clip-text text-transparent">
-                Easily and Smartly
-              </span>
+              Simplify, Manage, and Grow Your Gaming Center with Ankylo
             </motion.h1>
 
             <motion.p 
-              variants={fadeInUp}
-              className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8" 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed" 
               data-testid="text-hero-description"
             >
-              Ankylo helps you control operations, track sessions, and manage your gaming center with an intuitive dashboard.
+              Ankylo Gaming POS is a complete management system that helps gaming centers streamline operations, track sessions, and boost revenue with smart digital solutions.
             </motion.p>
 
-            {/* Email Signup Form */}
-            <motion.form 
-              variants={fadeInUp}
-              onSubmit={handleEmailSubmit} 
-              className="max-w-md mx-auto mb-16"
-            >
-              <div className="flex gap-3" data-testid="form-email-signup">
-                <div className="flex-1 relative">
-                  <Input
-                    type="email"
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="h-12 bg-card/50 backdrop-blur-sm border-border/50 focus:border-primary rounded-xl px-4"
-                    data-testid="input-email"
-                    disabled={signupMutation.isPending}
-                  />
-                </div>
-                <Button 
-                  type="submit" 
-                  size="lg" 
-                  className="rounded-xl px-8 bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90"
-                  disabled={signupMutation.isPending}
-                  data-testid="button-submit-email"
-                >
-                  {signupMutation.isPending ? "..." : "Try it Free"}
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-              </div>
-            </motion.form>
-
-            {/* Hero Image */}
-            <motion.div 
-              initial={{ opacity: 0, y: 40 }}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-              className="relative mx-auto max-w-5xl" 
-              data-testid="image-hero-screenshot"
+              transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10"></div>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50">
+              <Button 
+                size="lg" 
+                className="rounded-full px-10 py-6 text-lg bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90"
+                data-testid="button-explore-features"
+              >
+                Explore Our Features
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </motion.div>
+          </div>
+
+          {/* Hero Image */}
+          <motion.div 
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mt-20 mx-auto max-w-6xl" 
+            data-testid="image-hero-screenshot"
+          >
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-border/50">
+              <img 
+                src={browserTabsImage} 
+                alt="Ankylo Gaming POS Dashboard"
+                className="w-full h-auto"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-24 md:py-32 relative bg-lines" id="features">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              We Build Digital Solutions That Drive Growth
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-16 lg:gap-20">
+            {/* Session Management */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="space-y-6"
+              data-testid="card-feature-sessions"
+            >
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-chart-1/10 to-chart-2/10 flex items-center justify-center">
+                <MonitorPlay className="w-8 h-8 text-chart-1" />
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold">Real-time Session Management</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Track gaming sessions across PC, consoles, VR, and simulators with live countdown timers, automatic status updates, and flexible pause/resume functionality. Monitor all activities in real-time with visual and audio alerts.
+              </p>
+              <div className="rounded-2xl overflow-hidden border border-border/50">
                 <img 
                   src={browserTabsImage} 
-                  alt="Ankylo Gaming POS Dashboard"
+                  alt="Session Management Dashboard"
                   className="w-full h-auto"
                 />
               </div>
             </motion.div>
-          </motion.div>
-        </div>
-      </section>
 
-      {/* Comprehensive Overview Section */}
-      <section className="py-20 md:py-32 relative" id="features">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Comprehensive Gaming Center Overview
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                View your total operations, revenue, and expenses at a glance to stay on top of your gaming center's performance.
-              </p>
-              
-              <div className="space-y-4">
-                <motion.div 
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.1 }}
-                  className="flex items-center gap-3"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <CheckCircle2 className="w-5 h-5 text-primary" />
-                  </div>
-                  <span className="text-foreground">Real-time balance tracking</span>
-                </motion.div>
-                <motion.div 
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 }}
-                  className="flex items-center gap-3"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <CheckCircle2 className="w-5 h-5 text-primary" />
-                  </div>
-                  <span className="text-foreground">Session analytics & insights</span>
-                </motion.div>
-                <motion.div 
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 }}
-                  className="flex items-center gap-3"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <CheckCircle2 className="w-5 h-5 text-primary" />
-                  </div>
-                  <span className="text-foreground">Comprehensive revenue tracking</span>
-                </motion.div>
-                <motion.div 
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.4 }}
-                  className="flex items-center gap-3"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <CheckCircle2 className="w-5 h-5 text-primary" />
-                  </div>
-                  <span className="text-foreground">Up to 10 financial accounts</span>
-                </motion.div>
-              </div>
-            </motion.div>
-
-            {/* Right Stats Cards */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="grid grid-cols-2 gap-4"
-            >
-              <motion.div 
-                whileHover={{ scale: 1.05 }}
-                className="p-6 rounded-2xl bg-gradient-to-br from-chart-1/20 to-chart-2/20 border border-chart-1/30 backdrop-blur-sm"
-                data-testid="card-stat-active-sessions"
-              >
-                <div className="text-sm text-muted-foreground mb-2">Active Sessions</div>
-                <div className="text-3xl font-bold text-foreground mb-1" data-testid="text-active-sessions">24</div>
-                <div className="text-xs text-green-500">+12% this week</div>
-              </motion.div>
-              <motion.div 
-                whileHover={{ scale: 1.05 }}
-                className="p-6 rounded-2xl bg-gradient-to-br from-chart-2/20 to-chart-3/20 border border-chart-2/30 backdrop-blur-sm"
-                data-testid="card-stat-revenue"
-              >
-                <div className="text-sm text-muted-foreground mb-2">Monthly Revenue</div>
-                <div className="text-3xl font-bold text-foreground mb-1" data-testid="text-revenue">$22,000</div>
-                <div className="text-xs text-green-500">+8% last month</div>
-              </motion.div>
-              <motion.div 
-                whileHover={{ scale: 1.05 }}
-                className="p-6 rounded-2xl bg-gradient-to-br from-chart-3/20 to-chart-4/20 border border-chart-3/30 backdrop-blur-sm"
-                data-testid="card-stat-bookings"
-              >
-                <div className="text-sm text-muted-foreground mb-2">Total Bookings</div>
-                <div className="text-3xl font-bold text-foreground mb-1" data-testid="text-bookings">156</div>
-                <div className="text-xs text-green-500">+15% today</div>
-              </motion.div>
-              <motion.div 
-                whileHover={{ scale: 1.05 }}
-                className="p-6 rounded-2xl bg-gradient-to-br from-chart-4/20 to-chart-1/20 border border-chart-4/30 backdrop-blur-sm"
-                data-testid="card-stat-efficiency"
-              >
-                <div className="text-sm text-muted-foreground mb-2">Efficiency</div>
-                <div className="text-3xl font-bold text-foreground mb-1" data-testid="text-efficiency">80%</div>
-                <div className="text-xs text-green-500">Optimal</div>
-              </motion.div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Powerful Features Section */}
-      <section className="py-20 md:py-32 relative bg-card/30" id="benefits">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Powerful Features to Elevate Your Gaming Center
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              All the tools you need to manage your operations—smart, simple, and seamless.
-            </p>
-          </motion.div>
-
-          <motion.div 
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
-          >
+            {/* Booking Management */}
             <motion.div 
-              variants={fadeInUp}
-              whileHover={{ y: -5 }}
-              className="p-6 rounded-2xl bg-card border border-card-border backdrop-blur-sm" 
-              data-testid="card-feature-sessions"
-            >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-chart-1 to-chart-2 flex items-center justify-center mb-4">
-                <MonitorPlay className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Real-time Session Management</h3>
-              <p className="text-sm text-muted-foreground">
-                Track gaming sessions across all devices with live countdown timers and status updates.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              variants={fadeInUp}
-              whileHover={{ y: -5 }}
-              className="p-6 rounded-2xl bg-card border border-card-border backdrop-blur-sm" 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="space-y-6"
               data-testid="card-feature-booking"
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-chart-2 to-chart-3 flex items-center justify-center mb-4">
-                <CalendarCheck className="w-6 h-6 text-white" />
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-chart-2/10 to-chart-3/10 flex items-center justify-center">
+                <CalendarCheck className="w-8 h-8 text-chart-2" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">Streamlined Booking</h3>
-              <p className="text-sm text-muted-foreground">
-                Handle walk-in and advance bookings with intelligent conflict detection.
+              <h3 className="text-2xl md:text-3xl font-bold">Streamlined Booking Management</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Handle walk-in and advance bookings with intelligent conflict detection and instant seat allocation. Process bulk bookings for events and parties, ensuring smooth customer flow and efficient resource utilization.
               </p>
+              <div className="rounded-2xl overflow-hidden border border-border/50">
+                <img 
+                  src={browserTabsImage} 
+                  alt="Booking Management System"
+                  className="w-full h-auto"
+                />
+              </div>
             </motion.div>
 
+            {/* Inventory Control */}
             <motion.div 
-              variants={fadeInUp}
-              whileHover={{ y: -5 }}
-              className="p-6 rounded-2xl bg-card border border-card-border backdrop-blur-sm" 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="space-y-6"
               data-testid="card-feature-inventory"
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-chart-3 to-chart-4 flex items-center justify-center mb-4">
-                <ShoppingCart className="w-6 h-6 text-white" />
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-chart-3/10 to-chart-4/10 flex items-center justify-center">
+                <ShoppingCart className="w-8 h-8 text-chart-3" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">Inventory Control</h3>
-              <p className="text-sm text-muted-foreground">
-                Manage food and beverage sales with real-time order tracking.
+              <h3 className="text-2xl md:text-3xl font-bold">Food & Inventory Solutions</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Manage food and beverage sales seamlessly with dynamic pricing, real-time order tracking, and comprehensive inventory control. Integrate orders directly with bookings and track revenue analytics for F&B operations.
               </p>
+              <div className="rounded-2xl overflow-hidden border border-border/50">
+                <img 
+                  src={browserTabsImage} 
+                  alt="Inventory Control Dashboard"
+                  className="w-full h-auto"
+                />
+              </div>
             </motion.div>
 
+            {/* Financial Management */}
             <motion.div 
-              variants={fadeInUp}
-              whileHover={{ y: -5 }}
-              className="p-6 rounded-2xl bg-card border border-card-border backdrop-blur-sm" 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="space-y-6"
               data-testid="card-feature-financial"
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-chart-4 to-chart-1 flex items-center justify-center mb-4">
-                <DollarSign className="w-6 h-6 text-white" />
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-chart-4/10 to-chart-1/10 flex items-center justify-center">
+                <DollarSign className="w-8 h-8 text-chart-4" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">Financial Management</h3>
-              <p className="text-sm text-muted-foreground">
-                Track expenses and revenue with detailed reporting and export capabilities.
+              <h3 className="text-2xl md:text-3xl font-bold">Comprehensive Financial Management</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Gain clear insights into your center's finances with detailed expense tracking, category-wise reporting, and flexible export capabilities. Track revenue, manage expenses, and make data-driven decisions with monthly and quarterly summaries.
               </p>
+              <div className="rounded-2xl overflow-hidden border border-border/50">
+                <img 
+                  src={browserTabsImage} 
+                  alt="Financial Management Dashboard"
+                  className="w-full h-auto"
+                />
+              </div>
             </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mt-20"
+          >
+            <Button 
+              size="lg" 
+              className="rounded-full px-10 py-6 text-lg bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90"
+              data-testid="button-explore-all-features"
+            >
+              Explore All Features
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
           </motion.div>
         </div>
       </section>
 
-      {/* Advanced Features Grid */}
-      <section className="py-20 md:py-32 relative">
+      {/* Key Benefits Section */}
+      <section className="py-24 md:py-32 bg-muted/30">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            transition={{ duration: 0.6 }}
+            className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              A Smarter Way to Manage Your Gaming Center
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              Comprehensive Gaming Center Management
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Built for professionals and businesses, Ankylo provides seamless, secure, and intuitive operational management.
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              All the tools you need to run a successful gaming center — smart, simple, and powerful.
             </p>
           </motion.div>
 
-          <div className="space-y-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              whileHover={{ x: 5 }}
-              className="p-6 rounded-2xl bg-card border border-card-border backdrop-blur-sm flex items-start gap-4 cursor-pointer"
-              data-testid="card-advanced-financial-insights"
+              transition={{ duration: 0.6 }}
+              className="space-y-4"
+              data-testid="card-benefit-tracking"
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-chart-1 to-chart-2 flex items-center justify-center flex-shrink-0">
-                <BarChart3 className="w-6 h-6 text-white" />
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-chart-1/10 to-chart-2/10 flex items-center justify-center">
+                <Clock className="w-7 h-7 text-chart-1" />
               </div>
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold mb-2">Smart Financial Insights</h3>
-                <p className="text-sm text-muted-foreground">
-                  Get real-time analytics on revenue, expenses, and profitability to make informed business decisions.
-                </p>
-              </div>
-              <ArrowRight className="w-5 h-5 text-muted-foreground" />
+              <h3 className="text-xl font-bold">Precise Session Tracking</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Accurate countdown timers with visual and audio alerts ensure billing accuracy and customer satisfaction.
+              </p>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              whileHover={{ x: 5 }}
-              className="p-6 rounded-2xl bg-card border border-card-border backdrop-blur-sm flex items-start gap-4 cursor-pointer"
-              data-testid="card-advanced-session-tracking"
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="space-y-4"
+              data-testid="card-benefit-analytics"
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-chart-2 to-chart-3 flex items-center justify-center flex-shrink-0">
-                <Clock className="w-6 h-6 text-white" />
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-chart-2/10 to-chart-3/10 flex items-center justify-center">
+                <BarChart3 className="w-7 h-7 text-chart-2" />
               </div>
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold mb-2">Precise Session Tracking</h3>
-              <p className="text-sm text-muted-foreground">
-                  Accurate countdown timers with visual and audio alerts ensure billing accuracy and customer satisfaction.
-                </p>
-              </div>
-              <ArrowRight className="w-5 h-5 text-muted-foreground" />
+              <h3 className="text-xl font-bold">Smart Financial Insights</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Get real-time analytics on revenue, expenses, and profitability to make informed business decisions.
+              </p>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              whileHover={{ x: 5 }}
-              className="p-6 rounded-2xl bg-card border border-card-border backdrop-blur-sm flex items-start gap-4 cursor-pointer"
-              data-testid="card-advanced-budgeting"
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="space-y-4"
+              data-testid="card-benefit-automation"
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-chart-3 to-chart-4 flex items-center justify-center flex-shrink-0">
-                <Zap className="w-6 h-6 text-white" />
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-chart-3/10 to-chart-4/10 flex items-center justify-center">
+                <Zap className="w-7 h-7 text-chart-3" />
               </div>
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold mb-2">Automated Budgeting & Forecasting</h3>
-                <p className="text-sm text-muted-foreground">
-                  Predict future revenue and optimize resource allocation with AI-powered forecasting.
-                </p>
-              </div>
-              <ArrowRight className="w-5 h-5 text-muted-foreground" />
+              <h3 className="text-xl font-bold">Automated Operations</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Streamline workflows with automated billing, inventory updates, and session management.
+              </p>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              whileHover={{ x: 5 }}
-              className="p-6 rounded-2xl bg-card border border-card-border backdrop-blur-sm flex items-start gap-4 cursor-pointer"
-              data-testid="card-advanced-multi-account"
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="space-y-4"
+              data-testid="card-benefit-security"
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-chart-4 to-chart-1 flex items-center justify-center flex-shrink-0">
-                <Database className="w-6 h-6 text-white" />
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-chart-4/10 to-chart-1/10 flex items-center justify-center">
+                <Shield className="w-7 h-7 text-chart-4" />
               </div>
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold mb-2">Multi-Account Dashboard (Coming Soon)</h3>
-                <p className="text-sm text-muted-foreground">
-                  Manage multiple gaming center locations from one unified dashboard.
-                </p>
+              <h3 className="text-xl font-bold">Robust Security</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Role-based access control and secure data management protect your critical business information.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="space-y-4"
+              data-testid="card-benefit-multi-device"
+            >
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-chart-1/10 to-chart-3/10 flex items-center justify-center">
+                <Database className="w-7 h-7 text-chart-1" />
               </div>
-              <ArrowRight className="w-5 h-5 text-muted-foreground" />
+              <h3 className="text-xl font-bold">Multi-Device Support</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Manage PC, PlayStation, Xbox, VR systems, and simulators all from one unified dashboard.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="space-y-4"
+              data-testid="card-benefit-customer"
+            >
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-chart-2/10 to-chart-4/10 flex items-center justify-center">
+                <Users className="w-7 h-7 text-chart-2" />
+              </div>
+              <h3 className="text-xl font-bold">Customer Management</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Build customer profiles, track visit history, and create loyalty programs to boost retention.
+              </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-20 md:py-32 relative" id="pricing">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      {/* CTA Section */}
+      <section className="py-32 md:py-40 bg-lines">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Flexible Plans for Every Need
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8">
+              Ready to Transform Your Gaming Center?
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Choose a plan that fits your financial goals—whether you're an individual or a business.
-            </p>
-          </motion.div>
-
-          <motion.div 
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-            className="grid md:grid-cols-3 gap-8"
-          >
-            {/* Free Plan */}
-            <motion.div 
-              variants={fadeInUp}
-              whileHover={{ y: -10 }}
-              className="p-8 rounded-2xl bg-card border border-card-border backdrop-blur-sm"
-              data-testid="card-pricing-free"
+            <Button 
+              size="lg" 
+              className="rounded-full px-12 py-7 text-xl bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90"
+              data-testid="button-check-plans"
             >
-              <div className="text-sm font-medium text-muted-foreground mb-2">Free Plan</div>
-              <div className="text-4xl font-bold mb-1">For Individual</div>
-              <div className="text-3xl font-bold mb-6">$0 <span className="text-lg text-muted-foreground font-normal">per month</span></div>
-              
-              <Button className="w-full mb-6 rounded-xl bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90" data-testid="button-get-started-free">
-                Get Started
-              </Button>
-
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Basic session tracking</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Up to 5 active sessions</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Standard support</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Community access</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Basic financial reports</span>
-                </li>
-              </ul>
-            </motion.div>
-
-            {/* Freelancer Plan */}
-            <motion.div 
-              variants={fadeInUp}
-              whileHover={{ y: -10 }}
-              className="p-8 rounded-2xl bg-gradient-to-br from-chart-1/10 to-chart-2/10 border-2 border-chart-1 backdrop-blur-sm relative"
-              data-testid="card-pricing-freelancer"
-            >
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-chart-1 to-chart-2 rounded-full text-xs font-semibold text-white">
-                POPULAR
-              </div>
-              <div className="text-sm font-medium text-muted-foreground mb-2">Enterprise Plan</div>
-              <div className="text-4xl font-bold mb-1">For Freelancers</div>
-              <div className="text-3xl font-bold mb-6">$15 <span className="text-lg text-muted-foreground font-normal">per month</span></div>
-              
-              <Button className="w-full mb-6 rounded-xl bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90" data-testid="button-get-started-freelancer">
-                Get Started
-              </Button>
-
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Everything in free plan</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Unlimited active sessions</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Advanced booking management</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Priority email support</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Detailed analytics & insights</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Inventory management</span>
-                </li>
-              </ul>
-            </motion.div>
-
-            {/* Business Plan */}
-            <motion.div 
-              variants={fadeInUp}
-              whileHover={{ y: -10 }}
-              className="p-8 rounded-2xl bg-card border border-card-border backdrop-blur-sm"
-              data-testid="card-pricing-business"
-            >
-              <div className="text-sm font-medium text-muted-foreground mb-2">Enterprise Plan</div>
-              <div className="text-4xl font-bold mb-1">For Businesses</div>
-              <div className="text-3xl font-bold mb-6">$35 <span className="text-lg text-muted-foreground font-normal">per month</span></div>
-              
-              <Button className="w-full mb-6 rounded-xl bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90" data-testid="button-get-started-business">
-                Get Started
-              </Button>
-
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Everything in freelancer plan</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Multi-location support</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Advanced financial management</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Role-based access control</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Dedicated account manager</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Custom integrations & API access</span>
-                </li>
-              </ul>
-            </motion.div>
+              Check Our Plans
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
           </motion.div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-border/50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
+      <footer className="border-t border-border/40 bg-muted/20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+          <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-chart-1 to-chart-2 flex items-center justify-center">
-                  <MonitorPlay className="w-5 h-5 text-white" />
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-chart-1 to-chart-2 flex items-center justify-center">
+                  <MonitorPlay className="w-6 h-6 text-white" />
                 </div>
-                <span className="text-xl font-bold text-foreground">Ankylo</span>
+                <span className="text-xl font-bold">Ankylo</span>
               </div>
-              <p className="text-sm text-muted-foreground">
-                Streamline your gaming center operations with modern management tools.
+              <p className="text-muted-foreground">
+                From idea to launch — we build your gaming center's digital presence.
               </p>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4 text-foreground">Product</h4>
-              <ul className="space-y-3">
-                <li><a href="#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Features</a></li>
-                <li><a href="#benefits" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Benefits</a></li>
-                <li><a href="#pricing" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Pricing</a></li>
+              <h4 className="font-bold mb-4">Features</h4>
+              <ul className="space-y-3 text-muted-foreground">
+                <li><a href="#" className="hover:text-foreground transition-colors">Session Management</a></li>
+                <li><a href="#" className="hover:text-foreground transition-colors">Booking System</a></li>
+                <li><a href="#" className="hover:text-foreground transition-colors">Inventory Control</a></li>
+                <li><a href="#" className="hover:text-foreground transition-colors">Financial Reports</a></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4 text-foreground">Company</h4>
-              <ul className="space-y-3">
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">About</a></li>
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Blog</a></li>
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Careers</a></li>
+              <h4 className="font-bold mb-4">Links</h4>
+              <ul className="space-y-3 text-muted-foreground">
+                <li><a href="#" className="hover:text-foreground transition-colors">About Us</a></li>
+                <li><a href="#" className="hover:text-foreground transition-colors">Contact</a></li>
+                <li><a href="#" className="hover:text-foreground transition-colors">Help Center</a></li>
+                <li><a href="#" className="hover:text-foreground transition-colors">Career</a></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4 text-foreground">Legal</h4>
-              <ul className="space-y-3">
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Privacy</a></li>
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Terms</a></li>
-                <li><a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Security</a></li>
+              <h4 className="font-bold mb-4">Connect</h4>
+              <ul className="space-y-3 text-muted-foreground">
+                <li><a href="#" className="hover:text-foreground transition-colors">+123 456 789</a></li>
+                <li><a href="mailto:support@ankylo.com" className="hover:text-foreground transition-colors">support@ankylo.com</a></li>
               </ul>
             </div>
           </div>
 
-          <div className="pt-8 border-t border-border/50 text-center">
+          <div className="pt-8 border-t border-border/40 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © 2025 Ankylo Gaming POS. All rights reserved.
+              Powered by Ankylo Gaming POS
             </p>
+            <div className="flex gap-6 text-sm text-muted-foreground">
+              <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-foreground transition-colors">Terms & Conditions</a>
+            </div>
           </div>
         </div>
       </footer>

@@ -284,36 +284,39 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-24 md:py-32 relative bg-lines" id="features">
+      <section className="py-24 md:py-32 relative bg-gradient-to-b from-background to-muted/20" id="features">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-20"
+            className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              We Build Digital Solutions That Drive Growth
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+              Everything You Need to <span className="bg-gradient-to-r from-violet-500 to-teal-500 bg-clip-text text-transparent">Succeed</span>
             </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Powerful features designed specifically for gaming centers
+            </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-16 lg:gap-20">
+          <div className="grid md:grid-cols-2 gap-8">
             {/* Session Management */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="space-y-6"
+              className="group relative p-8 rounded-2xl bg-card border border-border/50 hover:border-violet-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/10"
               data-testid="card-feature-sessions"
             >
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-chart-1/10 to-chart-2/10 flex items-center justify-center">
-                <MonitorPlay className="w-8 h-8 text-chart-1" />
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-violet-500/10 to-violet-600/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <MonitorPlay className="w-7 h-7 text-violet-500" />
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold">Real-time Session Management</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Track gaming sessions across PC, consoles, VR, and simulators with live countdown timers, automatic status updates, and flexible pause/resume functionality. Monitor all activities in real-time with visual and audio alerts.
+              <h3 className="text-xl md:text-2xl font-bold mb-3">Real-time Session Management</h3>
+              <p className="text-base text-muted-foreground leading-relaxed">
+                Track gaming sessions across PC, consoles, VR, and simulators with live countdown timers, automatic status updates, and flexible pause/resume functionality.
               </p>
             </motion.div>
 
@@ -323,15 +326,15 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="space-y-6"
+              className="group relative p-8 rounded-2xl bg-card border border-border/50 hover:border-teal-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/10"
               data-testid="card-feature-booking"
             >
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-chart-2/10 to-chart-3/10 flex items-center justify-center">
-                <CalendarCheck className="w-8 h-8 text-chart-2" />
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-teal-500/10 to-teal-600/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <CalendarCheck className="w-7 h-7 text-teal-500" />
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold">Streamlined Booking Management</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Handle walk-in and advance bookings with intelligent conflict detection and instant seat allocation. Process bulk bookings for events and parties, ensuring smooth customer flow and efficient resource utilization.
+              <h3 className="text-xl md:text-2xl font-bold mb-3">Streamlined Booking Management</h3>
+              <p className="text-base text-muted-foreground leading-relaxed">
+                Handle walk-in and advance bookings with intelligent conflict detection and instant seat allocation. Process bulk bookings for events and parties seamlessly.
               </p>
             </motion.div>
 
@@ -341,15 +344,15 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-6"
+              className="group relative p-8 rounded-2xl bg-card border border-border/50 hover:border-orange-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10"
               data-testid="card-feature-inventory"
             >
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-chart-3/10 to-chart-4/10 flex items-center justify-center">
-                <ShoppingCart className="w-8 h-8 text-chart-3" />
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500/10 to-orange-600/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <ShoppingCart className="w-7 h-7 text-orange-500" />
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold">Food & Inventory Solutions</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Manage food and beverage sales seamlessly with dynamic pricing, real-time order tracking, and comprehensive inventory control. Integrate orders directly with bookings and track revenue analytics for F&B operations.
+              <h3 className="text-xl md:text-2xl font-bold mb-3">Food & Inventory Solutions</h3>
+              <p className="text-base text-muted-foreground leading-relaxed">
+                Manage food and beverage sales seamlessly with dynamic pricing, real-time order tracking, and comprehensive inventory control with revenue analytics.
               </p>
             </motion.div>
 
@@ -359,15 +362,15 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="space-y-6"
+              className="group relative p-8 rounded-2xl bg-card border border-border/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10"
               data-testid="card-feature-financial"
             >
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-chart-4/10 to-chart-1/10 flex items-center justify-center">
-                <TrendingUp className="w-8 h-8 text-chart-4" />
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/10 to-blue-600/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <TrendingUp className="w-7 h-7 text-blue-500" />
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold">Comprehensive Financial Management</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Gain clear insights into your center's finances with detailed expense tracking, category-wise reporting, and flexible export capabilities. Track revenue, manage expenses, and make data-driven decisions with monthly and quarterly summaries.
+              <h3 className="text-xl md:text-2xl font-bold mb-3">Comprehensive Financial Management</h3>
+              <p className="text-base text-muted-foreground leading-relaxed">
+                Gain clear insights with detailed expense tracking, category-wise reporting, and flexible export capabilities. Make data-driven decisions with monthly summaries.
               </p>
             </motion.div>
           </div>

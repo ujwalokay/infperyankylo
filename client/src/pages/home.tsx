@@ -34,8 +34,7 @@ import {
   XCircle
 } from "lucide-react";
 
-import heroMockupImage from "@assets/Gemini_Generated_Image_vj8lztvj8lztvj8l-removebg-preview (1)_1761391160296.png";
-import newMockupImage from "@assets/Gemini_Generated_Image_vj8lztvj8lztvj8l-removebg-preview (1)_1761392195276.png";
+import dashboardImage from "@assets/Screenshot (212)_1761392948864.png";
 import ankyloLogo from "@assets/WhatsApp_Image_2025-10-10_at_18.36.58_1fb5438e-removebg-preview_1760631104312.png";
 
 export default function Home() {
@@ -258,26 +257,77 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Right Mockup Image */}
+            {/* Right Multi-Device Mockup */}
             <motion.div 
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="relative" 
+              className="relative lg:scale-110" 
               data-testid="image-hero-mockup"
             >
-              <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-violet-500/10 to-teal-500/10 p-1 backdrop-blur-sm">
-                <div className="absolute inset-0 bg-gradient-to-r from-violet-500/20 to-teal-500/20 blur-xl" />
-                <div className="relative rounded-xl overflow-hidden bg-background/50 backdrop-blur-sm">
-                  <img 
-                    src={newMockupImage} 
-                    alt="Ankylo Gaming POS - Multi-device dashboard view"
-                    className="w-full h-auto"
-                  />
-                </div>
-              </div>
               {/* Decorative glow effect */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-violet-500/20 to-teal-500/20 blur-2xl -z-10 opacity-50" />
+              <div className="absolute inset-0 bg-gradient-to-r from-violet-500/20 to-teal-500/20 blur-3xl -z-10 opacity-50" />
+              
+              {/* Multi-Device Container */}
+              <div className="relative">
+                {/* Laptop Display */}
+                <div className="relative w-full">
+                  {/* Laptop Screen */}
+                  <div className="relative bg-gray-900 rounded-t-xl overflow-hidden border-4 border-gray-800 shadow-2xl">
+                    <div className="aspect-[16/10] bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
+                      <img 
+                        src={dashboardImage} 
+                        alt="Ankylo Gaming POS Dashboard"
+                        className="w-full h-full object-cover object-left-top"
+                      />
+                    </div>
+                  </div>
+                  {/* Laptop Base */}
+                  <div className="relative">
+                    <div className="h-2 bg-gradient-to-b from-gray-800 to-gray-700 rounded-b-sm"></div>
+                    <div className="h-1 bg-gradient-to-b from-gray-700 to-gray-600 mx-4"></div>
+                    <div className="h-3 bg-gradient-to-b from-gray-600 to-gray-500 rounded-b-xl shadow-lg"></div>
+                  </div>
+                </div>
+
+                {/* Tablet Display - Positioned on right */}
+                <motion.div 
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.7, delay: 0.4 }}
+                  className="absolute -right-4 md:-right-8 bottom-12 md:bottom-16 w-36 md:w-48 z-10"
+                >
+                  <div className="relative bg-gray-900 rounded-lg overflow-hidden border-4 border-gray-800 shadow-2xl">
+                    <div className="aspect-[3/4] bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
+                      <img 
+                        src={dashboardImage} 
+                        alt="Tablet View"
+                        className="w-full h-full object-cover object-left-top"
+                      />
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Mobile Display - Positioned on left */}
+                <motion.div 
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.7, delay: 0.5 }}
+                  className="absolute -left-4 md:-left-8 bottom-8 md:bottom-12 w-20 md:w-28 z-20"
+                >
+                  <div className="relative bg-gray-900 rounded-2xl overflow-hidden border-4 border-gray-800 shadow-2xl">
+                    {/* Notch */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-4 bg-gray-900 rounded-b-2xl z-10"></div>
+                    <div className="aspect-[9/19] bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
+                      <img 
+                        src={dashboardImage} 
+                        alt="Mobile View"
+                        className="w-full h-full object-cover object-left-top"
+                      />
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
             </motion.div>
           </div>
         </div>

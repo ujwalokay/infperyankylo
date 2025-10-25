@@ -35,6 +35,7 @@ import {
 } from "lucide-react";
 
 import heroMockupImage from "@assets/Gemini_Generated_Image_vj8lztvj8lztvj8l-removebg-preview (1)_1761391160296.png";
+import newMockupImage from "@assets/Gemini_Generated_Image_vj8lztvj8lztvj8l-removebg-preview (1)_1761392195276.png";
 import ankyloLogo from "@assets/WhatsApp_Image_2025-10-10_at_18.36.58_1fb5438e-removebg-preview_1760631104312.png";
 
 export default function Home() {
@@ -218,6 +219,23 @@ export default function Home() {
               </Button>
             </motion.div>
           </div>
+
+          {/* Hero Mockup Image */}
+          <motion.div 
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mt-20 mx-auto max-w-6xl" 
+            data-testid="image-hero-mockup"
+          >
+            <div className="relative">
+              <img 
+                src={newMockupImage} 
+                alt="Ankylo Gaming POS - Multi-device dashboard view"
+                className="w-full h-auto"
+              />
+            </div>
+          </motion.div>
 
         </div>
       </section>

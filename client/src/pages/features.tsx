@@ -210,7 +210,7 @@ export default function Features() {
                 >
                   <div className={`space-y-6 ${isEven ? '' : 'md:col-start-2'}`}>
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.color} bg-opacity-10 flex items-center justify-center`}>
-                      <Icon className="w-8 h-8 text-chart-1" />
+                      <Icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-2xl md:text-3xl font-bold">{feature.title}</h3>
                     <p className="text-lg text-muted-foreground leading-relaxed">

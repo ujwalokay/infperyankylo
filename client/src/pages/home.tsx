@@ -186,7 +186,7 @@ export default function Home() {
               className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed" 
               data-testid="text-hero-description"
             >
-              Ankylo Gaming POS is a complete management system that helps gaming centers streamline operations, track sessions, and boost revenue with smart digital solutions.
+              Real-time session management, streamlined booking management, food inventory solutions, and complete financial management — all in one powerful platform.
             </motion.p>
 
             <motion.div
@@ -206,22 +206,6 @@ export default function Home() {
             </motion.div>
           </div>
 
-          {/* Hero Image */}
-          <motion.div 
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-20 mx-auto max-w-6xl" 
-            data-testid="image-hero-screenshot"
-          >
-            <div className="relative">
-              <img 
-                src={heroMockupImage} 
-                alt="Ankylo Gaming POS Dashboard - Multi-device view"
-                className="w-full h-auto"
-              />
-            </div>
-          </motion.div>
         </div>
       </section>
 
@@ -257,13 +241,6 @@ export default function Home() {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Track gaming sessions across PC, consoles, VR, and simulators with live countdown timers, automatic status updates, and flexible pause/resume functionality. Monitor all activities in real-time with visual and audio alerts.
               </p>
-              <div className="rounded-2xl overflow-hidden border border-border/50">
-                <img 
-                  src={heroMockupImage} 
-                  alt="Session Management Dashboard"
-                  className="w-full h-auto"
-                />
-              </div>
             </motion.div>
 
             {/* Booking Management */}
@@ -282,13 +259,6 @@ export default function Home() {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Handle walk-in and advance bookings with intelligent conflict detection and instant seat allocation. Process bulk bookings for events and parties, ensuring smooth customer flow and efficient resource utilization.
               </p>
-              <div className="rounded-2xl overflow-hidden border border-border/50">
-                <img 
-                  src={heroMockupImage} 
-                  alt="Booking Management System"
-                  className="w-full h-auto"
-                />
-              </div>
             </motion.div>
 
             {/* Inventory Control */}
@@ -307,13 +277,6 @@ export default function Home() {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Manage food and beverage sales seamlessly with dynamic pricing, real-time order tracking, and comprehensive inventory control. Integrate orders directly with bookings and track revenue analytics for F&B operations.
               </p>
-              <div className="rounded-2xl overflow-hidden border border-border/50">
-                <img 
-                  src={heroMockupImage} 
-                  alt="Inventory Control Dashboard"
-                  className="w-full h-auto"
-                />
-              </div>
             </motion.div>
 
             {/* Financial Management */}
@@ -332,13 +295,6 @@ export default function Home() {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Gain clear insights into your center's finances with detailed expense tracking, category-wise reporting, and flexible export capabilities. Track revenue, manage expenses, and make data-driven decisions with monthly and quarterly summaries.
               </p>
-              <div className="rounded-2xl overflow-hidden border border-border/50">
-                <img 
-                  src={heroMockupImage} 
-                  alt="Financial Management Dashboard"
-                  className="w-full h-auto"
-                />
-              </div>
             </motion.div>
           </div>
 

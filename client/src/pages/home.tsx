@@ -36,8 +36,7 @@ import {
 
 import dashboardImage from "@assets/Screenshot (212)_1761392948864.png";
 import ankyloLogo from "@assets/WhatsApp_Image_2025-10-10_at_18.36.58_1fb5438e-removebg-preview_1760631104312.png";
-import iphoneMockup from "@assets/apple-iphone-13-2021-medium_1761394545411.png";
-import mobileScreenshot from "@assets/2e4c0ed9-073f-4840-be1d-b03693272a58_1761396664665.png";
+import mobileComplete from "@assets/2e4c0ed9-073f-4840-be1d-b03693272a58_1761396779110.png";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -403,24 +402,11 @@ export default function Home() {
                     className="w-36 sm:w-40 md:w-48 lg:w-56"
                     data-testid="mockup-phone"
                   >
-                    {/* iPhone Mockup Container */}
-                    <div className="relative">
-                      {/* Dashboard Screen - positioned behind iPhone frame */}
-                      <div className="absolute top-[7.4%] left-[8.1%] right-[8.1%] bottom-[7%] rounded-[2.6rem] sm:rounded-[2.8rem] md:rounded-[3.1rem] overflow-hidden z-0 bg-white">
-                        <img 
-                          src={mobileScreenshot} 
-                          alt="Mobile Display - Ankylo Gaming POS"
-                          className="w-full h-full object-cover object-center"
-                        />
-                      </div>
-                      
-                      {/* iPhone Frame - overlays the screen */}
-                      <img 
-                        src={iphoneMockup} 
-                        alt="iPhone Mockup"
-                        className="relative z-10 w-full h-auto drop-shadow-2xl"
-                      />
-                    </div>
+                    <img 
+                      src={mobileComplete} 
+                      alt="Mobile Display - Ankylo Gaming POS"
+                      className="w-full h-auto drop-shadow-2xl"
+                    />
                   </motion.div>
                 </div>
               </div>

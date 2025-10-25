@@ -34,7 +34,7 @@ import {
   XCircle
 } from "lucide-react";
 
-import browserTabsImage from "@assets/generated_images/Browser_interface_with_sidebar_tabs_328237be.png";
+import heroMockupImage from "@assets/Gemini_Generated_Image_vj8lztvj8lztvj8l-removebg-preview (1)_1761391160296.png";
 import ankyloLogo from "@assets/WhatsApp_Image_2025-10-10_at_18.36.58_1fb5438e-removebg-preview_1760631104312.png";
 
 export default function Home() {
@@ -214,10 +214,10 @@ export default function Home() {
             className="mt-20 mx-auto max-w-6xl" 
             data-testid="image-hero-screenshot"
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-border/50">
+            <div className="relative">
               <img 
-                src={browserTabsImage} 
-                alt="Ankylo Gaming POS Dashboard"
+                src={heroMockupImage} 
+                alt="Ankylo Gaming POS Dashboard - Multi-device view"
                 className="w-full h-auto"
               />
             </div>
@@ -259,7 +259,7 @@ export default function Home() {
               </p>
               <div className="rounded-2xl overflow-hidden border border-border/50">
                 <img 
-                  src={browserTabsImage} 
+                  src={heroMockupImage} 
                   alt="Session Management Dashboard"
                   className="w-full h-auto"
                 />
@@ -284,7 +284,7 @@ export default function Home() {
               </p>
               <div className="rounded-2xl overflow-hidden border border-border/50">
                 <img 
-                  src={browserTabsImage} 
+                  src={heroMockupImage} 
                   alt="Booking Management System"
                   className="w-full h-auto"
                 />
@@ -309,7 +309,7 @@ export default function Home() {
               </p>
               <div className="rounded-2xl overflow-hidden border border-border/50">
                 <img 
-                  src={browserTabsImage} 
+                  src={heroMockupImage} 
                   alt="Inventory Control Dashboard"
                   className="w-full h-auto"
                 />
@@ -334,7 +334,7 @@ export default function Home() {
               </p>
               <div className="rounded-2xl overflow-hidden border border-border/50">
                 <img 
-                  src={browserTabsImage} 
+                  src={heroMockupImage} 
                   alt="Financial Management Dashboard"
                   className="w-full h-auto"
                 />

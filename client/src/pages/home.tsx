@@ -266,9 +266,11 @@ export default function Home() {
               className="relative" 
               data-testid="image-hero-mockup"
             >
-              {/* Decorative glow effects */}
-              <div className="absolute inset-0 bg-gradient-to-r from-violet-500/20 to-teal-500/20 blur-3xl -z-10 opacity-60" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-br from-violet-600/10 via-transparent to-teal-600/10 blur-2xl -z-10" />
+              {/* Animated Gradient Background */}
+              <div className="absolute inset-0 -z-10">
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-500/20 via-purple-500/20 to-teal-500/20 blur-3xl opacity-60 animate-gradient-shift" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-br from-violet-600/10 via-fuchsia-500/10 to-teal-600/10 blur-2xl animate-gradient-pulse" />
+              </div>
               
               {/* Multi-Device Container */}
               <div className="relative space-y-6 md:space-y-8">
@@ -279,7 +281,7 @@ export default function Home() {
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.3 }}
-                    className="w-full sm:w-64 md:w-80"
+                    className="w-full sm:w-64 md:w-80 animate-float"
                     data-testid="mockup-monitor"
                   >
                     {/* Monitor Stand */}
@@ -314,7 +316,7 @@ export default function Home() {
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.4 }}
-                    className="w-full sm:w-72 md:w-96"
+                    className="w-full sm:w-72 md:w-96 animate-float-delayed"
                     data-testid="mockup-laptop"
                   >
                     {/* Laptop Screen */}
@@ -373,7 +375,7 @@ export default function Home() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.5 }}
-                    className="w-40 sm:w-48 md:w-64"
+                    className="w-40 sm:w-48 md:w-64 animate-float"
                     data-testid="mockup-tablet"
                   >
                     <div className="relative bg-gradient-to-b from-gray-900 to-gray-800 rounded-2xl md:rounded-3xl overflow-hidden border-[5px] md:border-[7px] border-gray-900 shadow-2xl">
@@ -399,7 +401,7 @@ export default function Home() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.6 }}
-                    className="w-44 sm:w-48 md:w-56 lg:w-64"
+                    className="w-44 sm:w-48 md:w-56 lg:w-64 animate-float-delayed"
                     data-testid="mockup-phone"
                   >
                     <img 

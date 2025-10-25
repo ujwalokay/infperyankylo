@@ -225,7 +225,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-20 mx-auto max-w-6xl" 
+            className="mt-12 mx-auto max-w-6xl" 
             data-testid="image-hero-mockup"
           >
             <div className="relative">

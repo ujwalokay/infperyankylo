@@ -167,76 +167,119 @@ export default function Home() {
       </motion.nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 md:pt-48 md:pb-32 bg-lines">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+      <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
+        {/* Modern Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-violet-500/5 via-background to-teal-500/5" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-violet-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl" />
+        
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-orange-500/10 to-green-500/10 border border-orange-500/20"
-              data-testid="badge-made-in-india"
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+              className="space-y-8"
             >
-              <span className="text-2xl">🇮🇳</span>
-              <span className="text-sm md:text-base font-semibold bg-gradient-to-r from-orange-500 to-green-600 bg-clip-text text-transparent">
-                Proudly Made in India
-              </span>
-            </motion.div>
-            
-            <motion.h1 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-tight" 
-              data-testid="text-hero-heading"
-            >
-              Simplify, Manage, and Grow Your Gaming Center with Ankylo
-            </motion.h1>
-
-            <motion.p 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed" 
-              data-testid="text-hero-description"
-            >
-              Real-time session management, streamlined booking management, food inventory solutions, and complete financial management — all in one powerful platform.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <Button 
-                size="lg" 
-                className="rounded-full px-10 py-6 text-lg bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90"
-                data-testid="button-explore-features"
-                onClick={() => setLocation("/features")}
+              {/* Made in India Badge */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-orange-500/10 to-green-500/10 border border-orange-500/20 backdrop-blur-sm"
+                data-testid="badge-made-in-india"
               >
-                Explore Our Features
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
+                <span className="text-xl">🇮🇳</span>
+                <span className="text-sm font-semibold bg-gradient-to-r from-orange-500 to-green-600 bg-clip-text text-transparent">
+                  Proudly Made in India
+                </span>
+              </motion.div>
+
+              {/* Heading */}
+              <h1 
+                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight" 
+                data-testid="text-hero-heading"
+              >
+                Simplify, Manage, and{" "}
+                <span className="bg-gradient-to-r from-violet-500 to-teal-500 bg-clip-text text-transparent">
+                  Grow Your Gaming Center
+                </span>
+              </h1>
+
+              {/* Description */}
+              <p 
+                className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl" 
+                data-testid="text-hero-description"
+              >
+                Real-time session management, streamlined booking, food inventory, and complete financial management — all in one powerful platform.
+              </p>
+
+              {/* Key Features List */}
+              <div className="flex flex-wrap gap-4">
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle2 className="w-5 h-5 text-violet-500" />
+                  <span>Session Tracking</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle2 className="w-5 h-5 text-violet-500" />
+                  <span>Smart Booking</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle2 className="w-5 h-5 text-violet-500" />
+                  <span>F&B Management</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <CheckCircle2 className="w-5 h-5 text-violet-500" />
+                  <span>Financial Reports</span>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  size="lg" 
+                  className="rounded-full px-8 py-6 text-base bg-gradient-to-r from-violet-600 to-teal-600 hover:from-violet-700 hover:to-teal-700 shadow-lg shadow-violet-500/25"
+                  data-testid="button-explore-features"
+                  onClick={() => setLocation("/features")}
+                >
+                  Explore Our Features
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="rounded-full px-8 py-6 text-base border-2"
+                  data-testid="button-contact-sales"
+                  onClick={() => setContactDialogOpen(true)}
+                >
+                  Contact Sales
+                </Button>
+              </div>
+            </motion.div>
+
+            {/* Right Mockup Image */}
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="relative" 
+              data-testid="image-hero-mockup"
+            >
+              <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-violet-500/10 to-teal-500/10 p-1 backdrop-blur-sm">
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-500/20 to-teal-500/20 blur-xl" />
+                <div className="relative rounded-xl overflow-hidden bg-background/50 backdrop-blur-sm">
+                  <img 
+                    src={newMockupImage} 
+                    alt="Ankylo Gaming POS - Multi-device dashboard view"
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+              {/* Decorative glow effect */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-violet-500/20 to-teal-500/20 blur-2xl -z-10 opacity-50" />
             </motion.div>
           </div>
-
-          {/* Hero Mockup Image */}
-          <motion.div 
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-12 mx-auto max-w-6xl" 
-            data-testid="image-hero-mockup"
-          >
-            <div className="relative">
-              <img 
-                src={newMockupImage} 
-                alt="Ankylo Gaming POS - Multi-device dashboard view"
-                className="w-full h-auto"
-              />
-            </div>
-          </motion.div>
-
         </div>
       </section>
 

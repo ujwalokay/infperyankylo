@@ -405,11 +405,11 @@ export default function Home() {
                     {/* iPhone Mockup Container */}
                     <div className="relative">
                       {/* Dashboard Screen - positioned behind iPhone frame */}
-                      <div className="absolute top-[3%] left-[5%] right-[5%] bottom-[3%] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden z-0">
+                      <div className="absolute top-[2.5%] left-[4%] right-[4%] bottom-[2.5%] rounded-[2.2rem] md:rounded-[2.8rem] overflow-hidden z-0">
                         <img 
                           src={dashboardImage} 
                           alt="Mobile Display - Ankylo Gaming POS"
-                          className="w-full h-full object-cover object-left-top"
+                          className="w-full h-full object-cover object-center scale-110"
                         />
                       </div>
                       

@@ -36,6 +36,7 @@ import {
 
 import dashboardImage from "@assets/Screenshot (212)_1761392948864.png";
 import ankyloLogo from "@assets/WhatsApp_Image_2025-10-10_at_18.36.58_1fb5438e-removebg-preview_1760631104312.png";
+import iphoneMockup from "@assets/apple-iphone-13-2021-medium_1761394545411.png";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -398,59 +399,26 @@ export default function Home() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.6 }}
-                    className="w-32 sm:w-36 md:w-44 lg:w-48"
+                    className="w-36 sm:w-40 md:w-48 lg:w-56"
                     data-testid="mockup-phone"
                   >
-                    {/* iPhone 14 Pro Frame */}
-                    <div className="relative bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 rounded-[2.5rem] md:rounded-[3rem] p-2 md:p-3 shadow-2xl border-[3px] border-slate-800">
-                      {/* Screen Container */}
-                      <div className="relative bg-black rounded-[2.2rem] md:rounded-[2.7rem] overflow-hidden">
-                        {/* Dynamic Island */}
-                        <div className="absolute top-4 md:top-6 left-1/2 -translate-x-1/2 w-20 md:w-28 h-6 md:h-8 bg-black rounded-full z-20 shadow-lg border border-slate-900">
-                          <div className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 w-2.5 md:w-3.5 h-2.5 md:h-3.5 bg-slate-900 rounded-full"></div>
-                          <div className="absolute right-3 md:right-4 top-1/2 -translate-y-1/2 w-1.5 md:w-2 h-1.5 md:h-2 bg-slate-950 rounded-full"></div>
-                        </div>
-                        
-                        {/* Screen Content */}
-                        <div className="aspect-[9/19.5] bg-white overflow-hidden relative">
-                          {/* Status Bar */}
-                          <div className="absolute top-0 left-0 right-0 h-12 md:h-14 bg-gradient-to-b from-black/5 to-transparent z-10">
-                            <div className="flex justify-between items-start px-6 md:px-8 pt-2 md:pt-3 text-[8px] md:text-[10px] font-semibold">
-                              <span className="text-gray-900">9:41</span>
-                              <div className="flex gap-1 md:gap-1.5 items-center text-gray-900 mt-0.5">
-                                <div className="flex gap-[1px]">
-                                  <div className="w-[3px] md:w-1 h-2 md:h-2.5 bg-gray-900 rounded-sm"></div>
-                                  <div className="w-[3px] md:w-1 h-2.5 md:h-3 bg-gray-900 rounded-sm"></div>
-                                  <div className="w-[3px] md:w-1 h-3 md:h-3.5 bg-gray-900 rounded-sm"></div>
-                                  <div className="w-[3px] md:w-1 h-3.5 md:h-4 bg-gray-900 rounded-sm"></div>
-                                </div>
-                                <div className="w-3 md:w-4 h-2 md:h-2.5 border border-gray-900 rounded-sm relative">
-                                  <div className="absolute inset-[1px] bg-gray-900 rounded-[1px]"></div>
-                                  <div className="absolute -right-[2px] top-1/2 -translate-y-1/2 w-[2px] h-1 md:h-1.5 bg-gray-900 rounded-r-sm"></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          
-                          {/* Dashboard Image */}
-                          <img 
-                            src={dashboardImage} 
-                            alt="Mobile Display"
-                            className="w-full h-full object-cover object-left-top"
-                          />
-                          
-                          {/* Home Indicator */}
-                          <div className="absolute bottom-2 md:bottom-3 left-1/2 -translate-x-1/2 w-20 md:w-28 h-1 md:h-1.5 bg-black/30 rounded-full"></div>
-                        </div>
+                    {/* iPhone Mockup Container */}
+                    <div className="relative">
+                      {/* Dashboard Screen - positioned behind iPhone frame */}
+                      <div className="absolute top-[3%] left-[5%] right-[5%] bottom-[3%] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden z-0">
+                        <img 
+                          src={dashboardImage} 
+                          alt="Mobile Display - Ankylo Gaming POS"
+                          className="w-full h-full object-cover object-left-top"
+                        />
                       </div>
                       
-                      {/* Side Buttons - Left Side */}
-                      <div className="absolute -left-[3px] top-24 md:top-28 w-[3px] h-8 md:h-10 bg-slate-700 rounded-l-sm"></div>
-                      <div className="absolute -left-[3px] top-36 md:top-40 w-[3px] h-5 md:h-6 bg-slate-700 rounded-l-sm"></div>
-                      <div className="absolute -left-[3px] top-44 md:top-48 w-[3px] h-5 md:h-6 bg-slate-700 rounded-l-sm"></div>
-                      
-                      {/* Side Button - Right Side (Power) */}
-                      <div className="absolute -right-[3px] top-28 md:top-32 w-[3px] h-12 md:h-16 bg-slate-700 rounded-r-sm"></div>
+                      {/* iPhone Frame - overlays the screen */}
+                      <img 
+                        src={iphoneMockup} 
+                        alt="iPhone Mockup"
+                        className="relative z-10 w-full h-auto drop-shadow-2xl"
+                      />
                     </div>
                   </motion.div>
                 </div>

@@ -30,7 +30,8 @@ import {
   Users,
   FileText,
   MessageCircle,
-  PlayCircle
+  PlayCircle,
+  XCircle
 } from "lucide-react";
 
 import browserTabsImage from "@assets/generated_images/Browser_interface_with_sidebar_tabs_328237be.png";
@@ -755,14 +756,14 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
             {/* Free Trial Plan */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative p-8 rounded-3xl border border-border/50 bg-card/50 backdrop-blur"
+              className="relative p-6 rounded-3xl border border-border/50 bg-card/50 backdrop-blur"
               data-testid="card-plan-trial"
             >
               <div className="mb-6">
@@ -777,53 +778,43 @@ export default function Home() {
                 <p className="text-sm text-muted-foreground mt-2">14 days trial period</p>
               </div>
 
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                  <span>Full access to all features</span>
+                  <span className="text-sm">Full access to all features</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                  <span>Session & booking management</span>
+                  <span className="text-sm">Session & booking management</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                  <span>Inventory tracking</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                  <span>Basic support</span>
+                  <span className="text-sm">Basic support</span>
                 </li>
               </ul>
 
               <Button 
-                className="w-full rounded-full py-6 text-lg" 
+                className="w-full rounded-full py-6 text-base" 
                 variant="outline"
                 data-testid="button-start-trial"
                 onClick={() => setContactDialogOpen(true)}
               >
-                Contact Us
+                Start Free Trial
               </Button>
             </motion.div>
 
-            {/* Pro Plan */}
+            {/* Pro Plan - ₹699 */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="relative p-8 rounded-3xl border-2 border-chart-1 bg-gradient-to-b from-chart-1/10 to-transparent backdrop-blur"
+              className="relative p-6 rounded-3xl border border-border/50 bg-card/50 backdrop-blur"
               data-testid="card-plan-pro"
             >
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                <span className="px-4 py-1.5 rounded-full bg-gradient-to-r from-chart-1 to-chart-2 text-sm font-semibold text-white">
-                  Most Popular
-                </span>
-              </div>
-
               <div className="mb-6">
                 <h3 className="text-2xl font-bold mb-2">Pro Plan</h3>
-                <p className="text-muted-foreground">For growing gaming centers</p>
+                <p className="text-muted-foreground">For single category cafes</p>
               </div>
               
               <div className="mb-8">
@@ -834,37 +825,114 @@ export default function Home() {
                 <p className="text-sm text-muted-foreground mt-2">Billed monthly</p>
               </div>
 
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                  <span>Everything in Free Trial</span>
+                  <span className="text-sm">Everything in Free Trial</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                  <span>Unlimited devices & sessions</span>
+                  <span className="text-sm"><strong>Single category only</strong> (PS5 OR PC OR VR)</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                  <span>Advanced analytics & reports</span>
+                  <span className="text-sm">Basic analytics & reports</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                  <span>Priority support</span>
+                  <span className="text-sm">Email support</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                  <span>Custom branding</span>
+                  <XCircle className="w-5 h-5 text-muted-foreground/50 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm text-muted-foreground line-through">Live availability webpage</span>
                 </li>
               </ul>
 
               <Button 
-                className="w-full rounded-full py-6 text-lg bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90"
-                data-testid="button-get-started"
+                className="w-full rounded-full py-6 text-base"
+                variant="outline"
+                data-testid="button-choose-pro"
+                onClick={() => setContactDialogOpen(true)}
+              >
+                Choose Pro
+              </Button>
+            </motion.div>
+
+            {/* Best Plan - ₹899 (MOST POPULAR) */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative p-8 rounded-3xl border-2 border-chart-1 bg-gradient-to-br from-chart-1/20 via-chart-2/10 to-transparent backdrop-blur shadow-2xl shadow-chart-1/20 md:scale-105"
+              data-testid="card-plan-best"
+            >
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                <span className="px-6 py-2 rounded-full bg-gradient-to-r from-chart-1 to-chart-2 text-sm font-bold text-white shadow-lg">
+                  ⭐ MOST POPULAR
+                </span>
+              </div>
+
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-chart-1 to-chart-2 bg-clip-text text-transparent">Best Plan</h3>
+                <p className="text-muted-foreground font-semibold">Complete gaming center solution</p>
+              </div>
+              
+              <div className="mb-8">
+                <div className="flex items-baseline gap-2">
+                  <span className="text-5xl font-bold bg-gradient-to-r from-chart-1 to-chart-2 bg-clip-text text-transparent">₹899</span>
+                  <span className="text-muted-foreground">/month</span>
+                </div>
+                <p className="text-sm text-chart-1 font-semibold mt-2">Best value for multi-category cafes</p>
+              </div>
+
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm font-semibold">ALL 12 Premium Features Included</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm"><strong>All categories:</strong> PS5, PC, VR, Xbox & more</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">AI Maintenance & Smart Predictions</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Complete Inventory Management</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Advanced Analytics & Reports</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm"><strong>Live Availability Webpage</strong> for customers</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Priority 24/7 Support</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Custom Branding & White Label</span>
+                </li>
+              </ul>
+
+              <Button 
+                className="w-full rounded-full py-6 text-lg font-bold bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90 shadow-lg"
+                data-testid="button-get-best"
                 onClick={() => setLocation("/pricing")}
               >
-                Get Started
+                Get Started Now
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
+              
+              <p className="text-xs text-center text-muted-foreground mt-4">
+                💎 Save ₹200/month compared to Pro + extra features
+              </p>
             </motion.div>
           </div>
         </div>

@@ -399,7 +399,7 @@ export default function Home() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.6 }}
-                    className="w-36 sm:w-40 md:w-48 lg:w-56"
+                    className="w-44 sm:w-48 md:w-56 lg:w-64"
                     data-testid="mockup-phone"
                   >
                     <img 

@@ -17,7 +17,18 @@ import {
   Package
 } from "lucide-react";
 
-import seatManagementImage from "@assets/Screenshot (135)_1760629404121.png";
+import dashboardImage from "@assets/Screenshot (212)_1761390527364.png";
+import seatManagementImage from "@assets/Screenshot (212)_1761390527364.png";
+import timelineImage from "@assets/Screenshot (213)_1761390527364.png";
+import historyImage from "@assets/Screenshot (214)_1761390527364.png";
+import activityLogsImage from "@assets/Screenshot (215)_1761390527364.png";
+import analyticsImage from "@assets/Screenshot (216)_1761390527364.png";
+import aiMaintenanceImage from "@assets/Screenshot (218)_1761390527364.png";
+import foodImage from "@assets/Screenshot (219)_1761390527364.png";
+import inventoryImage from "@assets/Screenshot (220)_1761390527364.png";
+import expensesImage from "@assets/Screenshot (221)_1761390527364.png";
+import settingsImage from "@assets/Screenshot (222)_1761390527364.png";
+import reportsImage from "@assets/Screenshot (223)_1761390527364.png";
 import ankyloLogo from "@assets/WhatsApp_Image_2025-10-10_at_18.36.58_1fb5438e-removebg-preview_1760631104312.png";
 
 export default function Features() {
@@ -35,7 +46,7 @@ export default function Features() {
       icon: MonitorPlay,
       title: "Dashboard",
       description: "Get a complete overview of your gaming center operations at a glance. Real-time statistics, active sessions, revenue tracking, and quick access to all critical functions in one unified dashboard.",
-      image: seatManagementImage,
+      image: dashboardImage,
       color: "from-chart-1 to-chart-2"
     },
     {
@@ -51,7 +62,7 @@ export default function Features() {
       icon: Clock,
       title: "Timeline",
       description: "Visualize your entire day's schedule with an intuitive timeline view. See all bookings, sessions, and events chronologically to manage your gaming center's flow efficiently.",
-      image: seatManagementImage,
+      image: timelineImage,
       color: "from-chart-3 to-chart-4"
     },
     {
@@ -59,7 +70,7 @@ export default function Features() {
       icon: History,
       title: "History",
       description: "Access complete historical records of all bookings, sessions, and transactions. Filter by date, customer, or seat to analyze past activities and generate insights for better business decisions.",
-      image: seatManagementImage,
+      image: historyImage,
       color: "from-chart-4 to-chart-1"
     },
     {
@@ -67,7 +78,7 @@ export default function Features() {
       icon: FileText,
       title: "Activity Logs",
       description: "Track every action and change in your system with detailed activity logs. Monitor user actions, system events, and maintain complete audit trails for security and compliance.",
-      image: seatManagementImage,
+      image: activityLogsImage,
       color: "from-chart-1 to-chart-3"
     },
     {
@@ -75,7 +86,7 @@ export default function Features() {
       icon: BarChart3,
       title: "Analytics",
       description: "Gain deep insights into your business performance with comprehensive analytics. Track revenue trends, peak hours, customer behavior, and device utilization with interactive charts and reports.",
-      image: seatManagementImage,
+      image: analyticsImage,
       color: "from-chart-2 to-chart-4"
     },
     {
@@ -83,7 +94,7 @@ export default function Features() {
       icon: Bot,
       title: "AI Maintenance",
       description: "Leverage AI-powered maintenance predictions and automated system health monitoring. Get intelligent alerts for equipment issues, predictive maintenance schedules, and automated troubleshooting recommendations.",
-      image: seatManagementImage,
+      image: aiMaintenanceImage,
       color: "from-chart-3 to-chart-1"
     },
     {
@@ -91,7 +102,7 @@ export default function Features() {
       icon: Utensils,
       title: "Food",
       description: "Manage your food and beverage operations seamlessly. Process orders, track inventory, set dynamic pricing, and integrate F&B sales with gaming sessions for complete revenue tracking.",
-      image: seatManagementImage,
+      image: foodImage,
       color: "from-chart-4 to-chart-2"
     },
     {
@@ -99,7 +110,7 @@ export default function Features() {
       icon: Package,
       title: "Inventory",
       description: "Complete inventory management for all your gaming equipment, peripherals, and consumables. Track stock levels, manage reorders, and monitor equipment lifecycle with automated alerts for low stock.",
-      image: seatManagementImage,
+      image: inventoryImage,
       color: "from-chart-1 to-chart-3"
     },
     {
@@ -107,7 +118,7 @@ export default function Features() {
       icon: Wallet,
       title: "Expenses",
       description: "Keep track of all your business expenses with category-wise organization. Record operational costs, vendor payments, and maintenance expenses to understand your profitability clearly.",
-      image: seatManagementImage,
+      image: expensesImage,
       color: "from-chart-2 to-chart-4"
     },
     {
@@ -115,7 +126,7 @@ export default function Features() {
       icon: Settings,
       title: "Settings",
       description: "Customize your gaming center's configuration to match your business needs. Manage devices, pricing plans, happy hours, user roles, and system preferences all in one place.",
-      image: seatManagementImage,
+      image: settingsImage,
       color: "from-chart-3 to-chart-4"
     },
     {
@@ -123,7 +134,7 @@ export default function Features() {
       icon: FileBarChart,
       title: "Reports",
       description: "Generate detailed reports on revenue, expenses, device utilization, and customer analytics. Export data in multiple formats for accounting, tax filing, and business planning.",
-      image: seatManagementImage,
+      image: reportsImage,
       color: "from-chart-4 to-chart-1"
     }
   ];

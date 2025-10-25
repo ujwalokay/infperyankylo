@@ -262,21 +262,23 @@ export default function Home() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="relative lg:scale-110" 
+              className="relative lg:scale-105" 
               data-testid="image-hero-mockup"
             >
               {/* Decorative glow effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-violet-500/20 to-teal-500/20 blur-3xl -z-10 opacity-50" />
               
               {/* Multi-Device Container */}
-              <div className="relative">
-                {/* Monitor with Stand Setup */}
-                <div className="relative w-full">
-                  {/* Monitor Screen */}
-                  <div className="relative bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg overflow-hidden border-8 border-gray-900 shadow-2xl">
-                    {/* Screen Bezel */}
-                    <div className="absolute inset-0 border-2 border-gray-800/50 rounded-lg pointer-events-none z-10"></div>
-                    <div className="aspect-[16/9] bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
+              <div className="relative flex items-end gap-4 md:gap-6">
+                {/* MacBook Laptop */}
+                <div className="flex-1">
+                  {/* Laptop Screen */}
+                  <div className="relative bg-gradient-to-b from-gray-900 to-gray-800 rounded-t-2xl overflow-hidden border-[3px] border-gray-900 shadow-2xl">
+                    {/* Top Bezel with Camera */}
+                    <div className="absolute top-2 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-700 rounded-full z-10"></div>
+                    
+                    {/* Screen */}
+                    <div className="aspect-[16/10] bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden border-2 border-gray-800">
                       <img 
                         src={dashboardImage} 
                         alt="Ankylo Gaming POS Dashboard"
@@ -285,52 +287,80 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  {/* Monitor Stand */}
-                  <div className="flex justify-center">
-                    {/* Stand Neck */}
-                    <div className="w-3 h-8 bg-gradient-to-b from-gray-700 to-gray-600"></div>
-                  </div>
-                  
-                  {/* Monitor Base */}
-                  <div className="flex justify-center">
-                    <div className="w-32 h-2 bg-gradient-to-b from-gray-600 to-gray-500 rounded-full shadow-lg"></div>
-                  </div>
-
-                  {/* Laptop Below Monitor */}
-                  <div className="mt-4">
-                    {/* Laptop Screen */}
-                    <div className="relative bg-gray-900 rounded-t-lg overflow-hidden border-4 border-gray-800 shadow-xl">
-                      <div className="aspect-[16/10] bg-gradient-to-br from-gray-800 to-gray-900 overflow-hidden p-1">
-                        <div className="w-full h-full bg-gradient-to-br from-gray-700 to-gray-800 rounded-sm"></div>
-                      </div>
-                    </div>
-                    {/* Laptop Base */}
-                    <div className="relative">
-                      <div className="h-1.5 bg-gradient-to-b from-gray-800 to-gray-700 rounded-b-sm"></div>
-                    </div>
+                  {/* Laptop Base/Keyboard */}
+                  <div className="relative">
+                    {/* Hinge */}
+                    <div className="h-1 bg-gradient-to-b from-gray-900 to-gray-800"></div>
                     
-                    {/* Keyboard */}
-                    <div className="mt-1 bg-gradient-to-b from-gray-800 to-gray-700 rounded-lg p-2 shadow-lg">
-                      <div className="grid grid-cols-12 gap-0.5">
-                        {/* Keyboard Keys */}
-                        {[...Array(36)].map((_, i) => (
-                          <div key={i} className="h-2 bg-gradient-to-b from-gray-600 to-gray-700 rounded-sm"></div>
-                        ))}
+                    {/* Keyboard Base */}
+                    <div className="bg-gradient-to-b from-gray-300 to-gray-400 rounded-b-2xl px-4 py-3 shadow-xl">
+                      {/* Keyboard */}
+                      <div className="mb-2">
+                        <div className="grid grid-cols-14 gap-[2px] mb-[2px]">
+                          {[...Array(42)].map((_, i) => (
+                            <div key={i} className="h-3 bg-gradient-to-b from-gray-100 to-gray-200 rounded-sm shadow-sm"></div>
+                          ))}
+                        </div>
+                        <div className="grid grid-cols-14 gap-[2px] mb-[2px]">
+                          {[...Array(42)].map((_, i) => (
+                            <div key={i + 42} className="h-3 bg-gradient-to-b from-gray-100 to-gray-200 rounded-sm shadow-sm"></div>
+                          ))}
+                        </div>
+                        {/* Spacebar row */}
+                        <div className="flex gap-[2px]">
+                          <div className="h-3 flex-1 bg-gradient-to-b from-gray-100 to-gray-200 rounded-sm shadow-sm"></div>
+                          <div className="h-3 flex-[3] bg-gradient-to-b from-gray-100 to-gray-200 rounded-sm shadow-sm"></div>
+                          <div className="h-3 flex-1 bg-gradient-to-b from-gray-100 to-gray-200 rounded-sm shadow-sm"></div>
+                        </div>
                       </div>
-                      {/* Spacebar */}
-                      <div className="mt-0.5 col-span-8 h-2 bg-gradient-to-b from-gray-600 to-gray-700 rounded-sm mx-8"></div>
+                      
+                      {/* Trackpad */}
+                      <div className="mx-auto w-32 h-16 bg-gradient-to-b from-gray-200 to-gray-300 rounded-lg border border-gray-400 shadow-inner"></div>
                     </div>
                   </div>
                 </div>
 
-                {/* Tablet Display - Positioned on right */}
+                {/* iPhone Mobile */}
                 <motion.div 
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.4 }}
-                  className="absolute -right-4 md:-right-8 bottom-24 md:bottom-32 w-36 md:w-48 z-10"
+                  className="w-28 md:w-36"
                 >
-                  <div className="relative bg-gray-900 rounded-xl overflow-hidden border-[6px] border-gray-900 shadow-2xl">
+                  {/* iPhone Frame */}
+                  <div className="relative bg-gradient-to-b from-gray-900 to-black rounded-[2.5rem] p-2 shadow-2xl border-2 border-gray-800">
+                    {/* Screen */}
+                    <div className="relative bg-black rounded-[2rem] overflow-hidden">
+                      {/* Dynamic Island */}
+                      <div className="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-7 bg-black rounded-full z-10 flex items-center justify-center">
+                        <div className="w-3 h-3 bg-gray-800 rounded-full mr-10"></div>
+                      </div>
+                      
+                      {/* Screen Content */}
+                      <div className="aspect-[9/19.5] bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
+                        <img 
+                          src={dashboardImage} 
+                          alt="Mobile View"
+                          className="w-full h-full object-cover object-left-top"
+                        />
+                      </div>
+                    </div>
+                    
+                    {/* Side Buttons */}
+                    <div className="absolute -left-[2px] top-20 w-[2px] h-8 bg-gray-700 rounded-l"></div>
+                    <div className="absolute -left-[2px] top-32 w-[2px] h-5 bg-gray-700 rounded-l"></div>
+                    <div className="absolute -right-[2px] top-24 w-[2px] h-14 bg-gray-700 rounded-r"></div>
+                  </div>
+                </motion.div>
+
+                {/* Tablet Display */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: 0.5 }}
+                  className="w-40 md:w-52"
+                >
+                  <div className="relative bg-gray-900 rounded-2xl overflow-hidden border-[6px] border-gray-900 shadow-2xl">
                     <div className="aspect-[3/4] bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
                       <img 
                         src={dashboardImage} 
@@ -339,42 +369,7 @@ export default function Home() {
                       />
                     </div>
                     {/* Home button indicator */}
-                    <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-8 h-1 bg-gray-800 rounded-full"></div>
-                  </div>
-                </motion.div>
-
-                {/* iPhone Mobile Display - Positioned on left */}
-                <motion.div 
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.7, delay: 0.5 }}
-                  className="absolute -left-4 md:-left-8 bottom-16 md:bottom-24 w-24 md:w-32 z-20"
-                >
-                  <div className="relative">
-                    {/* iPhone Outer Frame */}
-                    <div className="relative bg-gradient-to-b from-gray-900 to-black rounded-[2rem] p-1.5 shadow-2xl border border-gray-800">
-                      {/* iPhone Screen */}
-                      <div className="relative bg-black rounded-[1.7rem] overflow-hidden">
-                        {/* Dynamic Island / Notch */}
-                        <div className="absolute top-2 left-1/2 -translate-x-1/2 w-20 h-6 bg-black rounded-full z-10 flex items-center justify-center">
-                          <div className="w-2 h-2 bg-gray-800 rounded-full mr-8"></div>
-                        </div>
-                        
-                        {/* Screen Content */}
-                        <div className="aspect-[9/19.5] bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
-                          <img 
-                            src={dashboardImage} 
-                            alt="Mobile View"
-                            className="w-full h-full object-cover object-left-top"
-                          />
-                        </div>
-                      </div>
-                      
-                      {/* Side Buttons */}
-                      <div className="absolute -left-0.5 top-16 w-0.5 h-6 bg-gray-800 rounded-l"></div>
-                      <div className="absolute -left-0.5 top-24 w-0.5 h-4 bg-gray-800 rounded-l"></div>
-                      <div className="absolute -right-0.5 top-20 w-0.5 h-12 bg-gray-800 rounded-r"></div>
-                    </div>
+                    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-10 h-1.5 bg-gray-800 rounded-full"></div>
                   </div>
                 </motion.div>
               </div>

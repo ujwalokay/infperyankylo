@@ -1035,7 +1035,7 @@ export default function Home() {
               data-testid="card-plan-pro"
             >
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                <span className="px-6 py-2 rounded-full bg-gradient-to-r from-chart-1 to-chart-2 text-sm font-bold text-white shadow-lg">
+                <span className="px-6 py-2 rounded-full bg-gradient-to-r from-chart-1 to-chart-2 text-sm font-bold text-white shadow-lg whitespace-nowrap">
                   MOST POPULAR
                 </span>
               </div>

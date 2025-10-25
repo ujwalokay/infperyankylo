@@ -12,10 +12,9 @@ import {
   Wallet,
   Settings,
   FileBarChart,
-  FileCheck,
   CalendarCheck,
-  Users,
-  Activity
+  Bot,
+  Package
 } from "lucide-react";
 
 import seatManagementImage from "@assets/Screenshot (135)_1760629404121.png";
@@ -81,51 +80,51 @@ export default function Features() {
     },
     {
       id: 7,
-      icon: Utensils,
-      title: "Food & Beverage",
-      description: "Manage your food and beverage operations seamlessly. Process orders, track inventory, set dynamic pricing, and integrate F&B sales with gaming sessions for complete revenue tracking.",
+      icon: Bot,
+      title: "AI Maintenance",
+      description: "Leverage AI-powered maintenance predictions and automated system health monitoring. Get intelligent alerts for equipment issues, predictive maintenance schedules, and automated troubleshooting recommendations.",
       image: seatManagementImage,
       color: "from-chart-3 to-chart-1"
     },
     {
       id: 8,
-      icon: Wallet,
-      title: "Expenses",
-      description: "Keep track of all your business expenses with category-wise organization. Record operational costs, vendor payments, and maintenance expenses to understand your profitability clearly.",
+      icon: Utensils,
+      title: "Food",
+      description: "Manage your food and beverage operations seamlessly. Process orders, track inventory, set dynamic pricing, and integrate F&B sales with gaming sessions for complete revenue tracking.",
       image: seatManagementImage,
       color: "from-chart-4 to-chart-2"
     },
     {
       id: 9,
+      icon: Package,
+      title: "Inventory",
+      description: "Complete inventory management for all your gaming equipment, peripherals, and consumables. Track stock levels, manage reorders, and monitor equipment lifecycle with automated alerts for low stock.",
+      image: seatManagementImage,
+      color: "from-chart-1 to-chart-3"
+    },
+    {
+      id: 10,
+      icon: Wallet,
+      title: "Expenses",
+      description: "Keep track of all your business expenses with category-wise organization. Record operational costs, vendor payments, and maintenance expenses to understand your profitability clearly.",
+      image: seatManagementImage,
+      color: "from-chart-2 to-chart-4"
+    },
+    {
+      id: 11,
       icon: Settings,
       title: "Settings",
       description: "Customize your gaming center's configuration to match your business needs. Manage devices, pricing plans, happy hours, user roles, and system preferences all in one place.",
       image: seatManagementImage,
-      color: "from-chart-1 to-chart-4"
+      color: "from-chart-3 to-chart-4"
     },
     {
-      id: 10,
+      id: 12,
       icon: FileBarChart,
       title: "Reports",
       description: "Generate detailed reports on revenue, expenses, device utilization, and customer analytics. Export data in multiple formats for accounting, tax filing, and business planning.",
       image: seatManagementImage,
-      color: "from-chart-2 to-chart-1"
-    },
-    {
-      id: 11,
-      icon: Users,
-      title: "Customer Management",
-      description: "Build and maintain comprehensive customer profiles. Track visit history, preferences, and spending patterns to create personalized experiences and loyalty programs.",
-      image: seatManagementImage,
-      color: "from-chart-3 to-chart-2"
-    },
-    {
-      id: 12,
-      icon: Activity,
-      title: "Live Availability Tracking",
-      description: "Standalone public page for customers to view real-time availability of gaming devices. See live status of PCs, PS5, Xbox, VR systems, and simulators before visiting your center. Attract walk-ins with transparent availability information.",
-      image: seatManagementImage,
-      color: "from-chart-4 to-chart-3"
+      color: "from-chart-4 to-chart-1"
     }
   ];
 

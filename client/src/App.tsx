@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import Features from "@/pages/features";
 import PricingBreakdown from "@/pages/pricing-breakdown";
+import PricingBest from "@/pages/pricing-best";
+import PricingPro from "@/pages/pricing-pro";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -14,6 +16,8 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/features" component={Features} />
       <Route path="/pricing" component={PricingBreakdown} />
+      <Route path="/pricing-best" component={PricingBest} />
+      <Route path="/pricing-pro" component={PricingPro} />
       <Route component={NotFound} />
     </Switch>
   );

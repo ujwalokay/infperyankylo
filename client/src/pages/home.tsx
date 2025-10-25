@@ -803,17 +803,17 @@ export default function Home() {
               </Button>
             </motion.div>
 
-            {/* Pro Plan - ₹699 */}
+            {/* Best Plan - ₹699 */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="relative p-6 rounded-3xl border border-border/50 bg-card/50 backdrop-blur"
-              data-testid="card-plan-pro"
+              data-testid="card-plan-best"
             >
               <div className="mb-6">
-                <h3 className="text-2xl font-bold mb-2">Pro Plan</h3>
+                <h3 className="text-2xl font-bold mb-2">Best Plan</h3>
                 <p className="text-muted-foreground">For single category cafes</p>
               </div>
               
@@ -849,32 +849,32 @@ export default function Home() {
               </ul>
 
               <Button 
-                className="w-full rounded-full py-6 text-base"
-                variant="outline"
-                data-testid="button-choose-pro"
-                onClick={() => setContactDialogOpen(true)}
+                className="w-full rounded-full py-6 text-base bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90"
+                data-testid="button-get-best"
+                onClick={() => setLocation("/pricing-best")}
               >
-                Choose Pro
+                Get Started Now
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </motion.div>
 
-            {/* Best Plan - ₹899 (MOST POPULAR) */}
+            {/* Pro Plan - ₹899 (MOST POPULAR) */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative p-8 rounded-3xl border-2 border-chart-1 bg-gradient-to-br from-chart-1/20 via-chart-2/10 to-transparent backdrop-blur shadow-2xl shadow-chart-1/20 md:scale-105"
-              data-testid="card-plan-best"
+              data-testid="card-plan-pro"
             >
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                 <span className="px-6 py-2 rounded-full bg-gradient-to-r from-chart-1 to-chart-2 text-sm font-bold text-white shadow-lg">
-                  ⭐ MOST POPULAR
+                  MOST POPULAR
                 </span>
               </div>
 
               <div className="mb-6">
-                <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-chart-1 to-chart-2 bg-clip-text text-transparent">Best Plan</h3>
+                <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-chart-1 to-chart-2 bg-clip-text text-transparent">Pro Plan</h3>
                 <p className="text-muted-foreground font-semibold">Complete gaming center solution</p>
               </div>
               
@@ -923,15 +923,15 @@ export default function Home() {
 
               <Button 
                 className="w-full rounded-full py-6 text-lg font-bold bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90 shadow-lg"
-                data-testid="button-get-best"
-                onClick={() => setLocation("/pricing")}
+                data-testid="button-get-pro"
+                onClick={() => setLocation("/pricing-pro")}
               >
                 Get Started Now
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               
               <p className="text-xs text-center text-muted-foreground mt-4">
-                💎 Save ₹200/month compared to Pro + extra features
+                💎 Only ₹200 more - Get ALL features + all categories
               </p>
             </motion.div>
           </div>

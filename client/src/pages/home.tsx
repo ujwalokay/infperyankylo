@@ -175,6 +175,22 @@ export default function Home() {
                       <div className="text-sm text-green-100">Get instant support</div>
                     </div>
                   </Button>
+
+                  <Button
+                    onClick={() => {
+                      window.open('https://instagram.com/airavotogaming', '_blank');
+                      setContactDialogOpen(false);
+                    }}
+                    className="w-full justify-start gap-3 h-auto py-4"
+                    variant="outline"
+                    data-testid="button-instagram"
+                  >
+                    <SiInstagram className="w-5 h-5" />
+                    <div className="text-left">
+                      <div className="font-semibold">Follow us on Instagram</div>
+                      <div className="text-sm text-muted-foreground">Stay updated with our latest posts</div>
+                    </div>
+                  </Button>
                 </div>
               </DialogContent>
             </Dialog>
@@ -1274,7 +1290,7 @@ export default function Home() {
                   How do I get support if I face any issues?
                 </AccordionTrigger>
                 <AccordionContent className="text-base text-muted-foreground leading-relaxed" data-testid="faq-content-5">
-                  We provide comprehensive support through multiple channels. You can reach us via WhatsApp at +91 8657955764 for instant help, email us at airvotogaming@gmail.com, or use our contact form. We also offer detailed documentation, video tutorials, and our support team is available to assist you with any questions or technical issues you may encounter.
+                  We provide comprehensive support through multiple channels. You can reach us via WhatsApp at +91 8657955764 for instant help, email us at airavotogaming@gmail.com, or use our contact form. We also offer detailed documentation, video tutorials, and our support team is available to assist you with any questions or technical issues you may encounter.
                 </AccordionContent>
               </AccordionItem>
 
@@ -1379,7 +1395,7 @@ export default function Home() {
               <h4 className="font-bold mb-4">Connect</h4>
               <ul className="space-y-3 text-muted-foreground">
                 <li><a href="tel:+918657955764" className="hover:text-foreground transition-colors">+91 8657955764</a></li>
-                <li><a href="mailto:airvotogaming@gmail.com" className="hover:text-foreground transition-colors">airvotogaming@gmail.com</a></li>
+                <li><a href="mailto:airavotogaming@gmail.com" className="hover:text-foreground transition-colors">airavotogaming@gmail.com</a></li>
               </ul>
               <div className="mt-6">
                 <h4 className="font-bold mb-4">Follow Us</h4>

@@ -181,14 +181,13 @@ export default function Home() {
                       window.open('https://instagram.com/airavotogaming', '_blank');
                       setContactDialogOpen(false);
                     }}
-                    className="w-full justify-start gap-3 h-auto py-4"
-                    variant="outline"
+                    className="w-full justify-start gap-3 h-auto py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 hover:from-purple-700 hover:via-pink-700 hover:to-orange-600 text-white"
                     data-testid="button-instagram"
                   >
                     <SiInstagram className="w-5 h-5" />
                     <div className="text-left">
                       <div className="font-semibold">Chat on Instagram</div>
-                      <div className="text-sm text-muted-foreground">Message us directly</div>
+                      <div className="text-sm text-purple-100">Message us directly</div>
                     </div>
                   </Button>
                 </div>

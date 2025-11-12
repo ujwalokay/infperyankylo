@@ -474,4 +474,12 @@
   .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
     inset: -1px;
   }
+
+  /* Image Protection - Prevent downloading, dragging, and selecting */
+  .protected-image {
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+    pointer-events: auto;
+  }
 }

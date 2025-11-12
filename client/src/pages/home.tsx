@@ -121,7 +121,9 @@ export default function Home() {
               <img 
                 src={airavotoLogo} 
                 alt="Airavoto Gaming Logo" 
-                className="w-10 h-10 md:w-12 md:h-12"
+                className="w-10 h-10 md:w-12 md:h-12 protected-image"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable={false}
               />
               <span className="text-lg md:text-2xl font-bold text-foreground hidden sm:inline">Airavoto Gaming</span>
               <span className="text-lg font-bold text-foreground sm:hidden">Airavoto</span>
@@ -310,7 +312,9 @@ export default function Home() {
                           <img 
                             src={dashboardImage} 
                             alt="Monitor Display - Airavoto Gaming POS"
-                            className="w-full h-full object-cover object-left-top"
+                            className="w-full h-full object-cover object-left-top protected-image"
+                            onContextMenu={(e) => e.preventDefault()}
+                            draggable={false}
                           />
                         </div>
                       </div>
@@ -343,7 +347,9 @@ export default function Home() {
                         <img 
                           src={dashboardImage} 
                           alt="Laptop Display - Airavoto Gaming Dashboard"
-                          className="w-full h-full object-cover object-left-top"
+                          className="w-full h-full object-cover object-left-top protected-image"
+                          onContextMenu={(e) => e.preventDefault()}
+                          draggable={false}
                         />
                       </div>
                     </div>
@@ -401,7 +407,9 @@ export default function Home() {
                         <img 
                           src={dashboardImage} 
                           alt="Tablet Display"
-                          className="w-full h-full object-cover object-left-top"
+                          className="w-full h-full object-cover object-left-top protected-image"
+                          onContextMenu={(e) => e.preventDefault()}
+                          draggable={false}
                         />
                       </div>
                       
@@ -421,7 +429,9 @@ export default function Home() {
                     <img 
                       src={mobileComplete} 
                       alt="Mobile Display - Airavoto Gaming"
-                      className="w-full h-auto drop-shadow-2xl"
+                      className="w-full h-auto drop-shadow-2xl protected-image"
+                      onContextMenu={(e) => e.preventDefault()}
+                      draggable={false}
                     />
                   </motion.div>
                 </div>
@@ -1336,7 +1346,9 @@ export default function Home() {
                 <img 
                   src={airavotoLogo} 
                   alt="Airavoto Gaming Logo" 
-                  className="w-12 h-12"
+                  className="w-12 h-12 protected-image"
+                  onContextMenu={(e) => e.preventDefault()}
+                  draggable={false}
                 />
                 <span className="text-xl font-bold">Airavoto Gaming</span>
               </div>

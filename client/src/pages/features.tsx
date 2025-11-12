@@ -154,7 +154,9 @@ export default function Features() {
               <img 
                 src={ankyloLogo} 
                 alt="Ankylo Logo" 
-                className="w-10 h-10 md:w-12 md:h-12"
+                className="w-10 h-10 md:w-12 md:h-12 protected-image"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable={false}
               />
               <span className="text-lg md:text-2xl font-bold text-foreground hidden sm:inline">Ankylo Gaming POS</span>
               <span className="text-lg font-bold text-foreground sm:hidden">Ankylo</span>
@@ -233,7 +235,9 @@ export default function Features() {
                     <img 
                       src={feature.image} 
                       alt={`${feature.title} Interface`}
-                      className="w-full h-auto"
+                      className="w-full h-auto protected-image"
+                      onContextMenu={(e) => e.preventDefault()}
+                      draggable={false}
                       data-testid={`image-feature-${feature.id}`}
                     />
                   </div>
@@ -280,7 +284,9 @@ export default function Features() {
               <img 
                 src={ankyloLogo} 
                 alt="Ankylo Logo" 
-                className="w-10 h-10"
+                className="w-10 h-10 protected-image"
+                onContextMenu={(e) => e.preventDefault()}
+                draggable={false}
               />
               <span className="text-lg font-bold">Ankylo Gaming POS</span>
             </div>

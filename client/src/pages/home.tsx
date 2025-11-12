@@ -187,8 +187,8 @@ export default function Home() {
                   >
                     <SiInstagram className="w-5 h-5" />
                     <div className="text-left">
-                      <div className="font-semibold">Follow us on Instagram</div>
-                      <div className="text-sm text-muted-foreground">Stay updated with our latest posts</div>
+                      <div className="font-semibold">Chat on Instagram</div>
+                      <div className="text-sm text-muted-foreground">Message us directly</div>
                     </div>
                   </Button>
                 </div>

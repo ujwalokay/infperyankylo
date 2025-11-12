@@ -147,7 +147,7 @@ export default function Home() {
                 <div className="grid gap-4 py-4">
                   <Button
                     onClick={() => {
-                      window.open('https://forms.gle/your-google-form-id', '_blank');
+                      window.open('https://forms.gle/QiFf57g7bdU1UTX19', '_blank');
                       setContactDialogOpen(false);
                     }}
                     className="w-full justify-start gap-3 h-auto py-4"

@@ -1442,11 +1442,11 @@ export default function Home() {
               Powered by Airavoto Gaming
             </p>
             <div className="flex gap-6 text-sm text-muted-foreground">
-              <Link href="/privacy">
-                <a className="hover:text-foreground transition-colors" data-testid="link-privacy">Privacy Policy</a>
+              <Link href="/privacy" className="hover:text-foreground transition-colors" data-testid="link-privacy">
+                Privacy Policy
               </Link>
-              <Link href="/terms">
-                <a className="hover:text-foreground transition-colors" data-testid="link-terms">Terms & Conditions</a>
+              <Link href="/terms" className="hover:text-foreground transition-colors" data-testid="link-terms">
+                Terms & Conditions
               </Link>
             </div>
           </div>

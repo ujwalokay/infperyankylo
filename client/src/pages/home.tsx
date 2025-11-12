@@ -35,7 +35,7 @@ import {
 } from "lucide-react";
 
 import dashboardImage from "@assets/Screenshot (212)_1761392948864.png";
-import ankyloLogo from "@assets/WhatsApp_Image_2025-10-10_at_18.36.58_1fb5438e-removebg-preview_1760631104312.png";
+import airavotoLogo from "@assets/20251023_202645_1762943113599.png";
 import mobileComplete from "@assets/2e4c0ed9-073f-4840-be1d-b03693272a58_1761396779110.png";
 
 export default function Home() {
@@ -51,7 +51,7 @@ export default function Home() {
     onSuccess: () => {
       toast({
         title: "Thank you for your interest!",
-        description: "We'll contact you soon about Ankylo Gaming POS.",
+        description: "We'll contact you soon about Airavoto Gaming.",
       });
       setEmail("");
     },
@@ -105,12 +105,12 @@ export default function Home() {
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center gap-2 md:gap-3">
               <img 
-                src={ankyloLogo} 
-                alt="Ankylo Logo" 
+                src={airavotoLogo} 
+                alt="Airavoto Gaming Logo" 
                 className="w-10 h-10 md:w-12 md:h-12"
               />
-              <span className="text-lg md:text-2xl font-bold text-foreground hidden sm:inline">Ankylo Gaming POS</span>
-              <span className="text-lg font-bold text-foreground sm:hidden">Ankylo</span>
+              <span className="text-lg md:text-2xl font-bold text-foreground hidden sm:inline">Airavoto Gaming</span>
+              <span className="text-lg font-bold text-foreground sm:hidden">Airavoto</span>
             </div>
             
             <Dialog open={contactDialogOpen} onOpenChange={setContactDialogOpen}>
@@ -295,7 +295,7 @@ export default function Home() {
                         <div className="aspect-[16/9] bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
                           <img 
                             src={dashboardImage} 
-                            alt="Monitor Display - Ankylo Gaming POS"
+                            alt="Monitor Display - Airavoto Gaming POS"
                             className="w-full h-full object-cover object-left-top"
                           />
                         </div>
@@ -328,7 +328,7 @@ export default function Home() {
                       <div className="aspect-[16/10] bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden border-2 border-gray-800">
                         <img 
                           src={dashboardImage} 
-                          alt="Laptop Display - Ankylo Gaming POS Dashboard"
+                          alt="Laptop Display - Airavoto Gaming Dashboard"
                           className="w-full h-full object-cover object-left-top"
                         />
                       </div>
@@ -406,7 +406,7 @@ export default function Home() {
                   >
                     <img 
                       src={mobileComplete} 
-                      alt="Mobile Display - Ankylo Gaming POS"
+                      alt="Mobile Display - Airavoto Gaming"
                       className="w-full h-auto drop-shadow-2xl"
                     />
                   </motion.div>
@@ -664,7 +664,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Why Choose Ankylo Gaming POS?
+              Why Choose Airavoto Gaming?
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               See how we compare to other gaming center management solutions
@@ -685,7 +685,7 @@ export default function Home() {
                     <tr className="border-b border-border/50">
                       <th className="text-left p-6 font-bold text-lg md:text-xl">Feature</th>
                       <th className="text-center p-6 font-bold text-lg md:text-xl bg-gradient-to-br from-chart-1/10 to-chart-2/10">
-                        Ankylo Gaming POS
+                        Airavoto Gaming
                       </th>
                       <th className="text-center p-6 font-bold text-lg md:text-xl">Pancafe Pro</th>
                       <th className="text-center p-6 font-bold text-lg md:text-xl">Excel Sheet</th>
@@ -1121,10 +1121,10 @@ export default function Home() {
               <span className="text-sm font-semibold text-chart-1">Video Tutorial</span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              See Ankylo in Action
+              See Airavoto Gaming in Action
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Watch this quick tutorial to learn how to set up and use Ankylo Gaming POS for your gaming center
+              Watch this quick tutorial to learn how to set up and use Airavoto Gaming for your gaming center
             </p>
           </motion.div>
 
@@ -1140,7 +1140,7 @@ export default function Home() {
               <iframe
                 className="absolute top-0 left-0 w-full h-full"
                 src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="Ankylo Gaming POS Tutorial"
+                title="Airavoto Gaming Tutorial"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 data-testid="iframe-tutorial"
@@ -1215,11 +1215,11 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-3 mb-6">
                 <img 
-                  src={ankyloLogo} 
-                  alt="Ankylo Logo" 
+                  src={airavotoLogo} 
+                  alt="Airavoto Gaming Logo" 
                   className="w-12 h-12"
                 />
-                <span className="text-xl font-bold">Ankylo</span>
+                <span className="text-xl font-bold">Airavoto Gaming</span>
               </div>
               <p className="text-muted-foreground">
                 From idea to launch — we build your gaming center's digital presence.
@@ -1250,14 +1250,14 @@ export default function Home() {
               <h4 className="font-bold mb-4">Connect</h4>
               <ul className="space-y-3 text-muted-foreground">
                 <li><a href="#" className="hover:text-foreground transition-colors">+123 456 789</a></li>
-                <li><a href="mailto:support@ankylo.com" className="hover:text-foreground transition-colors">support@ankylo.com</a></li>
+                <li><a href="mailto:support@airavoto.com" className="hover:text-foreground transition-colors">support@airavoto.com</a></li>
               </ul>
             </div>
           </div>
 
           <div className="pt-8 border-t border-border/40 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              Powered by Ankylo Gaming POS
+              Powered by Airavoto Gaming
             </p>
             <div className="flex gap-6 text-sm text-muted-foreground">
               <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>

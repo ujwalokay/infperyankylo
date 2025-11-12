@@ -14,6 +14,12 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { 
   Mail, 
   ArrowRight,
@@ -1187,6 +1193,111 @@ export default function Home() {
                 Contact Support
               </Button>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 md:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background"></div>
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Got questions? We've got answers
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <Accordion type="single" collapsible className="space-y-4" data-testid="accordion-faq">
+              <AccordionItem value="item-1" className="border border-border/50 rounded-xl px-6 bg-card/50 backdrop-blur">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline" data-testid="faq-trigger-1">
+                  What is Airavoto Gaming and how does it help my gaming center?
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground leading-relaxed" data-testid="faq-content-1">
+                  Airavoto Gaming is a comprehensive Point of Sale (POS) system designed specifically for gaming centers. It helps you manage real-time gaming sessions across PC, console, VR, and simulators, handle bookings, track food & beverage sales, manage inventory, and generate detailed financial reports—all from one powerful platform. It simplifies operations and helps you grow your business efficiently.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2" className="border border-border/50 rounded-xl px-6 bg-card/50 backdrop-blur">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline" data-testid="faq-trigger-2">
+                  How does the session management system work?
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground leading-relaxed" data-testid="faq-content-2">
+                  Our session management system tracks gaming sessions in real-time with live countdown timers. You can easily start, pause, resume, or end sessions across multiple gaming stations. The system automatically updates session status, calculates charges based on time played, and sends notifications when sessions are about to end. Everything is visible from a single dashboard for easy monitoring.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3" className="border border-border/50 rounded-xl px-6 bg-card/50 backdrop-blur">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline" data-testid="faq-trigger-3">
+                  Can I manage bookings and walk-ins at the same time?
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground leading-relaxed" data-testid="faq-content-3">
+                  Yes! Airavoto Gaming supports both advance bookings and walk-in customers seamlessly. The system has intelligent conflict detection to prevent double bookings, instant seat allocation, and can handle bulk bookings for events or parties. You'll have full visibility of your schedule and can manage both types of customers efficiently.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4" className="border border-border/50 rounded-xl px-6 bg-card/50 backdrop-blur">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline" data-testid="faq-trigger-4">
+                  Is the system suitable for small gaming centers?
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground leading-relaxed" data-testid="faq-content-4">
+                  Absolutely! Airavoto Gaming is designed to scale with your business. Whether you're running a small gaming cafe with 5 stations or a large gaming arena with 50+ stations, our system adapts to your needs. We offer flexible pricing plans that work for businesses of all sizes, and you only pay for the features you need.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5" className="border border-border/50 rounded-xl px-6 bg-card/50 backdrop-blur">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline" data-testid="faq-trigger-5">
+                  How do I get support if I face any issues?
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground leading-relaxed" data-testid="faq-content-5">
+                  We provide comprehensive support through multiple channels. You can reach us via WhatsApp at +91 8657955764 for instant help, email us at airvotogaming@gmail.com, or use our contact form. We also offer detailed documentation, video tutorials, and our support team is available to assist you with any questions or technical issues you may encounter.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-6" className="border border-border/50 rounded-xl px-6 bg-card/50 backdrop-blur">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline" data-testid="faq-trigger-6">
+                  Can I try the system before committing to a purchase?
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground leading-relaxed" data-testid="faq-content-6">
+                  Yes! We offer a demo of the system so you can explore all the features and see how Airavoto Gaming works for your gaming center. Contact us through the "Contact Us" button or reach out via WhatsApp, and we'll be happy to schedule a personalized demo and answer all your questions about pricing and implementation.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-center mt-12"
+          >
+            <p className="text-muted-foreground mb-6">
+              Still have questions? We're here to help!
+            </p>
+            <Button 
+              size="lg" 
+              className="rounded-full px-8"
+              onClick={() => setContactDialogOpen(true)}
+              data-testid="button-faq-contact"
+            >
+              Contact Us
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
           </motion.div>
         </div>
       </section>

@@ -178,7 +178,7 @@ export default function Home() {
 
                   <Button
                     onClick={() => {
-                      window.open('https://instagram.com/airavotogaming', '_blank');
+                      window.open('https://www.instagram.com/airavotogaming?igsh=MTEwOGx5emN5cXhldg==', '_blank');
                       setContactDialogOpen(false);
                     }}
                     className="w-full justify-start gap-3 h-auto py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 hover:from-purple-700 hover:via-pink-700 hover:to-orange-600 text-white"
@@ -1400,7 +1400,7 @@ export default function Home() {
                 <h4 className="font-bold mb-4">Follow Us</h4>
                 <div className="flex flex-wrap gap-3">
                   <a 
-                    href="https://instagram.com/airvotogaming" 
+                    href="https://www.instagram.com/airavotogaming?igsh=MTEwOGx5emN5cXhldg==" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-muted/50 hover:bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground transition-all hover-elevate"

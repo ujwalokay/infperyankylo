@@ -24,7 +24,7 @@ import {
 } from "@/components/ui/dialog";
 import { FileText, MessageCircle } from "lucide-react";
 
-import ankyloLogo from "@assets/WhatsApp_Image_2025-10-10_at_18.36.58_1fb5438e-removebg-preview_1760631104312.png";
+import airavotoLogo from "@assets/20251023_202645_1762943113599.png";
 
 export default function PricingBreakdown() {
   const [, setLocation] = useLocation();
@@ -85,14 +85,14 @@ export default function PricingBreakdown() {
           <div className="flex items-center justify-between h-20">
             <Link href="/" className="flex items-center gap-2 md:gap-3" data-testid="link-home">
               <img 
-                src={ankyloLogo} 
-                alt="Ankylo Logo" 
+                src={airavotoLogo} 
+                alt="Airavoto Gaming Logo" 
                 className="w-10 h-10 md:w-12 md:h-12 protected-image"
                 onContextMenu={(e) => e.preventDefault()}
                 draggable={false}
               />
-              <span className="text-lg md:text-2xl font-bold text-foreground hidden sm:inline">Ankylo Gaming POS</span>
-              <span className="text-lg font-bold text-foreground sm:hidden">Ankylo</span>
+              <span className="text-lg md:text-2xl font-bold text-foreground hidden sm:inline">Airavoto Gaming</span>
+              <span className="text-lg font-bold text-foreground sm:hidden">Airavoto</span>
             </Link>
             
             <Button 
@@ -371,16 +371,16 @@ export default function PricingBreakdown() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <img 
-                src={ankyloLogo} 
-                alt="Ankylo Logo" 
+                src={airavotoLogo} 
+                alt="Airavoto Gaming Logo" 
                 className="w-10 h-10 protected-image"
                 onContextMenu={(e) => e.preventDefault()}
                 draggable={false}
               />
-              <span className="text-lg font-bold">Ankylo Gaming POS</span>
+              <span className="text-lg font-bold">Airavoto Gaming</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              © 2025 Ankylo Gaming POS. All rights reserved.
+              © 2025 Airavoto Gaming. All rights reserved.
             </p>
           </div>
         </div>

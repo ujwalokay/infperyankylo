@@ -147,7 +147,7 @@ export default function Home() {
                   
                   <Button
                     onClick={() => {
-                      window.open('https://wa.me/your-number', '_blank');
+                      window.open('https://wa.me/918657955764', '_blank');
                       setContactDialogOpen(false);
                     }}
                     className="w-full justify-start gap-3 h-auto py-4 bg-green-600 hover:bg-green-700 text-white"
@@ -1241,16 +1241,14 @@ export default function Home() {
               <ul className="space-y-3 text-muted-foreground">
                 <li><a href="#" className="hover:text-foreground transition-colors">About Us</a></li>
                 <li><a href="#" className="hover:text-foreground transition-colors">Contact</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Help Center</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Career</a></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-bold mb-4">Connect</h4>
               <ul className="space-y-3 text-muted-foreground">
-                <li><a href="#" className="hover:text-foreground transition-colors">+123 456 789</a></li>
-                <li><a href="mailto:support@airavoto.com" className="hover:text-foreground transition-colors">support@airavoto.com</a></li>
+                <li><a href="tel:+918657955764" className="hover:text-foreground transition-colors">+91 8657955764</a></li>
+                <li><a href="mailto:airvotogaming@gmail.com" className="hover:text-foreground transition-colors">airvotogaming@gmail.com</a></li>
               </ul>
             </div>
           </div>

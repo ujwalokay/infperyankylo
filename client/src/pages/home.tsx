@@ -33,6 +33,14 @@ import {
   PlayCircle,
   XCircle
 } from "lucide-react";
+import { 
+  SiInstagram, 
+  SiX, 
+  SiFacebook, 
+  SiWhatsapp, 
+  SiDiscord, 
+  SiYoutube 
+} from "react-icons/si";
 
 import dashboardImage from "@assets/Screenshot (212)_1761392948864.png";
 import airavotoLogo from "@assets/20251023_202645_1762943113599.png";
@@ -1250,6 +1258,71 @@ export default function Home() {
                 <li><a href="tel:+918657955764" className="hover:text-foreground transition-colors">+91 8657955764</a></li>
                 <li><a href="mailto:airvotogaming@gmail.com" className="hover:text-foreground transition-colors">airvotogaming@gmail.com</a></li>
               </ul>
+              <div className="mt-6">
+                <h4 className="font-bold mb-4">Follow Us</h4>
+                <div className="flex flex-wrap gap-3">
+                  <a 
+                    href="https://instagram.com/airvotogaming" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-muted/50 hover:bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground transition-all hover-elevate"
+                    data-testid="link-instagram"
+                    aria-label="Instagram"
+                  >
+                    <SiInstagram className="w-5 h-5" />
+                  </a>
+                  <a 
+                    href="https://x.com/airvotogaming" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-muted/50 hover:bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground transition-all hover-elevate"
+                    data-testid="link-x"
+                    aria-label="X (Twitter)"
+                  >
+                    <SiX className="w-5 h-5" />
+                  </a>
+                  <a 
+                    href="https://facebook.com/airvotogaming" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-muted/50 hover:bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground transition-all hover-elevate"
+                    data-testid="link-facebook"
+                    aria-label="Facebook"
+                  >
+                    <SiFacebook className="w-5 h-5" />
+                  </a>
+                  <a 
+                    href="https://wa.me/918657955764" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-muted/50 hover:bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground transition-all hover-elevate"
+                    data-testid="link-whatsapp"
+                    aria-label="WhatsApp"
+                  >
+                    <SiWhatsapp className="w-5 h-5" />
+                  </a>
+                  <a 
+                    href="https://discord.gg/airvotogaming" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-muted/50 hover:bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground transition-all hover-elevate"
+                    data-testid="link-discord"
+                    aria-label="Discord"
+                  >
+                    <SiDiscord className="w-5 h-5" />
+                  </a>
+                  <a 
+                    href="https://youtube.com/@airvotogaming" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-muted/50 hover:bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground transition-all hover-elevate"
+                    data-testid="link-youtube"
+                    aria-label="YouTube"
+                  >
+                    <SiYoutube className="w-5 h-5" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 

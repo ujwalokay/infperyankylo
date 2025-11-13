@@ -23,6 +23,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { FileText, MessageCircle } from "lucide-react";
+import { SiInstagram } from "react-icons/si";
 
 import airavotoLogo from "@assets/20251023_202645_1762943113599.png";
 
@@ -326,7 +327,7 @@ export default function PricingBreakdown() {
                 <div className="grid gap-4 py-4">
                   <Button
                     onClick={() => {
-                      window.open('https://forms.gle/your-google-form-id', '_blank');
+                      window.open('https://forms.gle/QiFf57g7bdU1UTX19', '_blank');
                       setContactDialogOpen(false);
                     }}
                     className="w-full justify-start gap-3 h-auto py-4"
@@ -342,7 +343,7 @@ export default function PricingBreakdown() {
                   
                   <Button
                     onClick={() => {
-                      window.open('https://wa.me/your-number', '_blank');
+                      window.open('https://wa.me/918657955764', '_blank');
                       setContactDialogOpen(false);
                     }}
                     className="w-full justify-start gap-3 h-auto py-4 bg-green-600 hover:bg-green-700 text-white"
@@ -352,6 +353,21 @@ export default function PricingBreakdown() {
                     <div className="text-left">
                       <div className="font-semibold">Chat on WhatsApp</div>
                       <div className="text-sm text-green-100">Get instant support</div>
+                    </div>
+                  </Button>
+
+                  <Button
+                    onClick={() => {
+                      window.open('https://www.instagram.com/airavotogaming?igsh=MTEwOGx5emN5cXhldg==', '_blank');
+                      setContactDialogOpen(false);
+                    }}
+                    className="w-full justify-start gap-3 h-auto py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 hover:from-purple-700 hover:via-pink-700 hover:to-orange-600 text-white"
+                    data-testid="button-instagram"
+                  >
+                    <SiInstagram className="w-5 h-5" />
+                    <div className="text-left">
+                      <div className="font-semibold">Chat on Instagram</div>
+                      <div className="text-sm text-purple-100">Message us directly</div>
                     </div>
                   </Button>
                 </div>

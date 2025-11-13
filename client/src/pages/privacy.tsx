@@ -289,15 +289,6 @@ export default function Privacy() {
             </p>
           </section>
         </div>
-
-        <div className="mt-12 pt-8 border-t border-border">
-          <Link href="/">
-            <Button data-testid="button-back-home-bottom">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Home
-            </Button>
-          </Link>
-        </div>
       </div>
     </div>
   );

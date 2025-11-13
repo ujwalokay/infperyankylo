@@ -180,7 +180,7 @@ export default function PricingBreakdown() {
                   <Card className="p-6 hover:shadow-lg transition-shadow">
                     <div className="flex items-start gap-4">
                       <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${cost.color} bg-opacity-10 flex items-center justify-center flex-shrink-0`}>
-                        <Icon className="w-7 h-7 text-chart-1" />
+                        <Icon className="w-7 h-7 text-white" />
                       </div>
                       <div className="flex-1">
                         <h3 className="text-xl font-bold mb-2">{cost.title}</h3>

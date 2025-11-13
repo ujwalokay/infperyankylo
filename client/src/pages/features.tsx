@@ -14,7 +14,8 @@ import {
   FileBarChart,
   CalendarCheck,
   Bot,
-  Package
+  Package,
+  Globe
 } from "lucide-react";
 
 import dashboardImage from "@assets/Screenshot (212)_1761390527364.png";
@@ -29,6 +30,7 @@ import inventoryImage from "@assets/Screenshot (220)_1761390527364.png";
 import expensesImage from "@assets/Screenshot (221)_1761390527364.png";
 import settingsImage from "@assets/Screenshot (222)_1761390527364.png";
 import reportsImage from "@assets/Screenshot (223)_1761390527364.png";
+import liveAvailabilityImage from "@assets/Screenshot (419)_1763017616191.png";
 import airavotoLogo from "@assets/20251023_202645_1762943113599.png";
 
 export default function Features() {
@@ -136,6 +138,14 @@ export default function Features() {
       description: "Generate detailed reports on revenue, expenses, device utilization, and customer analytics. Export data in multiple formats for accounting, tax filing, and business planning.",
       image: reportsImage,
       color: "from-chart-4 to-chart-1"
+    },
+    {
+      id: 13,
+      icon: Globe,
+      title: "Live Seat Availability Mini Webpage",
+      description: "Empower your players with real-time seat availability through a dedicated mini webpage. Customers can instantly check which gaming stations are free, see live status updates, and plan their visit accordingly - all without calling or visiting your cafe.",
+      image: liveAvailabilityImage,
+      color: "from-chart-1 to-chart-2"
     }
   ];
 

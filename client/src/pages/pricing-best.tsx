@@ -257,7 +257,7 @@ export default function PricingBest() {
               { text: "AI Maintenance & Predictions", included: false },
               { text: "Complete inventory management", included: false },
               { text: "All categories (PS5, PC, VR, Xbox)", included: false },
-              { text: "Priority 24/7 support", included: false }
+              { text: "Priority support (Working Hours)", included: false }
             ].map((feature, index) => (
               <motion.div
                 key={index}
@@ -386,7 +386,7 @@ export default function PricingBest() {
             </Dialog>
 
             <p className="text-sm text-muted-foreground mt-6">
-              No credit card required • 14-day free trial included
+              No credit card required • 7-day free trial included
             </p>
           </motion.div>
         </div>

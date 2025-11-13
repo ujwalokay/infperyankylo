@@ -266,7 +266,7 @@ export default function PricingBreakdown() {
               "Customer management & loyalty",
               "Expense tracking",
               "Live availability display",
-              "Priority support (24/7)",
+              "Priority support (Working Hours)",
               "Custom branding",
               "Multi-location support",
               "Automated billing & invoicing",
@@ -375,7 +375,7 @@ export default function PricingBreakdown() {
             </Dialog>
 
             <p className="text-sm text-muted-foreground mt-6">
-              No credit card required • 14-day free trial included
+              No credit card required • 7-day free trial included
             </p>
           </motion.div>
         </div>

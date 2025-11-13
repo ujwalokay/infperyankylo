@@ -262,7 +262,7 @@ export default function Features() {
               Ready to Transform Your Gaming Center?
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Start your 14-day free trial and experience the power of Airavoto Gaming
+              Start your 7-day free trial and experience the power of Airavoto Gaming
             </p>
             <Button 
               size="lg" 

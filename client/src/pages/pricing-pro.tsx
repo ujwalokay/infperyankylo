@@ -233,7 +233,7 @@ export default function PricingPro() {
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
                     <p className="text-sm text-muted-foreground">
-                      <strong>Premium Plan Benefits:</strong> Get ALL 12 features, ALL device categories (PS5, PC, VR, Xbox), AI Maintenance, Complete Inventory, Live Availability Webpage & Priority 24/7 Support!
+                      <strong>Premium Plan Benefits:</strong> Get ALL 12 features, ALL device categories (PS5, PC, VR, Xbox), AI Maintenance, Complete Inventory, Live Availability Webpage & Priority Support (Working Hours)!
                     </p>
                   </div>
                 </div>
@@ -271,7 +271,7 @@ export default function PricingPro() {
               "Expense Tracking & Reports",
               "Settings & Customization",
               "Live Availability Webpage for Customers",
-              "Priority support (24/7)",
+              "Priority support (Working Hours)",
               "Custom branding & White Label",
               "All Categories: PS5, PC, VR, Xbox & more",
               "Automated billing & invoicing",
@@ -379,7 +379,7 @@ export default function PricingPro() {
             </Dialog>
 
             <p className="text-sm text-muted-foreground mt-6">
-              No credit card required • 14-day free trial included
+              No credit card required • 7-day free trial included
             </p>
           </motion.div>
         </div>

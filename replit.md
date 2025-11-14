@@ -2,7 +2,17 @@
 
 ## Overview
 
-This is a modern, professional landing page for Ankylo Gaming POS built with React, TypeScript, and Express. The application showcases a complete gaming center management system with purple/black modern tech aesthetics, featuring comprehensive operational tools for session tracking, booking management, inventory control, and financial oversight. The project uses a full-stack architecture with a React frontend powered by Vite and an Express backend for API handling.
+This is a modern, professional landing page for Ankylo Gaming POS built with React, TypeScript, and Express. The application showcases a complete gaming center management system with purple/black modern tech aesthetics, featuring comprehensive operational tools for session tracking, booking management, inventory control, financial oversight, happy hours management, and flexible discount systems. The project uses a full-stack architecture with a React frontend powered by Vite and an Express backend for API handling.
+
+## Recent Changes
+
+**November 14, 2025**
+- Added Happy Hours Management feature card to home page and features page
+- Added Flexible Discount & Free Hours feature card to home page and features page
+- Features positioned before Live Seat Availability Mini Webpage as requested
+- Enabled mobile two-finger zoom (maximum-scale: 5.0, user-scalable: yes)
+- Used PartyPopper icon for Happy Hours and Percent icon for Discount features
+- Integrated user-provided screenshots for feature visualization
 
 ## User Preferences
 

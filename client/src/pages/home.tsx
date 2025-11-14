@@ -37,7 +37,9 @@ import {
   FileText,
   MessageCircle,
   PlayCircle,
-  XCircle
+  XCircle,
+  PartyPopper,
+  Percent
 } from "lucide-react";
 import { 
   SiInstagram, 
@@ -544,6 +546,42 @@ export default function Home() {
               <h3 className="text-xl md:text-2xl font-bold mb-3">Comprehensive Financial Management</h3>
               <p className="text-base text-muted-foreground leading-relaxed">
                 Gain clear insights with detailed expense tracking, category-wise reporting, and flexible export capabilities. Make data-driven decisions with monthly summaries.
+              </p>
+            </motion.div>
+
+            {/* Happy Hours */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="group relative p-8 rounded-2xl bg-card border border-border/50 hover:border-pink-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/10"
+              data-testid="card-feature-happy-hours"
+            >
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500/10 to-pink-600/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <PartyPopper className="w-7 h-7 text-pink-500" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold mb-3">Happy Hours Management</h3>
+              <p className="text-base text-muted-foreground leading-relaxed">
+                Configure special pricing during off-peak hours to maximize seat utilization. Automatically apply discounted rates and boost revenue with smart time-based promotions.
+              </p>
+            </motion.div>
+
+            {/* Discount Bonus */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="group relative p-8 rounded-2xl bg-card border border-border/50 hover:border-emerald-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/10"
+              data-testid="card-feature-discount-bonus"
+            >
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-emerald-500/10 to-emerald-600/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Percent className="w-7 h-7 text-emerald-500" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold mb-3">Flexible Discount & Free Hours</h3>
+              <p className="text-base text-muted-foreground leading-relaxed">
+                Apply manual discounts and free hours on any booking. Reward loyal customers, handle promotions, and manage special offers with complete flexibility and control.
               </p>
             </motion.div>
           </div>

@@ -15,7 +15,9 @@ import {
   CalendarCheck,
   Bot,
   Package,
-  Globe
+  Globe,
+  PartyPopper,
+  Percent
 } from "lucide-react";
 
 import dashboardImage from "@assets/Screenshot (212)_1761390527364.png";
@@ -30,6 +32,8 @@ import inventoryImage from "@assets/Screenshot (220)_1761390527364.png";
 import expensesImage from "@assets/Screenshot (221)_1761390527364.png";
 import settingsImage from "@assets/Screenshot (222)_1761390527364.png";
 import reportsImage from "@assets/Screenshot (223)_1761390527364.png";
+import happyHoursImage from "@assets/Screenshot (423)_1763102462455.png";
+import discountBonusImage from "@assets/Screenshot (424)_1763102462455.png";
 import liveAvailabilityImage from "@assets/Screenshot (419)_1763017616191.png";
 import airavotoLogo from "@assets/20251023_202645_1762943113599.png";
 
@@ -141,6 +145,22 @@ export default function Features() {
     },
     {
       id: 13,
+      icon: PartyPopper,
+      title: "Happy Hours Management",
+      description: "Configure special pricing during off-peak hours to maximize seat utilization. Set time-based discounts that automatically apply during happy hours. Boost revenue by attracting more customers during slow periods with smart promotional pricing.",
+      image: happyHoursImage,
+      color: "from-pink-500 to-pink-600"
+    },
+    {
+      id: 14,
+      icon: Percent,
+      title: "Flexible Discount & Free Hours",
+      description: "Apply manual discounts and free hours to any booking with complete flexibility. Reward loyal customers, handle special promotions, and manage custom offers. Set percentage-based discounts or add complimentary hours to enhance customer satisfaction.",
+      image: discountBonusImage,
+      color: "from-emerald-500 to-emerald-600"
+    },
+    {
+      id: 15,
       icon: Globe,
       title: "Live Seat Availability Mini Webpage",
       description: "Empower your players with real-time seat availability through a dedicated mini webpage. Customers can instantly check which gaming stations are free, see live status updates, and plan their visit accordingly - all without calling or visiting your cafe.",

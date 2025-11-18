@@ -133,7 +133,7 @@ export default function PricingPro() {
               className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight" 
               data-testid="text-pricing-heading"
             >
-              Admin Plan - Detailed Pricing
+              Professional Plan - For Growing Businesses
             </motion.h1>
 
             <motion.p 
@@ -149,101 +149,6 @@ export default function PricingPro() {
         </div>
       </section>
 
-      {/* Cost Breakdown */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              What's Included in Your Subscription
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Here's the complete breakdown of monthly costs
-            </p>
-          </motion.div>
-
-          <div className="space-y-6 mb-12">
-            {costs.map((cost, index) => {
-              const Icon = cost.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  data-testid={`card-cost-${index}`}
-                >
-                  <Card className="p-6 hover:shadow-lg transition-shadow">
-                    <div className="flex items-start gap-4">
-                      <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${cost.color} bg-opacity-10 flex items-center justify-center flex-shrink-0`}>
-                        <Icon className="w-7 h-7 text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold mb-2">{cost.title}</h3>
-                        <p className="text-muted-foreground">{cost.description}</p>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-2xl font-bold">₹{formatPrice(cost.originalCost)}</div>
-                        <div className="text-sm text-muted-foreground">/month</div>
-                      </div>
-                    </div>
-                  </Card>
-                </motion.div>
-              );
-            })}
-          </div>
-
-          {/* Pricing Summary */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <Card className="p-8 bg-gradient-to-br from-chart-1/5 to-chart-2/5 border-2 border-chart-1/20">
-              <div className="space-y-4">
-                <div className="flex justify-between items-center text-lg">
-                  <span className="text-muted-foreground">Original Total</span>
-                  <span className="font-semibold">₹{formatPrice(originalTotal)}/month</span>
-                </div>
-
-                <div className="flex justify-between items-center text-lg">
-                  <div className="flex items-center gap-2">
-                    <Tag className="w-5 h-5 text-chart-1" />
-                    <span className="text-chart-1 font-semibold">Launch Discount ({discountPercent}%)</span>
-                  </div>
-                  <span className="text-chart-1 font-semibold">-₹{formatPrice(discountAmount)}</span>
-                </div>
-
-                <div className="border-t border-border/50 pt-4 mt-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-2xl font-bold">Your Monthly Price</span>
-                    <div className="text-right">
-                      <div className="text-4xl font-bold text-chart-1">₹{formatPrice(finalPrice)}</div>
-                      <div className="text-sm text-muted-foreground line-through">₹{formatPrice(originalTotal)}</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-background/50 rounded-xl p-4 mt-6">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                    <p className="text-sm text-muted-foreground">
-                      <strong>Admin Plan Benefits:</strong> Get ALL 12 features, ALL device categories (PS5, PC, VR, Xbox), AI Maintenance, Complete Inventory, Live Availability Webpage, Priority Support & Admin Panel Dashboard for managing all your cafes in one place!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </Card>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Features Included */}
       <section className="py-16 md:py-24 bg-muted/30">
@@ -256,7 +161,7 @@ export default function PricingPro() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Everything You Get with Admin Plan (₹3,999)
+              Everything You Get with Professional Plan (₹3,999)
             </h2>
           </motion.div>
 
@@ -314,7 +219,7 @@ export default function PricingPro() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Contact us today to activate your Admin Plan and start managing all your gaming centers
+              Contact us today to get started with the Professional Plan
             </p>
 
             <Dialog open={contactDialogOpen} onOpenChange={setContactDialogOpen}>
@@ -322,9 +227,9 @@ export default function PricingPro() {
                 <Button 
                   size="lg" 
                   className="rounded-full px-12 py-7 text-xl bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90"
-                  data-testid="button-activate-plan"
+                  data-testid="button-get-started"
                 >
-                  Activate Admin Plan
+                  Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </DialogTrigger>

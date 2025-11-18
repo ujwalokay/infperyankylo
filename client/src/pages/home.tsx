@@ -131,14 +131,26 @@ export default function Home() {
               <span className="text-lg font-bold text-foreground sm:hidden">Airavoto</span>
             </div>
             
-            <Dialog open={contactDialogOpen} onOpenChange={setContactDialogOpen}>
-              <DialogTrigger asChild>
-                <Button size="lg" className="rounded-full px-4 md:px-8" data-testid="button-contact">
-                  <span className="hidden sm:inline">Contact Us</span>
-                  <span className="sm:hidden">Contact</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-              </DialogTrigger>
+            <div className="flex items-center gap-3">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="rounded-full px-4 md:px-6"
+                onClick={() => window.open('https://demo.airavotogaming.com', '_blank')}
+                data-testid="button-live-demo"
+              >
+                <PlayCircle className="w-4 h-4 md:mr-2" />
+                <span className="hidden md:inline">Live Demo</span>
+              </Button>
+              
+              <Dialog open={contactDialogOpen} onOpenChange={setContactDialogOpen}>
+                <DialogTrigger asChild>
+                  <Button size="lg" className="rounded-full px-4 md:px-8" data-testid="button-contact">
+                    <span className="hidden sm:inline">Contact Us</span>
+                    <span className="sm:hidden">Contact</span>
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </DialogTrigger>
               <DialogContent className="sm:max-w-md">
                 <DialogHeader>
                   <DialogTitle>Contact Us</DialogTitle>
@@ -195,6 +207,7 @@ export default function Home() {
                 </div>
               </DialogContent>
             </Dialog>
+            </div>
           </div>
         </div>
       </motion.nav>
@@ -1083,17 +1096,17 @@ export default function Home() {
               </Button>
             </motion.div>
 
-            {/* Admin Plan - ₹3,999 */}
+            {/* Professional Plan - ₹3,999 */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative p-6 rounded-3xl border border-border/50 bg-card/50 backdrop-blur"
-              data-testid="card-plan-admin"
+              data-testid="card-plan-professional"
             >
               <div className="mb-6">
-                <h3 className="text-2xl font-bold mb-2">Admin Plan</h3>
+                <h3 className="text-2xl font-bold mb-2">Professional Plan</h3>
                 <p className="text-muted-foreground">For gaming center franchises</p>
               </div>
               
@@ -1135,7 +1148,7 @@ export default function Home() {
               <Button 
                 className="w-full rounded-full py-6 text-base" 
                 variant="outline"
-                data-testid="button-contact-admin"
+                data-testid="button-contact-professional"
                 onClick={() => setLocation("/pricing-pro")}
               >
                 View Details

@@ -42,36 +42,38 @@ export default function PricingPro() {
       icon: Server,
       title: "Server Infrastructure",
       description: "High-performance cloud servers for fast, reliable access",
-      originalCost: 600,
+      originalCost: 2200,
       color: "from-chart-1 to-chart-2"
     },
     {
       icon: Database,
       title: "Database Management",
       description: "Secure PostgreSQL database with automatic backups",
-      originalCost: 500,
+      originalCost: 1800,
       color: "from-chart-2 to-chart-3"
     },
     {
       icon: Shield,
       title: "Security & SSL",
       description: "Enterprise-grade security with SSL certificates",
-      originalCost: 350,
+      originalCost: 1500,
       color: "from-chart-3 to-chart-4"
     },
     {
       icon: Zap,
       title: "Premium Features",
       description: "AI Maintenance, Advanced analytics, Inventory & All categories",
-      originalCost: 450,
+      originalCost: 2000,
       color: "from-chart-4 to-chart-1"
     }
   ];
 
   const originalTotal = costs.reduce((sum, cost) => sum + cost.originalCost, 0);
-  const discountPercent = 53;
-  const discountAmount = originalTotal - 899;
-  const finalPrice = 899;
+  const finalPrice = 3999;
+  const discountAmount = originalTotal - finalPrice;
+  const discountPercent = Math.round((discountAmount / originalTotal) * 100);
+  
+  const formatPrice = (price: number) => price.toLocaleString('en-IN');
 
   return (
     <div className="min-h-screen">
@@ -121,7 +123,7 @@ export default function PricingPro() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-chart-1/20 to-chart-2/20 border border-chart-1/30 mb-6"
             >
               <Tag className="w-4 h-4 text-chart-1" />
-              <span className="text-sm font-semibold">MOST POPULAR - Best Value for Multi-Category Cafes</span>
+              <span className="text-sm font-semibold">MOST POPULAR - Best Value for Multi-Cafe Operations</span>
             </motion.div>
 
             <motion.h1 
@@ -187,7 +189,7 @@ export default function PricingPro() {
                         <p className="text-muted-foreground">{cost.description}</p>
                       </div>
                       <div className="text-right">
-                        <div className="text-2xl font-bold">₹{cost.originalCost}</div>
+                        <div className="text-2xl font-bold">₹{formatPrice(cost.originalCost)}</div>
                         <div className="text-sm text-muted-foreground">/month</div>
                       </div>
                     </div>
@@ -208,7 +210,7 @@ export default function PricingPro() {
               <div className="space-y-4">
                 <div className="flex justify-between items-center text-lg">
                   <span className="text-muted-foreground">Original Total</span>
-                  <span className="font-semibold">₹{originalTotal}/month</span>
+                  <span className="font-semibold">₹{formatPrice(originalTotal)}/month</span>
                 </div>
 
                 <div className="flex justify-between items-center text-lg">
@@ -216,15 +218,15 @@ export default function PricingPro() {
                     <Tag className="w-5 h-5 text-chart-1" />
                     <span className="text-chart-1 font-semibold">Launch Discount ({discountPercent}%)</span>
                   </div>
-                  <span className="text-chart-1 font-semibold">-₹{discountAmount}</span>
+                  <span className="text-chart-1 font-semibold">-₹{formatPrice(discountAmount)}</span>
                 </div>
 
                 <div className="border-t border-border/50 pt-4 mt-4">
                   <div className="flex justify-between items-center">
                     <span className="text-2xl font-bold">Your Monthly Price</span>
                     <div className="text-right">
-                      <div className="text-4xl font-bold text-chart-1">₹{finalPrice}</div>
-                      <div className="text-sm text-muted-foreground line-through">₹{originalTotal}</div>
+                      <div className="text-4xl font-bold text-chart-1">₹{formatPrice(finalPrice)}</div>
+                      <div className="text-sm text-muted-foreground line-through">₹{formatPrice(originalTotal)}</div>
                     </div>
                   </div>
                 </div>
@@ -254,7 +256,7 @@ export default function PricingPro() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Everything You Get with Pro Plan (₹899)
+              Everything You Get with Pro Plan (₹3,999)
             </h2>
           </motion.div>
 

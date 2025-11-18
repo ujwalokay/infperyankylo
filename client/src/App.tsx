@@ -9,8 +9,6 @@ import Features from "@/pages/features";
 import PricingBreakdown from "@/pages/pricing-breakdown";
 import PricingBest from "@/pages/pricing-best";
 import PricingPro from "@/pages/pricing-pro";
-import Terms from "@/pages/terms";
-import Privacy from "@/pages/privacy";
 import NotFound from "@/pages/not-found";
 
 function ScrollToTop() {
@@ -33,8 +31,6 @@ function Router() {
         <Route path="/pricing" component={PricingBreakdown} />
         <Route path="/pricing-best" component={PricingBest} />
         <Route path="/pricing-pro" component={PricingPro} />
-        <Route path="/terms" component={Terms} />
-        <Route path="/privacy" component={Privacy} />
         <Route component={NotFound} />
       </Switch>
     </>

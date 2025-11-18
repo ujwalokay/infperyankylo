@@ -1047,67 +1047,12 @@ export default function Home() {
               </Button>
             </motion.div>
 
-            {/* Best Plan - ₹699 */}
+            {/* Pro Plan - ₹3999 (MOST POPULAR) */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="relative p-6 rounded-3xl border border-border/50 bg-card/50 backdrop-blur"
-              data-testid="card-plan-best"
-            >
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold mb-2">Best Plan</h3>
-                <p className="text-muted-foreground">For single category cafes</p>
-              </div>
-              
-              <div className="mb-8">
-                <div className="flex items-baseline gap-2">
-                  <span className="text-5xl font-bold">₹699</span>
-                  <span className="text-muted-foreground">/month</span>
-                </div>
-                <p className="text-sm text-muted-foreground mt-2">Billed monthly</p>
-              </div>
-
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Everything in Free Trial</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm"><strong>Single category only</strong> (PS5 OR PC OR VR)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Basic analytics & reports</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Email support</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <XCircle className="w-5 h-5 text-muted-foreground/50 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm text-muted-foreground line-through">Live availability webpage</span>
-                </li>
-              </ul>
-
-              <Button 
-                className="w-full rounded-full py-6 text-base bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90"
-                data-testid="button-get-best"
-                onClick={() => setLocation("/pricing-best")}
-              >
-                Get Started Now
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </motion.div>
-
-            {/* Pro Plan - ₹899 (MOST POPULAR) */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
               className="relative p-8 rounded-3xl border-2 border-chart-1 bg-gradient-to-br from-chart-1/20 via-chart-2/10 to-transparent backdrop-blur shadow-2xl shadow-chart-1/20 md:scale-105"
               data-testid="card-plan-pro"
             >
@@ -1119,15 +1064,15 @@ export default function Home() {
 
               <div className="mb-6">
                 <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-chart-1 to-chart-2 bg-clip-text text-transparent">Pro Plan</h3>
-                <p className="text-muted-foreground font-semibold">Complete gaming center solution</p>
+                <p className="text-muted-foreground font-semibold">Complete multi-cafe solution</p>
               </div>
               
               <div className="mb-8">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-5xl font-bold bg-gradient-to-r from-chart-1 to-chart-2 bg-clip-text text-transparent">₹899</span>
+                  <span className="text-5xl font-bold bg-gradient-to-r from-chart-1 to-chart-2 bg-clip-text text-transparent">₹3,999</span>
                   <span className="text-muted-foreground">/month</span>
                 </div>
-                <p className="text-sm text-chart-1 font-semibold mt-2">Best value for multi-category cafes</p>
+                <p className="text-sm text-chart-1 font-semibold mt-2">Best value for multi-cafe operations</p>
               </div>
 
               <ul className="space-y-3 mb-8">
@@ -1173,12 +1118,95 @@ export default function Home() {
                 Get Started Now
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
+            </motion.div>
+
+            {/* Admin/Franchise Plan */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative p-6 rounded-3xl border border-border/50 bg-card/50 backdrop-blur"
+              data-testid="card-plan-admin"
+            >
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold mb-2">Admin Plan</h3>
+                <p className="text-muted-foreground">For gaming center franchises</p>
+              </div>
               
-              <p className="text-xs text-center text-muted-foreground mt-4">
-                💎 Only ₹200 more - Get ALL features + all categories
-              </p>
+              <div className="mb-8">
+                <div className="flex items-baseline gap-2">
+                  <span className="text-4xl font-bold">Custom</span>
+                </div>
+                <p className="text-sm text-muted-foreground mt-2">Tailored pricing for your franchise</p>
+              </div>
+
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Everything in Pro Plan</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm"><strong>Centralized franchise management</strong></span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Multi-location analytics</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Staff & role management</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Dedicated support</span>
+                </li>
+              </ul>
+
+              <Button 
+                className="w-full rounded-full py-6 text-base" 
+                variant="outline"
+                data-testid="button-contact-admin"
+                onClick={() => setContactDialogOpen(true)}
+              >
+                Contact Us
+              </Button>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Live Demo Section */}
+      <section className="py-24 md:py-32 bg-gradient-to-br from-chart-1/5 via-chart-2/5 to-background">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              Experience Airavoto Gaming <span className="bg-gradient-to-r from-chart-1 to-chart-2 bg-clip-text text-transparent">Live</span>
+            </h2>
+            <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+              Try our platform in action with a live demo. See how easy it is to manage your gaming center with Airavoto Gaming.
+            </p>
+            
+            <Button 
+              size="lg" 
+              className="rounded-full px-12 py-7 text-xl bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90 shadow-lg shadow-chart-1/25"
+              data-testid="button-live-demo"
+              onClick={() => window.open('https://frtgnjdjrrtj.onrender.com/', '_blank')}
+            >
+              <PlayCircle className="w-6 h-6 mr-2" />
+              Launch Live Demo
+            </Button>
+            
+            <p className="text-sm text-muted-foreground mt-6">
+              No login required • Full feature access • Instant preview
+            </p>
+          </motion.div>
         </div>
       </section>
 

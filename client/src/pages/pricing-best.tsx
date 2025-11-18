@@ -41,29 +41,31 @@ export default function PricingBest() {
       icon: Server,
       title: "Server Infrastructure",
       description: "Cloud servers for reliable access",
-      originalCost: 300,
+      originalCost: 1500,
       color: "from-chart-1 to-chart-2"
     },
     {
       icon: Database,
       title: "Database Management",
       description: "Secure database with backups",
-      originalCost: 250,
+      originalCost: 1200,
       color: "from-chart-2 to-chart-3"
     },
     {
       icon: Shield,
       title: "Security & SSL",
       description: "Basic security with SSL certificates",
-      originalCost: 200,
+      originalCost: 1000,
       color: "from-chart-3 to-chart-4"
     }
   ];
 
   const originalTotal = costs.reduce((sum, cost) => sum + cost.originalCost, 0);
-  const discountPercent = 7;
-  const discountAmount = originalTotal - 699;
-  const finalPrice = 699;
+  const finalPrice = 2525;
+  const discountAmount = originalTotal - finalPrice;
+  const discountPercent = Math.round((discountAmount / originalTotal) * 100);
+  
+  const formatPrice = (price: number) => price.toLocaleString('en-IN');
 
   return (
     <div className="min-h-screen">
@@ -179,7 +181,7 @@ export default function PricingBest() {
                         <p className="text-muted-foreground">{cost.description}</p>
                       </div>
                       <div className="text-right">
-                        <div className="text-2xl font-bold">₹{cost.originalCost}</div>
+                        <div className="text-2xl font-bold">₹{formatPrice(cost.originalCost)}</div>
                         <div className="text-sm text-muted-foreground">/month</div>
                       </div>
                     </div>
@@ -200,7 +202,7 @@ export default function PricingBest() {
               <div className="space-y-4">
                 <div className="flex justify-between items-center text-lg">
                   <span className="text-muted-foreground">Original Total</span>
-                  <span className="font-semibold">₹{originalTotal}/month</span>
+                  <span className="font-semibold">₹{formatPrice(originalTotal)}/month</span>
                 </div>
 
                 <div className="flex justify-between items-center text-lg">
@@ -208,15 +210,15 @@ export default function PricingBest() {
                     <Tag className="w-5 h-5 text-chart-1" />
                     <span className="text-chart-1 font-semibold">Launch Discount ({discountPercent}%)</span>
                   </div>
-                  <span className="text-chart-1 font-semibold">-₹{discountAmount}</span>
+                  <span className="text-chart-1 font-semibold">-₹{formatPrice(discountAmount)}</span>
                 </div>
 
                 <div className="border-t border-border/50 pt-4 mt-4">
                   <div className="flex justify-between items-center">
                     <span className="text-2xl font-bold">Your Monthly Price</span>
                     <div className="text-right">
-                      <div className="text-4xl font-bold text-chart-1">₹{finalPrice}</div>
-                      <div className="text-sm text-muted-foreground line-through">₹{originalTotal}</div>
+                      <div className="text-4xl font-bold text-chart-1">₹{formatPrice(finalPrice)}</div>
+                      <div className="text-sm text-muted-foreground line-through">₹{formatPrice(originalTotal)}</div>
                     </div>
                   </div>
                 </div>
@@ -286,7 +288,7 @@ export default function PricingBest() {
                 💡 Want all features and all categories? 
               </p>
               <p className="text-muted-foreground mb-6">
-                Upgrade to Pro Plan for just ₹200 more and get everything!
+                Upgrade to Pro Plan for just ₹1,474 more and get everything!
               </p>
               <Button 
                 onClick={() => setLocation("/pricing-pro")}

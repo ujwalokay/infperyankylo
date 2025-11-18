@@ -764,7 +764,6 @@ export default function Home() {
                       <th className="text-center p-6 font-bold text-lg md:text-xl bg-gradient-to-br from-chart-1/10 to-chart-2/10">
                         Airavoto Gaming
                       </th>
-                      <th className="text-center p-6 font-bold text-lg md:text-xl">Pancafe Pro</th>
                       <th className="text-center p-6 font-bold text-lg md:text-xl">Excel Sheet</th>
                     </tr>
                   </thead>
@@ -773,9 +772,6 @@ export default function Home() {
                       <td className="p-6 font-medium">Real-time Session Tracking</td>
                       <td className="p-6 text-center bg-gradient-to-br from-chart-1/5 to-chart-2/5">
                         <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
-                      </td>
-                      <td className="p-6 text-center">
-                        <CheckCircle2 className="w-6 h-6 text-muted-foreground mx-auto" />
                       </td>
                       <td className="p-6 text-center">
                         <span className="text-2xl text-muted-foreground">✗</span>
@@ -788,9 +784,6 @@ export default function Home() {
                         <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
                       </td>
                       <td className="p-6 text-center">
-                        <CheckCircle2 className="w-6 h-6 text-muted-foreground mx-auto" />
-                      </td>
-                      <td className="p-6 text-center">
                         <span className="text-2xl text-muted-foreground">✗</span>
                       </td>
                     </tr>
@@ -799,9 +792,6 @@ export default function Home() {
                       <td className="p-6 font-medium">Food & Beverage Management</td>
                       <td className="p-6 text-center bg-gradient-to-br from-chart-1/5 to-chart-2/5">
                         <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
-                      </td>
-                      <td className="p-6 text-center">
-                        <span className="text-2xl text-muted-foreground">✗</span>
                       </td>
                       <td className="p-6 text-center">
                         <span className="text-muted-foreground text-sm">Manual Only</span>
@@ -814,9 +804,6 @@ export default function Home() {
                         <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
                       </td>
                       <td className="p-6 text-center">
-                        <span className="text-muted-foreground text-sm">Basic</span>
-                      </td>
-                      <td className="p-6 text-center">
                         <span className="text-muted-foreground text-sm">Manual Calculations</span>
                       </td>
                     </tr>
@@ -825,9 +812,6 @@ export default function Home() {
                       <td className="p-6 font-medium">Advanced Booking System</td>
                       <td className="p-6 text-center bg-gradient-to-br from-chart-1/5 to-chart-2/5">
                         <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
-                      </td>
-                      <td className="p-6 text-center">
-                        <span className="text-muted-foreground text-sm">Basic</span>
                       </td>
                       <td className="p-6 text-center">
                         <span className="text-2xl text-muted-foreground">✗</span>
@@ -840,9 +824,6 @@ export default function Home() {
                         <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
                       </td>
                       <td className="p-6 text-center">
-                        <CheckCircle2 className="w-6 h-6 text-muted-foreground mx-auto" />
-                      </td>
-                      <td className="p-6 text-center">
                         <span className="text-muted-foreground text-sm">Manual Only</span>
                       </td>
                     </tr>
@@ -853,9 +834,6 @@ export default function Home() {
                         <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
                       </td>
                       <td className="p-6 text-center">
-                        <span className="text-muted-foreground text-sm">Limited</span>
-                      </td>
-                      <td className="p-6 text-center">
                         <span className="text-2xl text-muted-foreground">✗</span>
                       </td>
                     </tr>
@@ -864,9 +842,6 @@ export default function Home() {
                       <td className="p-6 font-medium">Expense Tracking</td>
                       <td className="p-6 text-center bg-gradient-to-br from-chart-1/5 to-chart-2/5">
                         <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
-                      </td>
-                      <td className="p-6 text-center">
-                        <span className="text-2xl text-muted-foreground">✗</span>
                       </td>
                       <td className="p-6 text-center">
                         <span className="text-muted-foreground text-sm">Manual Only</span>
@@ -881,18 +856,12 @@ export default function Home() {
                       <td className="p-6 text-center">
                         <span className="text-2xl text-muted-foreground">✗</span>
                       </td>
-                      <td className="p-6 text-center">
-                        <span className="text-2xl text-muted-foreground">✗</span>
-                      </td>
                     </tr>
 
                     <tr className="border-b border-border/50" data-testid="row-comparison-alerts">
                       <td className="p-6 font-medium">Audio & Visual Alerts</td>
                       <td className="p-6 text-center bg-gradient-to-br from-chart-1/5 to-chart-2/5">
                         <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
-                      </td>
-                      <td className="p-6 text-center">
-                        <span className="text-muted-foreground text-sm">Basic</span>
                       </td>
                       <td className="p-6 text-center">
                         <span className="text-2xl text-muted-foreground">✗</span>
@@ -905,9 +874,6 @@ export default function Home() {
                         <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
                       </td>
                       <td className="p-6 text-center">
-                        <span className="text-muted-foreground text-sm">Limited</span>
-                      </td>
-                      <td className="p-6 text-center">
                         <span className="text-2xl text-muted-foreground">✗</span>
                       </td>
                     </tr>
@@ -916,9 +882,6 @@ export default function Home() {
                       <td className="p-6 font-medium">Role-Based Access Control</td>
                       <td className="p-6 text-center bg-gradient-to-br from-chart-1/5 to-chart-2/5">
                         <CheckCircle2 className="w-6 h-6 text-chart-1 mx-auto" />
-                      </td>
-                      <td className="p-6 text-center">
-                        <span className="text-muted-foreground text-sm">Limited</span>
                       </td>
                       <td className="p-6 text-center">
                         <span className="text-2xl text-muted-foreground">✗</span>
@@ -933,9 +896,6 @@ export default function Home() {
                       <td className="p-6 text-center">
                         <span className="text-muted-foreground text-sm">Local Only</span>
                       </td>
-                      <td className="p-6 text-center">
-                        <span className="text-muted-foreground text-sm">File Sharing</span>
-                      </td>
                     </tr>
 
                     <tr data-testid="row-comparison-ease">
@@ -948,11 +908,6 @@ export default function Home() {
                       <td className="p-6 text-center">
                         <div className="flex items-center justify-center gap-1">
                           <span className="text-muted-foreground">★★★☆☆</span>
-                        </div>
-                      </td>
-                      <td className="p-6 text-center">
-                        <div className="flex items-center justify-center gap-1">
-                          <span className="text-muted-foreground">★★☆☆☆</span>
                         </div>
                       </td>
                     </tr>
@@ -1035,6 +990,14 @@ export default function Home() {
                   <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
                   <span className="text-sm">Basic support</span>
                 </li>
+                <li className="flex items-start gap-3">
+                  <XCircle className="w-5 h-5 text-muted-foreground/50 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm text-muted-foreground">60 seconds delay for boot up</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <XCircle className="w-5 h-5 text-muted-foreground/50 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm text-muted-foreground">No custom branding</span>
+                </li>
               </ul>
 
               <Button 
@@ -1047,7 +1010,7 @@ export default function Home() {
               </Button>
             </motion.div>
 
-            {/* Pro Plan - ₹3999 (MOST POPULAR) */}
+            {/* Pro Plan - ₹2,525 (MOST POPULAR) */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1064,63 +1027,63 @@ export default function Home() {
 
               <div className="mb-6">
                 <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-chart-1 to-chart-2 bg-clip-text text-transparent">Pro Plan</h3>
-                <p className="text-muted-foreground font-semibold">Complete multi-cafe solution</p>
+                <p className="text-muted-foreground font-semibold">Perfect for single cafe</p>
               </div>
               
               <div className="mb-8">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-5xl font-bold bg-gradient-to-r from-chart-1 to-chart-2 bg-clip-text text-transparent">₹3,999</span>
+                  <span className="text-5xl font-bold bg-gradient-to-r from-chart-1 to-chart-2 bg-clip-text text-transparent">₹2,525</span>
                   <span className="text-muted-foreground">/month</span>
                 </div>
-                <p className="text-sm text-chart-1 font-semibold mt-2">Best value for multi-cafe operations</p>
+                <p className="text-sm text-chart-1 font-semibold mt-2">Best value for single cafe operations</p>
               </div>
 
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm font-semibold">ALL 12 Premium Features Included</span>
+                  <span className="text-sm font-semibold"><strong>All categories:</strong> PS5, PC, VR, Xbox & more</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm"><strong>All categories:</strong> PS5, PC, VR, Xbox & more</span>
+                  <span className="text-sm">Session & booking management</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">AI Maintenance & Smart Predictions</span>
+                  <span className="text-sm">Basic inventory tracking</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Complete Inventory Management</span>
+                  <span className="text-sm">Basic analytics & reports</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Advanced Analytics & Reports</span>
+                  <span className="text-sm">Food & beverage management</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm"><strong>Live Availability Webpage</strong> for customers</span>
+                  <span className="text-sm">Email support</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Priority Support (Working Hours)</span>
+                  <span className="text-sm">Real-time session tracking</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Custom Branding & White Label</span>
+                  <span className="text-sm">Automated billing</span>
                 </li>
               </ul>
 
               <Button 
                 className="w-full rounded-full py-6 text-lg font-bold bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90 shadow-lg"
                 data-testid="button-get-pro"
-                onClick={() => setLocation("/pricing-pro")}
+                onClick={() => setLocation("/pricing-best")}
               >
                 Get Started Now
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </motion.div>
 
-            {/* Admin/Franchise Plan */}
+            {/* Admin Plan - ₹3,999 */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1136,9 +1099,10 @@ export default function Home() {
               
               <div className="mb-8">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold">Custom</span>
+                  <span className="text-5xl font-bold">₹3,999</span>
+                  <span className="text-muted-foreground">/month</span>
                 </div>
-                <p className="text-sm text-muted-foreground mt-2">Tailored pricing for your franchise</p>
+                <p className="text-sm text-muted-foreground mt-2">Complete multi-cafe solution</p>
               </div>
 
               <ul className="space-y-3 mb-8">
@@ -1148,7 +1112,11 @@ export default function Home() {
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm"><strong>Centralized franchise management</strong></span>
+                  <span className="text-sm font-semibold"><strong>Admin panel dashboard</strong> for all cafes in one place</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Centralized franchise management</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
@@ -1168,9 +1136,9 @@ export default function Home() {
                 className="w-full rounded-full py-6 text-base" 
                 variant="outline"
                 data-testid="button-contact-admin"
-                onClick={() => setContactDialogOpen(true)}
+                onClick={() => setLocation("/pricing-pro")}
               >
-                Contact Us
+                View Details
               </Button>
             </motion.div>
           </div>

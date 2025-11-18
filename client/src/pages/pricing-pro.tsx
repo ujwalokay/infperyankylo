@@ -123,7 +123,7 @@ export default function PricingPro() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-chart-1/20 to-chart-2/20 border border-chart-1/30 mb-6"
             >
               <Tag className="w-4 h-4 text-chart-1" />
-              <span className="text-sm font-semibold">MOST POPULAR - Best Value for Multi-Cafe Operations</span>
+              <span className="text-sm font-semibold">For Gaming Center Franchises - Multi-Cafe Management</span>
             </motion.div>
 
             <motion.h1 
@@ -133,7 +133,7 @@ export default function PricingPro() {
               className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight" 
               data-testid="text-pricing-heading"
             >
-              Pro Plan - Detailed Pricing
+              Admin Plan - Detailed Pricing
             </motion.h1>
 
             <motion.p 
@@ -235,7 +235,7 @@ export default function PricingPro() {
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
                     <p className="text-sm text-muted-foreground">
-                      <strong>Premium Plan Benefits:</strong> Get ALL 12 features, ALL device categories (PS5, PC, VR, Xbox), AI Maintenance, Complete Inventory, Live Availability Webpage & Priority Support (Working Hours)!
+                      <strong>Admin Plan Benefits:</strong> Get ALL 12 features, ALL device categories (PS5, PC, VR, Xbox), AI Maintenance, Complete Inventory, Live Availability Webpage, Priority Support & Admin Panel Dashboard for managing all your cafes in one place!
                     </p>
                   </div>
                 </div>
@@ -256,13 +256,16 @@ export default function PricingPro() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Everything You Get with Pro Plan (₹3,999)
+              Everything You Get with Admin Plan (₹3,999)
             </h2>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
               "ALL 12 Premium Features Included",
+              "Admin Panel Dashboard for all cafes in one place",
+              "Centralized franchise management",
+              "Multi-location analytics & reporting",
               "Dashboard & Real-time Overview",
               "Seat Management (ALL Categories)",
               "Timeline & History Tracking",
@@ -273,7 +276,9 @@ export default function PricingPro() {
               "Expense Tracking & Reports",
               "Settings & Customization",
               "Live Availability Webpage for Customers",
+              "Staff & role management",
               "Priority support (Working Hours)",
+              "Dedicated support",
               "Custom branding & White Label",
               "All Categories: PS5, PC, VR, Xbox & more",
               "Automated billing & invoicing",
@@ -309,7 +314,7 @@ export default function PricingPro() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Contact us today to activate your Pro Plan and start transforming your gaming center
+              Contact us today to activate your Admin Plan and start managing all your gaming centers
             </p>
 
             <Dialog open={contactDialogOpen} onOpenChange={setContactDialogOpen}>
@@ -319,7 +324,7 @@ export default function PricingPro() {
                   className="rounded-full px-12 py-7 text-xl bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90"
                   data-testid="button-activate-plan"
                 >
-                  Activate Pro Plan
+                  Activate Admin Plan
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </DialogTrigger>

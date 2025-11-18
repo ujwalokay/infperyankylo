@@ -115,7 +115,7 @@ export default function PricingBest() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-chart-1/20 to-chart-2/20 border border-chart-1/30 mb-6"
             >
               <Tag className="w-4 h-4 text-chart-1" />
-              <span className="text-sm font-semibold">Best Plan - Perfect for Single Category Cafes</span>
+              <span className="text-sm font-semibold">MOST POPULAR - Perfect for Single Cafe</span>
             </motion.div>
 
             <motion.h1 
@@ -125,7 +125,7 @@ export default function PricingBest() {
               className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight" 
               data-testid="text-pricing-heading"
             >
-              Best Plan - Detailed Pricing
+              Pro Plan - Detailed Pricing
             </motion.h1>
 
             <motion.p 
@@ -152,7 +152,7 @@ export default function PricingBest() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              What's Included in Best Plan
+              What's Included in Pro Plan
             </h2>
             <p className="text-lg text-muted-foreground">
               Here's the complete breakdown of monthly costs
@@ -239,27 +239,25 @@ export default function PricingBest() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              What You Get with Best Plan
+              What You Get with Pro Plan (₹2,525)
             </h2>
-            <p className="text-muted-foreground">Perfect for cafes with a single gaming category</p>
+            <p className="text-muted-foreground">Perfect for single cafe operations</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { text: "Single category access (Choose PS5, PC, or VR)", included: true },
+              { text: "All categories: PS5, PC, VR, Xbox & more", included: true },
               { text: "Session & booking management", included: true },
               { text: "Basic analytics & reports", included: true },
               { text: "Food & beverage management", included: true },
               { text: "Customer management", included: true },
+              { text: "Basic inventory tracking", included: true },
               { text: "Expense tracking", included: true },
               { text: "Email support", included: true },
               { text: "Automated billing", included: true },
-              { text: "Data export & backups", included: true },
-              { text: "Live availability webpage", included: false },
-              { text: "AI Maintenance & Predictions", included: false },
-              { text: "Complete inventory management", included: false },
-              { text: "All categories (PS5, PC, VR, Xbox)", included: false },
-              { text: "Priority support (Working Hours)", included: false }
+              { text: "Data export", included: true },
+              { text: "Timeline view & scheduling", included: true },
+              { text: "Real-time session tracking", included: true }
             ].map((feature, index) => (
               <motion.div
                 key={index}
@@ -285,17 +283,17 @@ export default function PricingBest() {
           <div className="mt-12 text-center">
             <Card className="p-6 bg-gradient-to-r from-chart-1/10 to-chart-2/10 border-chart-1/30">
               <p className="text-lg font-semibold mb-4">
-                💡 Want all features and all categories? 
+                💡 Need multi-cafe management? 
               </p>
               <p className="text-muted-foreground mb-6">
-                Upgrade to Pro Plan for just ₹1,474 more and get everything!
+                Upgrade to Admin Plan for ₹3,999/month and get admin panel dashboard for all your cafes!
               </p>
               <Button 
                 onClick={() => setLocation("/pricing-pro")}
                 className="bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90"
-                data-testid="button-upgrade-pro"
+                data-testid="button-upgrade-admin"
               >
-                View Pro Plan
+                View Admin Plan
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Card>
@@ -316,7 +314,7 @@ export default function PricingBest() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Contact us today to activate your Best Plan
+              Contact us today to activate your Pro Plan
             </p>
 
             <Dialog open={contactDialogOpen} onOpenChange={setContactDialogOpen}>
@@ -326,7 +324,7 @@ export default function PricingBest() {
                   className="rounded-full px-12 py-7 text-xl bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90"
                   data-testid="button-activate-plan"
                 >
-                  Activate Best Plan
+                  Activate Pro Plan
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </DialogTrigger>

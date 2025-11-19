@@ -149,7 +149,27 @@ export default function Home() {
                   onClick={() => window.open('https://frtgnjdjrrtj.onrender.com', '_blank')}
                   data-testid="button-live-demo"
                 >
-                  <PlayCircle className="w-4 h-4 md:mr-2" />
+                  <motion.div
+                    animate={{
+                      rotate: [0, 360],
+                      scale: [1, 1.1, 1],
+                    }}
+                    transition={{
+                      rotate: {
+                        duration: 3,
+                        repeat: Infinity,
+                        ease: "linear"
+                      },
+                      scale: {
+                        duration: 1.5,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }
+                    }}
+                    className="flex items-center md:mr-2"
+                  >
+                    <PlayCircle className="w-4 h-4" />
+                  </motion.div>
                   <span className="hidden md:inline">Live Demo</span>
                 </Button>
               </motion.div>

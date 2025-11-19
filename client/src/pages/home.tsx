@@ -134,12 +134,7 @@ export default function Home() {
             <div className="flex items-center gap-3">
               <motion.div
                 animate={{
-                  scale: [1, 1.05, 1],
-                  boxShadow: [
-                    "0 0 0px rgba(139, 92, 246, 0)",
-                    "0 0 20px rgba(139, 92, 246, 0.5)",
-                    "0 0 0px rgba(139, 92, 246, 0)"
-                  ]
+                  opacity: [0.8, 1, 0.8],
                 }}
                 transition={{
                   duration: 2,
@@ -148,14 +143,14 @@ export default function Home() {
                 }}
               >
                 <Button 
+                  variant="outline"
                   size="lg" 
-                  className="rounded-full px-4 md:px-6 bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white border-0 shadow-lg shadow-violet-500/50 relative overflow-hidden group"
+                  className="rounded-full px-4 md:px-6 bg-white dark:bg-white text-black dark:text-black border-white dark:border-white hover:bg-white/90 dark:hover:bg-white/90 relative overflow-hidden group"
                   onClick={() => window.open('https://frtgnjdjrrtj.onrender.com', '_blank')}
                   data-testid="button-live-demo"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                  <PlayCircle className="w-4 h-4 md:mr-2 relative z-10" />
-                  <span className="hidden md:inline relative z-10">Live Demo</span>
+                  <PlayCircle className="w-4 h-4 md:mr-2" />
+                  <span className="hidden md:inline">Live Demo</span>
                 </Button>
               </motion.div>
               

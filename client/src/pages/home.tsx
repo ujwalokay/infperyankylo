@@ -1076,7 +1076,7 @@ export default function Home() {
               
               <div className="mb-8">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-5xl font-bold bg-gradient-to-r from-chart-1 to-chart-2 bg-clip-text text-transparent">₹2,525</span>
+                  <span className="text-5xl font-bold bg-gradient-to-r from-chart-1 to-chart-2 bg-clip-text text-transparent">₹2,499</span>
                   <span className="text-muted-foreground">/month</span>
                 </div>
                 <p className="text-sm text-chart-1 font-semibold mt-2">Best value for single cafe operations</p>

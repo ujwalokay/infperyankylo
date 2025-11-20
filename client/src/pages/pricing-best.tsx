@@ -61,7 +61,7 @@ export default function PricingBest() {
   ];
 
   const originalTotal = costs.reduce((sum, cost) => sum + cost.originalCost, 0);
-  const finalPrice = 2525;
+  const finalPrice = 2499;
   const discountAmount = originalTotal - finalPrice;
   const discountPercent = Math.round((discountAmount / originalTotal) * 100);
   
@@ -153,7 +153,7 @@ export default function PricingBest() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              What You Get with Pro Plan (₹2,525)
+              What You Get with Pro Plan (₹2,499)
             </h2>
             <p className="text-muted-foreground">Perfect for single cafe operations</p>
           </motion.div>

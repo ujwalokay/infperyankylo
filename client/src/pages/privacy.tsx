@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import { ScrollToTop } from "@/components/scroll-to-top";
 
 export default function Privacy() {
   return (
@@ -290,6 +291,8 @@ export default function Privacy() {
           </section>
         </div>
       </div>
+
+      <ScrollToTop />
     </div>
   );
 }

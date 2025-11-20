@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -6,6 +6,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { motion } from "framer-motion";
+import { ScrollToTop } from "@/components/scroll-to-top";
 import {
   Dialog,
   DialogContent,
@@ -39,8 +40,7 @@ import {
   PlayCircle,
   XCircle,
   PartyPopper,
-  Percent,
-  ArrowUp
+  Percent
 } from "lucide-react";
 import { 
   SiInstagram, 
@@ -58,18 +58,8 @@ import mobileComplete from "@assets/2e4c0ed9-073f-4840-be1d-b03693272a58_1761396
 export default function Home() {
   const [email, setEmail] = useState("");
   const [contactDialogOpen, setContactDialogOpen] = useState(false);
-  const [showScrollTop, setShowScrollTop] = useState(false);
   const { toast } = useToast();
   const [, setLocation] = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 400);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const signupMutation = useMutation({
     mutationFn: async (email: string) => {
@@ -1491,23 +1481,7 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* Scroll to Top Button */}
-      <motion.button
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ 
-          opacity: showScrollTop ? 1 : 0,
-          scale: showScrollTop ? 1 : 0.8,
-          y: showScrollTop ? 0 : 20
-        }}
-        transition={{ duration: 0.3 }}
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-gradient-to-r from-chart-1 to-chart-2 text-white shadow-lg hover:shadow-xl hover:scale-110 transition-all flex items-center justify-center"
-        style={{ pointerEvents: showScrollTop ? 'auto' : 'none' }}
-        data-testid="button-scroll-top"
-        aria-label="Scroll to top"
-      >
-        <ArrowUp className="w-5 h-5" />
-      </motion.button>
+      <ScrollToTop />
     </div>
   );
 }

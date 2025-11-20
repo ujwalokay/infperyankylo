@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { ScrollToTop } from "@/components/scroll-to-top";
 import { 
   ArrowLeft,
   MonitorPlay,
@@ -317,6 +318,8 @@ export default function PricingPro() {
           </div>
         </div>
       </footer>
+
+      <ScrollToTop />
     </div>
   );
 }

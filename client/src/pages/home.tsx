@@ -1105,7 +1105,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Email support</span>
+                  <span className="text-sm">Google login support</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-chart-1 mt-0.5 flex-shrink-0" />

@@ -167,7 +167,7 @@ export default function PricingBest() {
               { text: "Customer management", included: true },
               { text: "Basic inventory tracking", included: true },
               { text: "Expense tracking", included: true },
-              { text: "Email support", included: true },
+              { text: "Google login support", included: true },
               { text: "Automated billing", included: true },
               { text: "Data export", included: true },
               { text: "Timeline view & scheduling", included: true },

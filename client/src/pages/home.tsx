@@ -1018,7 +1018,7 @@ export default function Home() {
                 <div className="flex items-baseline gap-2">
                   <span className="text-5xl font-bold">Free</span>
                 </div>
-                <p className="text-sm text-muted-foreground mt-2">14 days trial period</p>
+                <p className="text-sm text-muted-foreground mt-2">7 days trial period</p>
               </div>
 
               <ul className="space-y-3 mb-8">

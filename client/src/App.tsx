@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import Home from "@/pages/home";
 import About from "@/pages/about";
 import Features from "@/pages/features";
+import Blog from "@/pages/blog";
 import PricingBest from "@/pages/pricing-best";
 import PricingPro from "@/pages/pricing-pro";
 import NotFound from "@/pages/not-found";
@@ -29,6 +30,7 @@ function Router() {
         <Route path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/features" component={Features} />
+        <Route path="/blog" component={Blog} />
         <Route path="/pricing-best" component={PricingBest} />
         <Route path="/pricing-pro" component={PricingPro} />
         <Route component={NotFound} />

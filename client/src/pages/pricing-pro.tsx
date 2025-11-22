@@ -3,6 +3,8 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ScrollToTop } from "@/components/scroll-to-top";
+import { useEffect, useState } from "react";
+import { Schema, productSchema, generateBreadcrumbSchema } from "@/components/seo/Schema";
 import { 
   ArrowLeft,
   MonitorPlay,
@@ -14,7 +16,6 @@ import {
   Tag,
   ArrowRight
 } from "lucide-react";
-import { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -31,6 +32,19 @@ import airavotoLogo from "@assets/20251023_202645_1762943113599.png";
 export default function PricingPro() {
   const [, setLocation] = useLocation();
   const [contactDialogOpen, setContactDialogOpen] = useState(false);
+
+  useEffect(() => {
+    document.title = "Pro Pricing - Airavoto Gaming | Premium Features & Support";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Airavoto Gaming Pro plan with premium features for large gaming centers. Includes priority support, custom branding, and advanced analytics. Contact us for enterprise pricing.');
+    }
+  }, []);
+
+  const breadcrumbData = [
+    { name: "Home", url: "https://airavotogaming.com/" },
+    { name: "Pricing Pro", url: "https://airavotogaming.com/pricing-pro" }
+  ];
 
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
@@ -78,6 +92,10 @@ export default function PricingPro() {
 
   return (
     <div className="min-h-screen">
+      <Schema schema={[
+        productSchema,
+        generateBreadcrumbSchema(breadcrumbData)
+      ]} />
       {/* Navigation */}
       <motion.nav 
         initial="initial"

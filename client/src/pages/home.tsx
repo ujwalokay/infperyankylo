@@ -147,7 +147,7 @@ export default function Home() {
                   variant="outline"
                   size="lg" 
                   className="rounded-full px-4 md:px-6 bg-white dark:bg-white text-black dark:text-black border-white dark:border-white hover:bg-white/90 dark:hover:bg-white/90 relative overflow-hidden group"
-                  onClick={() => window.open('https://frtgnjdjrrtj.onrender.com', '_blank')}
+                  onClick={() => window.open('https://demotestposairavoto.onrender.com/', '_blank')}
                   data-testid="button-live-demo"
                 >
                   <motion.div
@@ -1210,7 +1210,7 @@ export default function Home() {
               size="lg" 
               className="rounded-full px-12 py-7 text-xl bg-gradient-to-r from-chart-1 to-chart-2 hover:opacity-90 shadow-lg shadow-chart-1/25"
               data-testid="button-live-demo"
-              onClick={() => window.open('https://frtgnjdjrrtj.onrender.com/', '_blank')}
+              onClick={() => window.open('https://demotestposairavoto.onrender.com/', '_blank')}
             >
               <PlayCircle className="w-6 h-6 mr-2" />
               Launch Live Demo

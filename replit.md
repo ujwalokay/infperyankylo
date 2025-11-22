@@ -1,8 +1,8 @@
-# Ankylo Gaming POS Landing Page
+# Airavoto Gaming Landing Page
 
 ## Overview
 
-This is a modern, professional landing page for Ankylo Gaming POS built with React, TypeScript, and Express. The application showcases a complete gaming center management system with purple/black modern tech aesthetics, featuring comprehensive operational tools for session tracking, booking management, inventory control, financial oversight, happy hours management, and flexible discount systems. The project uses a full-stack architecture with a React frontend powered by Vite and an Express backend for API handling.
+This is a modern, professional landing page for Airavoto Gaming built with React, TypeScript, and Express. The application showcases a complete gaming center management system with purple/black modern tech aesthetics, featuring comprehensive operational tools for session tracking, booking management, inventory control, financial oversight, happy hours management, and flexible discount systems. The project uses a full-stack architecture with a React frontend powered by Vite and an Express backend for API handling.
 
 ## Recent Changes
 

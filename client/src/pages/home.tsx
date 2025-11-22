@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -7,6 +7,7 @@ import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { motion } from "framer-motion";
 import { ScrollToTop } from "@/components/scroll-to-top";
+import { Schema, organizationSchema, productSchema, localBusinessSchema, generateFAQSchema, generateBreadcrumbSchema } from "@/components/seo/Schema";
 import {
   Dialog,
   DialogContent,
@@ -97,6 +98,37 @@ export default function Home() {
     signupMutation.mutate(email);
   };
 
+  useEffect(() => {
+    document.title = "Airavoto Gaming - Complete Gaming Center Management System | India's #1 POS";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Transform your gaming center with Airavoto Gaming POS. Real-time session management, smart booking, inventory control, F&B tracking, and financial reports. Made in India for Indian gaming centers.');
+    }
+  }, []);
+
+  const faqData = [
+    {
+      question: "What is Airavoto Gaming and how does it help my gaming center?",
+      answer: "Airavoto Gaming is a comprehensive Point of Sale (POS) system designed specifically for gaming centers. It helps you manage real-time gaming sessions across PC, console, VR, and simulators, handle bookings, track food & beverage sales, manage inventory, and generate detailed financial reports—all from one powerful platform. It simplifies operations and helps you grow your business efficiently."
+    },
+    {
+      question: "Is the system easy to use for my staff?",
+      answer: "Absolutely! Airavoto Gaming features an intuitive, user-friendly interface designed for quick onboarding. Most staff members can learn the basics in under an hour. We also provide comprehensive training materials and ongoing support to ensure your team feels confident using the system."
+    },
+    {
+      question: "Can I try the system before committing?",
+      answer: "Yes! We offer a demo of the system so you can explore all the features and see how Airavoto Gaming works for your gaming center. Contact us through the 'Contact Us' button or reach out via WhatsApp, and we'll be happy to schedule a personalized demo and answer all your questions about pricing and implementation."
+    },
+    {
+      question: "What kind of support do you provide?",
+      answer: "We provide dedicated customer support to all our clients. Our team is available via phone, email, and WhatsApp to assist you with any questions or issues. We also offer regular updates and improvements to the platform based on user feedback."
+    }
+  ];
+
+  const breadcrumbData = [
+    { name: "Home", url: "https://airavotogaming.com/" }
+  ];
+
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0 },
@@ -111,6 +143,13 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      <Schema schema={[
+        organizationSchema,
+        productSchema,
+        localBusinessSchema,
+        generateFAQSchema(faqData),
+        generateBreadcrumbSchema(breadcrumbData)
+      ]} />
       {/* Navigation */}
       <motion.nav 
         initial="initial"

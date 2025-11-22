@@ -4,16 +4,30 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLocation } from "wouter";
 import { useEffect } from "react";
+import { Schema, organizationSchema, generateBreadcrumbSchema } from "@/components/seo/Schema";
 
 export default function About() {
   const [, setLocation] = useLocation();
 
   useEffect(() => {
     document.title = "About Us - Airavoto Gaming | Leading Gaming Center Management Solutions";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Learn about Airavoto Gaming, India\'s leading gaming center management platform. Our mission is to revolutionize gaming center operations with innovative technology and exceptional support.');
+    }
   }, []);
+
+  const breadcrumbData = [
+    { name: "Home", url: "https://airavotogaming.com/" },
+    { name: "About Us", url: "https://airavotogaming.com/about" }
+  ];
 
   return (
     <div className="min-h-screen">
+      <Schema schema={[
+        organizationSchema,
+        generateBreadcrumbSchema(breadcrumbData)
+      ]} />
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-chart-1/10 via-chart-2/10 to-background"></div>

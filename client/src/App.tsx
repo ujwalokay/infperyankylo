@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { useEffect } from "react";
 import Home from "@/pages/home";
+import About from "@/pages/about";
 import Features from "@/pages/features";
 import PricingBest from "@/pages/pricing-best";
 import PricingPro from "@/pages/pricing-pro";
@@ -26,6 +27,7 @@ function Router() {
       <ScrollToTop />
       <Switch>
         <Route path="/" component={Home} />
+        <Route path="/about" component={About} />
         <Route path="/features" component={Features} />
         <Route path="/pricing-best" component={PricingBest} />
         <Route path="/pricing-pro" component={PricingPro} />

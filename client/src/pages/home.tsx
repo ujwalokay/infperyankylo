@@ -1386,8 +1386,25 @@ export default function Home() {
             <div>
               <h4 className="font-bold mb-4">Links</h4>
               <ul className="space-y-3 text-muted-foreground">
-                <li><a href="#" className="hover:text-foreground transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-foreground transition-colors">Contact</a></li>
+                <li>
+                  <Link href="/about" className="hover:text-foreground transition-colors" data-testid="link-about">
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/features" className="hover:text-foreground transition-colors" data-testid="link-features">
+                    Features
+                  </Link>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => setContactDialogOpen(true)} 
+                    className="hover:text-foreground transition-colors text-left"
+                    data-testid="link-contact"
+                  >
+                    Contact
+                  </button>
+                </li>
               </ul>
             </div>
 

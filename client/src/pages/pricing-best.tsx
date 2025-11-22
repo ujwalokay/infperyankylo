@@ -3,6 +3,8 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ScrollToTop } from "@/components/scroll-to-top";
+import { useEffect, useState } from "react";
+import { Schema, productSchema, generateBreadcrumbSchema } from "@/components/seo/Schema";
 import { 
   ArrowLeft,
   CheckCircle2,
@@ -13,7 +15,6 @@ import {
   ArrowRight,
   XCircle
 } from "lucide-react";
-import { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -30,6 +31,19 @@ import airavotoLogo from "@assets/20251023_202645_1762943113599.png";
 export default function PricingBest() {
   const [, setLocation] = useLocation();
   const [contactDialogOpen, setContactDialogOpen] = useState(false);
+
+  useEffect(() => {
+    document.title = "Pricing - Airavoto Gaming | Affordable Gaming Center Management";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Get Airavoto Gaming POS at an affordable price. All-in-one gaming center management with transparent pricing. Contact us for a customized quote for your gaming business.');
+    }
+  }, []);
+
+  const breadcrumbData = [
+    { name: "Home", url: "https://airavotogaming.com/" },
+    { name: "Pricing", url: "https://airavotogaming.com/pricing-best" }
+  ];
 
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
@@ -70,6 +84,10 @@ export default function PricingBest() {
 
   return (
     <div className="min-h-screen">
+      <Schema schema={[
+        productSchema,
+        generateBreadcrumbSchema(breadcrumbData)
+      ]} />
       {/* Navigation */}
       <motion.nav 
         initial="initial"

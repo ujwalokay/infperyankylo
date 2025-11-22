@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ScrollToTop } from "@/components/scroll-to-top";
+import { useEffect } from "react";
+import { Schema, productSchema, generateBreadcrumbSchema } from "@/components/seo/Schema";
 import { 
   ArrowLeft,
   MonitorPlay,
@@ -40,6 +42,19 @@ import airavotoLogo from "@assets/20251023_202645_1762943113599.png";
 
 export default function Features() {
   const [, setLocation] = useLocation();
+  
+  useEffect(() => {
+    document.title = "Features - Airavoto Gaming | Complete POS Feature List";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Explore all features of Airavoto Gaming POS: Real-time session management, smart booking, inventory control, F&B tracking, financial reports, happy hours, discounts, and live seat availability for gaming centers.');
+    }
+  }, []);
+
+  const breadcrumbData = [
+    { name: "Home", url: "https://airavotogaming.com/" },
+    { name: "Features", url: "https://airavotogaming.com/features" }
+  ];
   
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
@@ -172,6 +187,10 @@ export default function Features() {
 
   return (
     <div className="min-h-screen">
+      <Schema schema={[
+        productSchema,
+        generateBreadcrumbSchema(breadcrumbData)
+      ]} />
       {/* Navigation */}
       <motion.nav 
         initial="initial"
